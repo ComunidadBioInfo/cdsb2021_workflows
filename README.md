@@ -21,6 +21,7 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 ## Temario 
 
 ### Lunes 9 de agosto
+
 | Horario     | Tema                                      | Instructor             |
 |-------------|-------------------------------------------|------------------------|
 | 10:00-11:00 | Hacks de RStudio                          | Erick Cuevas Fernández |
