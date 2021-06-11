@@ -20,6 +20,8 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 
 ## Temario 
 
+Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
+
 ### Lunes 9 de agosto
 
 | Horario     | Tema                                      | Instructor             |
@@ -66,7 +68,5 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 | 12:30-14:00 | Proyecto colaborativo                           | Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez |
 | 15:30-17:00 | Presentación de proyectos                       | Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez |
 
-
-Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
 
 
