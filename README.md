@@ -6,7 +6,7 @@
 
 Bienvenidos al Workshop Flujos de trabajo con RStudio y creación de Shiny apps! 
 
-<p align="right">
+<p align="justify">
 En este taller haremos un recorrido por las configuraciones avanzadas de RStudio y te hablaremos sobre las buenas prácticas para organizar tu código en proyectos de RStudio. Además, te mostraremos cómo trabajar en proyectos colaborativos usando control de versiones y cómo resolver conflictos al trabajar en este tipo de proyectos. Finalizaremos con un recorrido introductorio sobre las aplicaciones de Shiny y te mostraremos cómo crear tu primera aplicación. 
 
 Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas principales: 
