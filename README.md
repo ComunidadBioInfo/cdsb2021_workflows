@@ -30,6 +30,6 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 -	Introducción a las Shiny apps.
 -	Creando tu primer Shiny app.
 
-Consulta el calendario de este curso en: <https://calendar.google.com/calendar/u/0?cid=MWxnZnZobmxnZXM5YnVjdWE2Y2NtbDg3cThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ>
+Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
 
 
