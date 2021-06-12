@@ -18,6 +18,20 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 
 ## Instructores
 
+[M.C. Joselyn Chávez](https://comunidadbioinfo.github.io/es/authors/josschavezf/)
+[M.C. Erick Cuevas-Fernández](https://comunidadbioinfo.github.io/es/authors/erickcufe/)
+[Dr. Alejandro Reyes](https://comunidadbioinfo.github.io/es/authors/areyes/)
+[Dra. Alejandra Medina-Rivera](https://comunidadbioinfo.github.io/es/authors/amedina/)
+[M.C. María Teresa Ortiz](https://comunidadbioinfo.github.io/es/authors/mteresa/)
+[Dra. Mirna Vázquez Rosas-Landa](https://comunidadbioinfo.github.io/es/authors/mteresa/mirnavrl/)
+[M.C. Aurora Labastida](https://comunidadbioinfo.github.io/es/authors/mteresa/alabasti/)
+
+## Ponentes invitados
+
+[Dra. Ana Beatriz Villaseñor Altamirano](https://comunidadbioinfo.github.io/es/authors/anab/)
+[Lic. Ángel Escalante](https://comunidadbioinfo.github.io/es/authors/aescalante/)
+[Dr. Alejandro Ponce](https://comunidadbioinfo.github.io/es/authors/aponce/)
+
 ## Temario 
 
 Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
