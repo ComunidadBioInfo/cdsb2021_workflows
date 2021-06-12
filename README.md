@@ -82,5 +82,10 @@ Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
 | 12:30-14:00 | Proyecto colaborativo                           | Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez |
 | 15:30-17:00 | Presentación de proyectos                       | Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez |
 
+# Patrocinadores
+
+Agradecemos a nuestros patrocinadores:
+
+<a href="https://comunidadbioinfo.github.io/es/post/cs_and_s_event_fund_award/#.YJH-wbVKj8A"><img src="https://comunidadbioinfo.github.io/post/2021-01-27-cs_and_s_event_fund_award/spanish_cs_and_s_award.jpeg" width="400px" align="center"/></a>
 
 
