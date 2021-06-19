@@ -61,7 +61,7 @@ Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
 | Horario     | Tema                                                | Instructor              |
 |-------------|-----------------------------------------------------|-------------------------|
 | 9:00-10:30  | Modificando los archivos de inicio de R             | Joselyn Chávez          |
-| 11:30-12:30 | Keynote: Buenas prácticas de escritura de funciones | Ángel Escalante         |
+| 11:30-12:30 | Keynote Código legible con R: buenas prácticas de escritura | Ángel Escalante         |
 | 15:30-16:30 | Mantenimiento del espacio de trabajo                | Joselyn Chávez          |
 | 16:30-17:30 | Instalación de paqueterías desde código fuente      | Joselyn Chávez          |
 
