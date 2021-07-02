@@ -16,6 +16,8 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 -	Control de versiones con GitHub.
 -	Creación de Shiny apps.
 
+[**¡Registrate aquí!**](http://congresos.nnb.unam.mx/EBM2021/)
+
 ## Instructores
 
 - [M.C. Joselyn Chávez](https://comunidadbioinfo.github.io/es/authors/josschavezf/)
@@ -23,8 +25,8 @@ Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas 
 - [Dr. Alejandro Reyes](https://comunidadbioinfo.github.io/es/authors/areyes/)
 - [Dra. Alejandra Medina-Rivera](https://comunidadbioinfo.github.io/es/authors/amedina/)
 - [M.C. María Teresa Ortiz](https://comunidadbioinfo.github.io/es/authors/mteresa/)
-- [Dra. Mirna Vázquez Rosas-Landa](https://comunidadbioinfo.github.io/es/authors/mteresa/mirnavrl/)
-- [M.C. Aurora Labastida](https://comunidadbioinfo.github.io/es/authors/mteresa/alabasti/)
+- [Dra. Mirna Vázquez Rosas-Landa](https://comunidadbioinfo.github.io/es/authors/mirnavrl/)
+- [M.C. Aurora Labastida](https://comunidadbioinfo.github.io/es/authors/alabasti/)
 
 ## Ponentes invitados
 
