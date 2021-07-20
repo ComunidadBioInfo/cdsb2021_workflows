@@ -1,0 +1,9 @@
+# Git y GitHub con RStudio
+
+Erick Cuevas-Fernández
+
+10 de agosto de 2021
+
+## Diapositivas
+
+## Actividad

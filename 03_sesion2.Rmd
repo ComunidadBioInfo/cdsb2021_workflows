@@ -1,0 +1,8 @@
+# Keynote: Buenas practicas de escritura de funciones
+
+Ángel Escalante
+
+11 de agosto de 2021
+
+## Diapositivas
+
