@@ -3,6 +3,8 @@ title: "Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny a
 author: "Joselyn Chávez, Erick Cuevas-Fernández, Alejandro Reyes, Alejandra Medina-Rivera, María Teresa Ortiz, Mirna Vázquez Rosas-Landa, Aurora Labastida, Ángel Escalante, Alejandro Ponce."
 site: bookdown::bookdown_site
 documentclass: book
+url: 'https://comunidadbioinfo.github.io/cdsb2021_workflows/'
+github-repo: "comunidadbioinfo/cdsb2021_workflows"
 output:
   bookdown::gitbook: default
   #bookdown::pdf_book: default

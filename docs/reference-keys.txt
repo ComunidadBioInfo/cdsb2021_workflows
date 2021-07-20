@@ -1,0 +1,14 @@
+instructores
+ponentes-invitados
+temario
+lunes-9-de-agosto
+martes-10-de-agosto
+miércoles-11-de-agosto
+jueves-12-de-agosto
+viernes-13-de-agosto
+patrocinadores
+rstudio-hacks
+diapositivas
+flujos-de-trabajo-con-proyectos-de-rstudio
+diapositivas-1
+actividad-1
