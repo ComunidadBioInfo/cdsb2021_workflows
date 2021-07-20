@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</title>
+  <meta name="description" content="Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  
+  
+  
+
+<meta name="author" content="Joselyn Chávez, Erick Cuevas-Fernández, Alejandro Reyes, Alejandra Medina-Rivera, María Teresa Ortiz, Mirna Vázquez Rosas-Landa, Aurora Labastida, Ángel Escalante, Alejandro Ponce." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="rstudio-hacks.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructores"><i class="fa fa-check"></i><b>0.1</b> Instructores</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#ponentes-invitados"><i class="fa fa-check"></i><b>0.2</b> Ponentes invitados</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#temario"><i class="fa fa-check"></i><b>0.3</b> Temario</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#lunes-9-de-agosto"><i class="fa fa-check"></i><b>0.3.1</b> Lunes 9 de agosto</a></li>
+<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#martes-10-de-agosto"><i class="fa fa-check"></i><b>0.3.2</b> Martes 10 de agosto</a></li>
+<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#miércoles-11-de-agosto"><i class="fa fa-check"></i><b>0.3.3</b> Miércoles 11 de agosto</a></li>
+<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#jueves-12-de-agosto"><i class="fa fa-check"></i><b>0.3.4</b> Jueves 12 de agosto</a></li>
+<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#viernes-13-de-agosto"><i class="fa fa-check"></i><b>0.3.5</b> Viernes 13 de agosto</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#patrocinadores"><i class="fa fa-check"></i><b>0.4</b> Patrocinadores</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html"><i class="fa fa-check"></i><b>1</b> RStudio hacks</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#diapositivas"><i class="fa fa-check"></i><b>1.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html"><i class="fa fa-check"></i><b>2</b> Flujos de trabajo con proyectos de RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#diapositivas-1"><i class="fa fa-check"></i><b>2.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="2.2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#actividad-1"><i class="fa fa-check"></i><b>2.2</b> Actividad 1</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</h1>
+<p class="author"><em>Joselyn Chávez, Erick Cuevas-Fernández, Alejandro Reyes, Alejandra Medina-Rivera, María Teresa Ortiz, Mirna Vázquez Rosas-Landa, Aurora Labastida, Ángel Escalante, Alejandro Ponce.</em></p>
+</div>
+<div id="bienvenida" class="section level1 unnumbered">
+<h1>Bienvenida</h1>
+<p>Bienvenidos al Workshop Flujos de trabajo con RStudio y creación de Shiny apps!</p>
+<p align="justify">
+<p>En este taller haremos un recorrido por las configuraciones avanzadas de RStudio y te hablaremos sobre las buenas prácticas para organizar tu código en proyectos de RStudio. Además, te mostraremos cómo trabajar en proyectos colaborativos usando control de versiones y cómo resolver conflictos al trabajar en este tipo de proyectos. Finalizaremos con un recorrido introductorio sobre las aplicaciones de Shiny y te mostraremos cómo crear tu primera aplicación.</p>
+Todas las sesiones serán teóricas y prácticas. Nos enfocaremos en tres temas principales:
+</p>
+<ul>
+<li>Manejo de proyectos de RStudio.</li>
+<li>Control de versiones con GitHub.</li>
+<li>Creación de Shiny apps.</li>
+</ul>
+<div id="instructores" class="section level2" number="0.1">
+<h2><span class="header-section-number">0.1</span> Instructores</h2>
+<ul>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/josschavezf/">M.C. Joselyn Chávez</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/erickcufe/">M.C. Erick Cuevas-Fernández</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/areyes/">Dr. Alejandro Reyes</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/amedina/">Dra. Alejandra Medina-Rivera</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/mteresa/">M.C. María Teresa Ortiz</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/mirnavrl/">Dra. Mirna Vázquez Rosas-Landa</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/alabasti/">M.C. Aurora Labastida</a></li>
+</ul>
+</div>
+<div id="ponentes-invitados" class="section level2" number="0.2">
+<h2><span class="header-section-number">0.2</span> Ponentes invitados</h2>
+<ul>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/anab/">Dra. Ana Beatriz Villaseñor Altamirano</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/aescalante/">Lic. Ángel Escalante</a></li>
+<li><a href="https://comunidadbioinfo.github.io/es/authors/aponce/">Dr. Alejandro Ponce</a></li>
+</ul>
+</div>
+<div id="temario" class="section level2" number="0.3">
+<h2><span class="header-section-number">0.3</span> Temario</h2>
+<p>Consulta el calendario de este curso en: <a href="http://bit.ly/calendarcdsb2021" class="uri">http://bit.ly/calendarcdsb2021</a></p>
+<div id="lunes-9-de-agosto" class="section level3" number="0.3.1">
+<h3><span class="header-section-number">0.3.1</span> Lunes 9 de agosto</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10:00-11:00</td>
+<td>Hacks de RStudio</td>
+<td>Erick Cuevas Fernández</td>
+</tr>
+<tr class="even">
+<td>11:30-13:00</td>
+<td>Flujo de trabajo con proyectos de RStudio</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="odd">
+<td>13:00-14:00</td>
+<td>Generando mi primer proyecto de RStudio</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>15:30-16:30</td>
+<td>Trabajando con paths seguros</td>
+<td>María Teresa Ortiz</td>
+</tr>
+<tr class="odd">
+<td>16:30-17:30</td>
+<td>Buenas prácticas para nombrar archivos</td>
+<td>María Teresa Ortiz</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="martes-10-de-agosto" class="section level3" number="0.3.2">
+<h3><span class="header-section-number">0.3.2</span> Martes 10 de agosto</h3>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="51%" />
+<col width="35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-10:00</td>
+<td>Introducción a Git y GitHub desde terminal</td>
+<td>Mirna Vázquez Rosas-Landa</td>
+</tr>
+<tr class="even">
+<td>10:00-11:00</td>
+<td>Generando un proyecto colaborativo con Git/GitHub</td>
+<td>Aurora Labastida</td>
+</tr>
+<tr class="odd">
+<td>11:30-12:00</td>
+<td>Keynote: La comunidad R-Ladies</td>
+<td>Ana Beatriz Villaseñor Altamirano</td>
+</tr>
+<tr class="even">
+<td>12:00-14:00</td>
+<td>Git y GitHub con RStudio</td>
+<td>Erick Cuevas Fernández</td>
+</tr>
+<tr class="odd">
+<td>15:30-17:30</td>
+<td>Merge y conflictos de versiones en Git y GitHub</td>
+<td>Alejandra Medina Rivera</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="miércoles-11-de-agosto" class="section level3" number="0.3.3">
+<h3><span class="header-section-number">0.3.3</span> Miércoles 11 de agosto</h3>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="58%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-10:30</td>
+<td>Modificando los archivos de inicio de R</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>11:30-12:30</td>
+<td>Keynote Código legible con R: buenas prácticas de escritura</td>
+<td>Ángel Escalante</td>
+</tr>
+<tr class="odd">
+<td>15:30-16:30</td>
+<td>Mantenimiento del espacio de trabajo</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>16:30-17:30</td>
+<td>Instalación de paqueterías desde código fuente</td>
+<td>Joselyn Chávez</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="jueves-12-de-agosto" class="section level3" number="0.3.4">
+<h3><span class="header-section-number">0.3.4</span> Jueves 12 de agosto</h3>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="41%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-11:00</td>
+<td>Introducción a Shiny</td>
+<td>Erick Cuevas Fernández</td>
+</tr>
+<tr class="even">
+<td>11:30-14:00</td>
+<td>Creando mi primera aplicación de Shiny</td>
+<td>Alejandro Reyes</td>
+</tr>
+<tr class="odd">
+<td>15:30-17:30</td>
+<td>Proyecto colaborativo</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="viernes-13-de-agosto" class="section level3" number="0.3.5">
+<h3><span class="header-section-number">0.3.5</span> Viernes 13 de agosto</h3>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="41%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-11:00</td>
+<td>Proyecto colaborativo</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>11:30-12:30</td>
+<td>Keynote: Aplicaciones ShinyR en la vida diaria</td>
+<td>Alejandro Ponce</td>
+</tr>
+<tr class="odd">
+<td>12:30-14:00</td>
+<td>Proyecto colaborativo</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>15:30-17:00</td>
+<td>Presentación de proyectos</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="patrocinadores" class="section level2" number="0.4">
+<h2><span class="header-section-number">0.4</span> Patrocinadores</h2>
+<p>Agradecemos a nuestros patrocinadores:</p>
+<p><a href="https://comunidadbioinfo.github.io/es/post/cs_and_s_event_fund_award/#.YJH-wbVKj8A"><img src="https://comunidadbioinfo.github.io/post/2021-01-27-cs_and_s_event_fund_award/spanish_cs_and_s_award.jpeg" width="400px" align="center"/></a></p>
+<p><a href="https://www.r-consortium.org/"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" width="400px" align="center"/></a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="rstudio-hacks.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
