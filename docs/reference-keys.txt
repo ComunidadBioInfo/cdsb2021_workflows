@@ -65,3 +65,5 @@ opción-2-creando-un-proyecto-en-un-directorio-existente.
 por-qué-usar-proyectos-de-rstudio
 algunos-hacks
 prueba
+misión-de-rstudio
+historia-de-rstudio
