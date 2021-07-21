@@ -55,8 +55,14 @@ knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_s
 
 - Te permiten ser más organizado y pasar de tener una ensalada de archivos a tener carpetas para cada sección del análisis.
 
-<img src="img/salad.png" width="150" height="110" /> <img src="img/filesorder.png" width="150" height="110" />
- 
+
+```{r,echo=FALSE, fig.align='center', out.width='60%'}
+library(cowplot)
+ggdraw() + 
+  draw_image("img/salad.png", width = 0.4) + 
+  draw_image("img/filesorder.png", width = 0.5, x = 0.5)
+```
+
 
 - Compartamentalizas tu trabajo al generar un proyecto específico para cada análisis.
 
@@ -79,7 +85,7 @@ knitr::include_graphics("img/multisesion.png")
 - Nos ayuda a establecer colaboraciones y trabajar con plataformas de control de versiones.
 
 ```{r,echo=FALSE, fig.align='center', out.width='40%'}
-library(cowplot)
+#library(cowplot)
 ggdraw() + 
   draw_image("img/GitHubLogo.png", width = 0.6) + 
   draw_image("img/gitlablogo.jpg", width = 0.5, x = 0.5)
