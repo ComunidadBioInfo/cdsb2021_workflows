@@ -5,3 +5,11 @@ Erick Cuevas Fernández
 9 de agosto de 2021
 
 ## Diapositivas
+
+
+## Misión de RStudio
+
+*"RStudio’s mission is to create free and open-source software for data science, scientific research, and technical communication. We do this to enhance the production and consumption of knowledge by everyone, regardless of economic means, and to facilitate collaboration and reproducible research, both of which are critical to the integrity and efficacy of work in science, education, government, and industry."*
+
+
+
