@@ -56,3 +56,12 @@ keynote-aplicaciones-shinyr-en-la-vida-diaria
 diapositivas-15
 presentación-de-proyectos
 proyectos
+licencia
+actividad-11
+qué-es-un-proyecto-de-rstudio
+cómo-generamos-un-proyecto-de-rstudio
+opción-1-creando-un-proyecto-en-un-directorio-nuevo.
+opción-2-creando-un-proyecto-en-un-directorio-existente.
+por-qué-usar-proyectos-de-rstudio
+algunos-hacks
+prueba

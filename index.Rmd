@@ -98,5 +98,14 @@ Agradecemos a nuestros patrocinadores:
 
 <a href="https://www.r-consortium.org/"><img src="https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png" width="400px" align="center"/></a>
 
+## Licencia
 
+Este material posee una licencia tipo Creative Commons Attribution-ShareAlike 4.0 International License. 
 
+Para conocer más sobre esta licencia, visite http://creativecommons.org/licenses/by-sa/4.0/
+
+Este material está basado en:
+
+- RStudioConf2020 workshop [What They Forgot](https://rstd.io/wtf-2020-rsc).
+- El material de [Happy Git with R](https://happygitwithr.com).
+- El libro [Mastering Shiny](https://mastering-shiny.org)
