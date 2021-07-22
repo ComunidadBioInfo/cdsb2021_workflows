@@ -67,3 +67,7 @@ algunos-hacks
 prueba
 misión-de-rstudio
 historia-de-rstudio
+generando-mi-primer-proyecto-de-rstudio
+buenas-prácticas-para-ordenar-tu-proyecto
+utiliza-las-rutas-adecuadas-a-los-archivos
+compartiendo-tus-proyectos

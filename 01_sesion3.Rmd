@@ -1,4 +1,4 @@
-# Generando mi primer proyecto
+# Generando mi primer proyecto de RStudio
 
 Joselyn Chávez
 
@@ -6,4 +6,55 @@ Joselyn Chávez
 
 ## Diapositivas
 
-## Actividad 1
+[
+```{r, echo=FALSE}
+knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_sesion3.html",
+  height = "380px")
+```
+](https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_sesion3.html)
+
+## Buenas prácticas para ordenar tu proyecto
+
+Genera carpetas con:
+
+- Entradas (datos originales y datos filtrados).
+- Procedimientos (Rscripts con el filtrado, manejo de datos, análisis, generación de gráficas).
+- Salidas (Gráficas generadas y resultados).
+
+```{r, echo=FALSE, out.width='35%', fig.align='center'}
+knitr::include_graphics("img/proyecto1.png")
+```
+
+| **Actividad 1**|
+|----------------|
+| Descarga el proyecto desde https://bit.ly/driveCDSB2021 y ordena los archivos en subcarpetas, considera las recomendaciones mencionadas anteriormente. |
+
+## Utiliza las rutas adecuadas a los archivos
+
+Ahora que has reorganizado tu proyecto, debes usar las rutas relativas para importar y exportar tus archivos en sus directorios correspondientes.
+
+Recuerda que la raiz de tu proyecto será el directorio principal.
+
+Por ejemplo:
+
+```{r,echo=FALSE,out.width='30%',fig.align='center'}
+knitr::include_graphics("img/rutas.png")
+```
+
+```{r, eval=FALSE}
+tb <- read.table("datos/mis_datos.txt", header = TRUE)
+```
+
+| **Actividad 2**|
+|----------------|
+| - Con tu proyecto ordenado, abre el archivo analisis.R y corrige las rutas a los archivos considerando los subdirectorios que creaste. <br> - Mejora aún más tu proyecto! Secciona tu código y crea nuevos scripts con cada una de las secciones que detectes en el análisis.|
+
+## Compartiendo tus proyectos
+
+Una de las ventajas de usar proyectos de RStudio es facilitar la colaboración con otras personas, así como compartir tu código de manera reproducible.
+
+Lo más común es utilizar control de versiones, por ejemplo en GitHub o GitLab. Pero comencemos compartiendo nuestro proyecto mediante Drive. 
+
+| **Actividad 3**|
+|----------------|
+|Genera un proyecto en tu computadora que contenga lo siguiente: <br> - Un Rscript o Rmd con un pequeño análisis usando datos públicos de R, por ejemplo puedes usar los datos [palmperpinguins](https://allisonhorst.github.io/palmerpenguins/), [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html), o los conjuntos de datos en español del paquete [datos](https://github.com/cienciadedatos/datos). <br> - Genera al menos un archivo de salida, por ejemplo una gráfica, una tabla, un archivo de texto o un html relacionado con tu análisis. <br> - Crea los subdirectorios necesarios para ordernar tu proyecto y verifica que tu Rscript o Rmd contenga las rutas necesarias para leer o escribir estos archivos en las subcarpetas. <br> - Inercambien proyectos: Carga tu proyecto completo en el Drive https://bit.ly/driveCDSB2021 y pídele a tu compañera/o que lo descargue y compruebe que puede ejecutar el análisis en su computadora.|
