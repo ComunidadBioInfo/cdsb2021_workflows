@@ -151,7 +151,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#diapositivas"><i class="fa fa-check"></i><b>1.1</b> Diapositivas</a></li>
 <li class="chapter" data-level="1.2" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#misión-de-rstudio"><i class="fa fa-check"></i><b>1.2</b> Misión de RStudio</a></li>
-<li class="chapter" data-level="1.3" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#historia-de-rstudio"><i class="fa fa-check"></i><b>1.3</b> Historia de RStudio</a></li>
+<li class="chapter" data-level="1.3" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#equipo-de-rstudio"><i class="fa fa-check"></i><b>1.3</b> Equipo de RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#historia-de-rstudio"><i class="fa fa-check"></i><b>1.4</b> Historia de RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#primeros-consejos-para-iniciar"><i class="fa fa-check"></i><b>1.5</b> Primeros consejos para iniciar</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html"><i class="fa fa-check"></i><b>2</b> Flujos de trabajo con proyectos de RStudio</a>
 <ul>
@@ -269,11 +271,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="misión-de-rstudio" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Misión de RStudio</h2>
-<p><em>“RStudio’s mission is to create free and open-source software for data science, scientific research, and technical communication. We do this to enhance the production and consumption of knowledge by everyone, regardless of economic means, and to facilitate collaboration and reproducible research, both of which are critical to the integrity and efficacy of work in science, education, government, and industry.”</em></p>
+<p><em>“La misión de RStudio es crear software gratuito y de código abierto para ciencia de datos, investigación científica y comunicación técnica. Hacemos esto para mejorar la producción y el consumo de conocimiento por parte de todos, independientemente de los medios económicos, y para facilitar la colaboración y la investigación reproducible, las cuales son críticas”</em></p>
 </div>
-<div id="historia-de-rstudio" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Historia de RStudio</h2>
+<div id="equipo-de-rstudio" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Equipo de RStudio</h2>
+<p><em>“Las personas que se han unido a RStudio en este viaje son extraordinarias. Incluyen un número excepcional de los científicos de datos y desarrolladores de software de código abierto más productivos y respetados del mundo.”</em></p>
+</div>
+<div id="historia-de-rstudio" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Historia de RStudio</h2>
 <p><img src="img/timeline_rstudio.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="primeros-consejos-para-iniciar" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Primeros consejos para iniciar</h2>
+<p>Al abrir RStudio la consola nos arroja el mensaje que se muestra a continuación en la imagen. En este mensaje nos indica la versión de R que tenemos instalada y la plataforma en la que estamos trabajando. Para citar R en alguna publicación basta con usar la función <code>citation()</code>. Y para conocer a todo el equipo detrás del desarrollo de R, puedes consultarlo con la función <code>contributors()</code>.
+R y RStudio están diseñados para que muchas personas puedan aprenderlo desde cero, con tan solo este primer mensaje todo usuario podría empezar a aprender R; para empezar a aprender R intenta usar la función en tu consola de <code>help.start()</code> con el cual se desplegará un menú en <em>HTML</em> con todos los manuales para aprender a usar R, también aparecerán los manuales de todas las paqueterías del repositorio de <strong>CRAN</strong> (<em>The Comprehensive R archive Network</em>) así como enlaces a noticias del mundo de R.</p>
+<p><img src="img/iniciors_1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Otro consejo útil al momento de iniciar con el uso de una paquetería o función en particular es ejecutar la función <code>demo()</code>. Esta función se puede utilizar con los siguientes argumentos.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio-hacks.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(topic, <span class="at">package =</span> <span class="cn">NULL</span>, <span class="at">lib.loc =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-2"><a href="rstudio-hacks.html#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">character.only =</span> <span class="cn">FALSE</span>, <span class="at">verbose =</span> <span class="fu">getOption</span>(<span class="st">&quot;verbose&quot;</span>),</span>
+<span id="cb1-3"><a href="rstudio-hacks.html#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="at">ask =</span> <span class="fu">getOption</span>(<span class="st">&quot;demo.ask&quot;</span>),</span>
+<span id="cb1-4"><a href="rstudio-hacks.html#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">encoding =</span> <span class="fu">getOption</span>(<span class="st">&quot;encoding&quot;</span>))</span></code></pre></div>
+<p>Para desplegar todos las <em>demostraciones</em> disponibles ejecuta la función como se muestra a continuación:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="rstudio-hacks.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(<span class="at">package =</span> <span class="fu">.packages</span>(<span class="at">all.available =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
 
 </div>
 </div>

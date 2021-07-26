@@ -66,3 +66,5 @@ keynote-aplicaciones-shinyr-en-la-vida-diaria
 diapositivas-15
 presentación-de-proyectos
 proyectos
+equipo-de-rstudio
+primeros-consejos-para-iniciar
