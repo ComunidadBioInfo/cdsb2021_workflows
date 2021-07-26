@@ -46,3 +46,7 @@ Para desplegar todos las *demostraciones* disponibles ejecuta la función como s
 demo(package = .packages(all.available = TRUE))
 ```
 
+
+### La interfaz gráfica de RStudio
+
+RStudio es un *entorno de desarrollo integrado* (IDE) para R. Su interfaz gráfica incluye 4 paneles principales. 

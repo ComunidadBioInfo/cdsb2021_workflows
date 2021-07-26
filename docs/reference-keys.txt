@@ -68,3 +68,4 @@ presentación-de-proyectos
 proyectos
 equipo-de-rstudio
 primeros-consejos-para-iniciar
+la-interfaz-gráfica-de-rstudio
