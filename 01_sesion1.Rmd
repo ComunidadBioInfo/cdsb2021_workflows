@@ -9,8 +9,11 @@ Erick Cuevas Fernández
 
 ## Misión de RStudio
 
-*"RStudio’s mission is to create free and open-source software for data science, scientific research, and technical communication. We do this to enhance the production and consumption of knowledge by everyone, regardless of economic means, and to facilitate collaboration and reproducible research, both of which are critical to the integrity and efficacy of work in science, education, government, and industry."*
+*"La misión de RStudio es crear software gratuito y de código abierto para ciencia de datos, investigación científica y comunicación técnica. Hacemos esto para mejorar la producción y el consumo de conocimiento por parte de todos, independientemente de los medios económicos, y para facilitar la colaboración y la investigación reproducible, las cuales son críticas"*
 
+## Equipo de RStudio
+
+*"Las personas que se han unido a RStudio en este viaje son extraordinarias. Incluyen un número excepcional de los científicos de datos y desarrolladores de software de código abierto más productivos y respetados del mundo."*
 
 ## Historia de RStudio 
 
@@ -19,4 +22,11 @@ knitr::include_graphics("img/timeline_rstudio.png")
 ```
 
 
+## Primeros consejos para iniciar
+
+Al abrir RStudio la consola nos arroja el mensaje que se muestra a continuación en la imagen. En este mensaje nos indica la versión de R que tenemos instalada y la plataforma en la que estamos trabajando. Para citar R en alguna publicación basta con usar la función `citation()`. Y para conocer a todo el equipo detrás del desarrollo de R, puedes consultarlo con la función `contributors()`. 
+R y RStudio están diseñados para que muchas personas puedan aprenderlo desde cero, con tan solo este primer mensaje todo usuario podría empezar a aprender R. 
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/iniciors_1.png")
+```
 
