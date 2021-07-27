@@ -50,6 +50,20 @@ Como precaución de seguridad, GitHub elimina automáticamente los tokens de acc
 
 Una vez que tengas un token, puedes ingresarlo en lugar de tu contraseña cuando realices operaciones de Git a través de HTTPS.
 
+El punto final es que una vez configurada una PAT, varios paquetes de R, incluidos *usethis* y *gh*, podrán trabajar con la API de GitHub en su nombre, de forma automática. Por lo tanto, una PAT configurada correctamente significa que todo esto funcionará a la perfección:
 
+    - Operaciones HTTPS remotas a través de la línea de comando Git y, por lo tanto, a través de RStudio
+    - Operaciones HTTPS remotas a través del paquete gert R y, por lo tanto, usethis
+    - Operaciones de la API de GitHub a través del paquete gh R y, por lo tanto, usethis
+
+**¿Cómo crear un token desde R?**
+
+Puedes ir directamente a la página de GitHub a la parte para generar tu token de acceso personal mediante la siguiente función: 
+
+```{r, eval=FALSE}
+usethis::create_github_token()
+```
+
+Y con las opciones que se mencionaban anteriormente puedes configurar y crear tu **PAT**. 
 
 ## Actividad
