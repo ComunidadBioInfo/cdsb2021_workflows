@@ -68,3 +68,15 @@ Para que la app esté completa necesitas solo 4 cosas en tu **app.R**:
 
 **Genera un archivo app.R listo para hacer una Shiny app.** Puedes generar solo un app.R y posteriormente escribir en la consola "shinyapp" y presionar `Shift + Tab`
 
+
+## La Interfaz de Usuario (**UI**)
+
+Shiny por default usa [*bootstrap*](https://getbootstrap.com) (lo cual no tiene nada que ver con el método estadistico bootstrap). Esto es un marco de trabajo de HTML, CSS y Javascript más popular para desarrollar sitios web receptivos. 
+
+**OJO**: si sabes usar HTML puedes usar todos los tags en Shiny. Puedes consultar estos tags con la siguiente función:
+
+```{r, eval=FALSE}
+shiny::tags
+```
+
+

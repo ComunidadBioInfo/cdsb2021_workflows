@@ -153,10 +153,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#misión-de-rstudio"><i class="fa fa-check"></i><b>1.2</b> Misión de RStudio</a></li>
 <li class="chapter" data-level="1.3" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#equipo-de-rstudio"><i class="fa fa-check"></i><b>1.3</b> Equipo de RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#historia-de-rstudio"><i class="fa fa-check"></i><b>1.4</b> Historia de RStudio</a></li>
-<li class="chapter" data-level="1.5" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#primeros-consejos-para-iniciar"><i class="fa fa-check"></i><b>1.5</b> Primeros consejos para iniciar</a>
-<ul>
-<li class="chapter" data-level="1.5.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#la-interfaz-gráfica-de-rstudio"><i class="fa fa-check"></i><b>1.5.1</b> La interfaz gráfica de RStudio</a></li>
-</ul></li>
+<li class="chapter" data-level="1.5" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#primeros-consejos-para-iniciar"><i class="fa fa-check"></i><b>1.5</b> Primeros consejos para iniciar</a></li>
+<li class="chapter" data-level="1.6" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#la-interfaz-gráfica-de-rstudio"><i class="fa fa-check"></i><b>1.6</b> La interfaz gráfica de RStudio</a></li>
+<li class="chapter" data-level="1.7" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#atajos-con-el-teclado-en-rstudio"><i class="fa fa-check"></i><b>1.7</b> Atajos con el teclado en RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html"><i class="fa fa-check"></i><b>2</b> Flujos de trabajo con proyectos de RStudio</a>
 <ul>
@@ -238,6 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-8"><i class="fa fa-check"></i><b>14.3.1</b> Actividad</a></li>
 </ul></li>
+<li class="chapter" data-level="14.4" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-interfaz-de-usuario-ui"><i class="fa fa-check"></i><b>14.4</b> La Interfaz de Usuario (<strong>UI</strong>)</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html"><i class="fa fa-check"></i><b>15</b> Mi primera aplicación ShinyR</a>
 <ul>
@@ -330,8 +330,14 @@ Shiny es un paquete de R que nos permite generar módulos de mando web interacti
 <div id="actividad-8" class="section level3" number="14.3.1">
 <h3><span class="header-section-number">14.3.1</span> Actividad</h3>
 <p><strong>Genera un archivo app.R listo para hacer una Shiny app.</strong> Puedes generar solo un app.R y posteriormente escribir en la consola “shinyapp” y presionar <code>Shift + Tab</code></p>
-
 </div>
+</div>
+<div id="la-interfaz-de-usuario-ui" class="section level2" number="14.4">
+<h2><span class="header-section-number">14.4</span> La Interfaz de Usuario (<strong>UI</strong>)</h2>
+<p>Shiny por default usa <a href="https://getbootstrap.com"><em>bootstrap</em></a> (lo cual no tiene nada que ver con el método estadistico bootstrap). Esto es un marco de trabajo de HTML, CSS y Javascript más popular para desarrollar sitios web receptivos.</p>
+<p><strong>OJO</strong>: si sabes usar HTML puedes usar todos los tags en Shiny. Puedes consultar estos tags con la siguiente función:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducción-a-shiny.html#cb3-1" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span>tags</span></code></pre></div>
+
 </div>
 </div>
             </section>
