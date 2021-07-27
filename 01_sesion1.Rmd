@@ -47,6 +47,20 @@ demo(package = .packages(all.available = TRUE))
 ```
 
 
-### La interfaz gráfica de RStudio
+## La interfaz gráfica de RStudio
 
 RStudio es un *entorno de desarrollo integrado* (IDE) para R. Su interfaz gráfica incluye 4 paneles principales. 
+
+
+## Atajos con el teclado en RStudio
+
+**NOTA**: en windows en vez de `command` usa `control` 
+
+- `%>%` : `command` + `Shift` + `m`  
+- Para comentar código: `command` + `Shift` + `c`
+- Expandir cursor: mantén presionado `Alt` + usa el cursor
+- Ejecutar en la terminal líena de código y saltar a la siguiente línea de código: `command` + `Enter`
+- Ejecutar en la terminal línea de código y mantenerse en la línea de código: `Alt` + `Enter`
+
+
+

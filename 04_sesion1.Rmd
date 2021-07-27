@@ -55,6 +55,7 @@ En RStudio puedes generar una nueva app con este molde de código mediante los s
 
 1. Crea un nuevo directorio y un archivo **app.R** que contenga una aplicación básica en un solo paso haciendo clic en *Archivo* | *Nuevo proyecto*, luego selecciona *Nuevo directorio* y *Shiny Web Application*.
 2. Si ya has creado el archivo **app.R**, puedes agregar rápidamente el texto estándar de la aplicación escribiendo "shinyapp" y presionando `Shift + Tab`.
+3. También puedes hacer dos scripts por separado, **ui.R** y **server.R** y ejecutar ambos en la app.R con `shinyApp(ui = ui.R, server = server.R)`.
 
 Para que la app esté completa necesitas solo 4 cosas en tu **app.R**:
 
@@ -63,4 +64,7 @@ Para que la app esté completa necesitas solo 4 cosas en tu **app.R**:
 3. Especificar el comportamiento de nuestra aplicación definiendo una función de `server`.
 4. Ejecutar `shinyApp(ui, server)` para construir e iniciar una Shiny app.
 
-## Actividad
+### Actividad
+
+**Genera un archivo app.R listo para hacer una Shiny app.** Puedes generar solo un app.R y posteriormente escribir en la consola "shinyapp" y presionar `Shift + Tab`
+

@@ -234,8 +234,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="14.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#diapositivas-13"><i class="fa fa-check"></i><b>14.1</b> Diapositivas</a></li>
 <li class="chapter" data-level="14.2" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#qué-es-y-para-qué-me-sirve-shiny"><i class="fa fa-check"></i><b>14.2</b> ¿Qué es y para qué me sirve Shiny?</a></li>
-<li class="chapter" data-level="14.3" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-estructura-canónica-de-shiny"><i class="fa fa-check"></i><b>14.3</b> La estructura canónica de Shiny</a></li>
-<li class="chapter" data-level="14.4" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-8"><i class="fa fa-check"></i><b>14.4</b> Actividad</a></li>
+<li class="chapter" data-level="14.3" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-estructura-canónica-de-shiny"><i class="fa fa-check"></i><b>14.3</b> La estructura canónica de Shiny</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-8"><i class="fa fa-check"></i><b>14.3.1</b> Actividad</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html"><i class="fa fa-check"></i><b>15</b> Mi primera aplicación ShinyR</a>
 <ul>
@@ -315,6 +317,7 @@ Shiny es un paquete de R que nos permite generar módulos de mando web interacti
 <ol style="list-style-type: decimal">
 <li>Crea un nuevo directorio y un archivo <strong>app.R</strong> que contenga una aplicación básica en un solo paso haciendo clic en <em>Archivo</em> | <em>Nuevo proyecto</em>, luego selecciona <em>Nuevo directorio</em> y <em>Shiny Web Application</em>.</li>
 <li>Si ya has creado el archivo <strong>app.R</strong>, puedes agregar rápidamente el texto estándar de la aplicación escribiendo “shinyapp” y presionando <code>Shift + Tab</code>.</li>
+<li>También puedes hacer dos scripts por separado, <strong>ui.R</strong> y <strong>server.R</strong> y ejecutar ambos en la app.R con <code>shinyApp(ui = ui.R, server = server.R)</code>.</li>
 </ol>
 <p>Para que la app esté completa necesitas solo 4 cosas en tu <strong>app.R</strong>:</p>
 <ol style="list-style-type: decimal">
@@ -324,10 +327,11 @@ Shiny es un paquete de R que nos permite generar módulos de mando web interacti
 <li>Especificar el comportamiento de nuestra aplicación definiendo una función de <code>server</code>.</li>
 <li>Ejecutar <code>shinyApp(ui, server)</code> para construir e iniciar una Shiny app.</li>
 </ol>
-</div>
-<div id="actividad-8" class="section level2" number="14.4">
-<h2><span class="header-section-number">14.4</span> Actividad</h2>
+<div id="actividad-8" class="section level3" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> Actividad</h3>
+<p><strong>Genera un archivo app.R listo para hacer una Shiny app.</strong> Puedes generar solo un app.R y posteriormente escribir en la consola “shinyapp” y presionar <code>Shift + Tab</code></p>
 
+</div>
 </div>
 </div>
             </section>

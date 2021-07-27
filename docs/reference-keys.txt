@@ -76,3 +76,4 @@ credenciales-https-en-cache
 qué-es-y-para-qué-me-sirve-shiny
 la-estructura-canonica-de-shiny
 la-estructura-canónica-de-shiny
+atajos-con-el-teclado-en-rstudio
