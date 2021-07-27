@@ -6,4 +6,12 @@ Erick Cuevas-Fernández
 
 ## Diapositivas
 
+## Primeros pasos con Git en RStudio
+
+- Por cualquier problema con la conexión entre RStudio y Git, siempre ten en cuenta la ubicación de dónde se instaló Git. 
+    - Puedes usar en la terminal `which git` (Mac y Linux)
+    - o bien usar en la terminal `where git` (Windows)
+    
+- 
+
 ## Actividad

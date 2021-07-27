@@ -69,3 +69,4 @@ proyectos
 equipo-de-rstudio
 primeros-consejos-para-iniciar
 la-interfaz-gráfica-de-rstudio
+primeros-pasos-con-git-en-rstudio
