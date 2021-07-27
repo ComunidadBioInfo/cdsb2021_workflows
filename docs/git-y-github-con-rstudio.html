@@ -137,7 +137,10 @@
 <li class="chapter" data-level="8" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html"><i class="fa fa-check"></i><b>8</b> Git y GitHub con RStudio</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#diapositivas-7"><i class="fa fa-check"></i><b>8.1</b> Diapositivas</a></li>
-<li class="chapter" data-level="8.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario"><i class="fa fa-check"></i><b>8.2</b> Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)</a></li>
+<li class="chapter" data-level="8.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario"><i class="fa fa-check"></i><b>8.2</b> Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#credenciales-https-en-cache"><i class="fa fa-check"></i><b>8.2.1</b> Credenciales HTTPS en <strong>Cache</strong></a></li>
+</ul></li>
 <li class="chapter" data-level="8.3" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#actividad-3"><i class="fa fa-check"></i><b>8.3</b> Actividad</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html"><i class="fa fa-check"></i><b>9</b> Merge y conflictos de versiones en Git y GitHub</a>
@@ -231,6 +234,26 @@
 </ul></li>
 <li>Usualmente cuando inicies un proyecto colaborativo con GitHub inicializa el ropositorio con un README. Copia el HTTPS URL para clonar el repositorio en la <em>terminal</em> <code>git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git</code>.</li>
 </ul>
+<div id="credenciales-https-en-cache" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Credenciales HTTPS en <strong>Cache</strong></h3>
+<p>Puedes crear un token de acceso personal, <strong>PAT</strong> (<em>PERSONAL ACCESS TOKEN</em>), esa será tu credencial para HTTPS. Es una alternativa al uso de contraseñas para la autenticación en GitHub cuando utilizas la API de GitHub o la línea de comandos.
+Como precaución de seguridad, GitHub elimina automáticamente los tokens de acceso personales que no se han usado durante un año.</p>
+<p><strong>¿Cómo crear un token?</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Ve a tu perfil de GitHub, dale click a la imagen de perfil (usualmente en la esquina superior derecha), y busca la opción de <em>settings</em> ó <em>configuración</em> según sea la configuración de idioma que tengas.</p></li>
+<li><p>Da click a continuación en <em>Developer settings</em> ó <em>Parámetros del desarrollador</em>.</p></li>
+<li><p>En la barra lateral izquierda da click en <em>Tokens de acceso personal</em>.</p></li>
+<li><p>Haz click en <em>Generar un nuevo token</em>.</p></li>
+<li><p>Asígna un nombre descriptivo a tu token.</p></li>
+<li><p>Selecciona los alcances o permisos que deseas otorgarle a este token. Para usar tu token para acceder a repositorios desde la línea de comando, selecciona repo.</p></li>
+<li><p>Finalmente haz click en <em>generar token</em>.</p></li>
+<li><p>Listo, copia y pega tu token en el lugar dónde siempre lo puedas volver a copiar, ya que por razones de seguridad, una vez salgas de la página no podrás volver a ver el token.</p></li>
+</ol>
+<ul>
+<li>Nota: Preserva tus tokens de la misma manera que tus contraseñas y no se las reveles a nadie. Cuando trabajes con la API, usa tokens como variables del entorno en lugar de codificarlos de forma rígida en tus programas.</li>
+</ul>
+<p>Una vez que tengas un token, puedes ingresarlo en lugar de tu contraseña cuando realices operaciones de Git a través de HTTPS.</p>
+</div>
 </div>
 <div id="actividad-3" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Actividad</h2>
