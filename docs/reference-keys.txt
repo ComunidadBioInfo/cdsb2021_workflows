@@ -70,3 +70,5 @@ equipo-de-rstudio
 primeros-consejos-para-iniciar
 la-interfaz-gráfica-de-rstudio
 primeros-pasos-con-git-en-rstudio
+manual-de-sobreviviencia-con-git-en-rstudio-en-caso-de-ser-necesario
+manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario

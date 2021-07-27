@@ -6,12 +6,23 @@ Erick Cuevas-Fernández
 
 ## Diapositivas
 
-## Primeros pasos con Git en RStudio
+## Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)
 
 - Por cualquier problema con la conexión entre RStudio y Git, siempre ten en cuenta la ubicación de dónde se instaló Git. 
     - Puedes usar en la terminal `which git` (Mac y Linux)
-    - o bien usar en la terminal `where git` (Windows)
+    - O bien usar en la terminal `where git` (Windows)
     
-- 
+- Recuerda que la terminal (o línea de comandos ó consola ó shell ó bash) es un programa en tu computadora que funciona para correr otros programas. Desde RStudio puedes abrir la **terminal**, lo cual es muy conveniente si estás trabajando en un proyecto. Puedes abrir una terminal con:
+    - *Tools > Terminal* (abre la terminal dentro del IDE de RStudio)
+    - *Tools > Shell* (abre una terminal externa a RStudio)
+
+- La recomendación actual de **GitHub** es usar *HTTPS* porque es la manera más fácil de configurar y tiene operabilidad en multiples redes y plataformas.  
+    - Es menos probable que HTTPS sea bloqueado por un firewall.
+    - Una conexión HTTPS permite que `credential.helper` almacene en caché su contraseña. (por tanto puedes configurar tu usuario y contraseña en tu equipo de uso)
+    - Es más sencillo acceder a un repositorio desde cualquier lugar, ya que solo necesita los detalles de su cuenta (no se requieren claves SSH) para escribir en el repositorio.
+    
+- Usualmente cuando inicies un proyecto colaborativo con GitHub inicializa el ropositorio con un README. Copia el HTTPS URL para clonar el repositorio en la *terminal* `git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git`. 
+    
+    
 
 ## Actividad

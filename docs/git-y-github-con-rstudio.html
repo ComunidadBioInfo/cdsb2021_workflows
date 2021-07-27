@@ -137,7 +137,7 @@
 <li class="chapter" data-level="8" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html"><i class="fa fa-check"></i><b>8</b> Git y GitHub con RStudio</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#diapositivas-7"><i class="fa fa-check"></i><b>8.1</b> Diapositivas</a></li>
-<li class="chapter" data-level="8.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#primeros-pasos-con-git-en-rstudio"><i class="fa fa-check"></i><b>8.2</b> Primeros pasos con Git en RStudio</a></li>
+<li class="chapter" data-level="8.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario"><i class="fa fa-check"></i><b>8.2</b> Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)</a></li>
 <li class="chapter" data-level="8.3" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#actividad-3"><i class="fa fa-check"></i><b>8.3</b> Actividad</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html"><i class="fa fa-check"></i><b>9</b> Merge y conflictos de versiones en Git y GitHub</a>
@@ -210,15 +210,26 @@
 <div id="diapositivas-7" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Diapositivas</h2>
 </div>
-<div id="primeros-pasos-con-git-en-rstudio" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Primeros pasos con Git en RStudio</h2>
+<div id="manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)</h2>
 <ul>
 <li>Por cualquier problema con la conexión entre RStudio y Git, siempre ten en cuenta la ubicación de dónde se instaló Git.
 <ul>
 <li>Puedes usar en la terminal <code>which git</code> (Mac y Linux)</li>
-<li>o bien usar en la terminal <code>where git</code> (Windows)</li>
+<li>O bien usar en la terminal <code>where git</code> (Windows)</li>
 </ul></li>
-<li></li>
+<li>Recuerda que la terminal (o línea de comandos ó consola ó shell ó bash) es un programa en tu computadora que funciona para correr otros programas. Desde RStudio puedes abrir la <strong>terminal</strong>, lo cual es muy conveniente si estás trabajando en un proyecto. Puedes abrir una terminal con:
+<ul>
+<li><em>Tools &gt; Terminal</em> (abre la terminal dentro del IDE de RStudio)</li>
+<li><em>Tools &gt; Shell</em> (abre una terminal externa a RStudio)</li>
+</ul></li>
+<li>La recomendación actual de <strong>GitHub</strong> es usar <em>HTTPS</em> porque es la manera más fácil de configurar y tiene operabilidad en multiples redes y plataformas.
+<ul>
+<li>Es menos probable que HTTPS sea bloqueado por un firewall.</li>
+<li>Una conexión HTTPS permite que <code>credential.helper</code> almacene en caché su contraseña. (por tanto puedes configurar tu usuario y contraseña en tu equipo de uso)</li>
+<li>Es más sencillo acceder a un repositorio desde cualquier lugar, ya que solo necesita los detalles de su cuenta (no se requieren claves SSH) para escribir en el repositorio.</li>
+</ul></li>
+<li>Usualmente cuando inicies un proyecto colaborativo con GitHub inicializa el ropositorio con un README. Copia el HTTPS URL para clonar el repositorio en la <em>terminal</em> <code>git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git</code>.</li>
 </ul>
 </div>
 <div id="actividad-3" class="section level2" number="8.3">
