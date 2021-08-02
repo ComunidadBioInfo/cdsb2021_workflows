@@ -47,4 +47,4 @@ gapminder %>%
   mutate( dollars_per_day=gdp/population/365 ) %>%
   filter( 
     country %in% c("Mexico", "South Korea", "Germany"), 
-    between(year, ymin, ymax) )
+    between( year, ymin, ymax) )
