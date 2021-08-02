@@ -1,0 +1,83 @@
+# Introducción a Shiny
+
+Erick Cuevas-Fernández
+
+12 de agosto de 2021
+
+## Diapositivas
+
+
+## ¿Qué es y para qué me sirve Shiny?
+
+Este paquete fue creado en 2012 por RStudio para desarrollar aplicaciones Web con el uso de R. 
+Shiny es un paquete de R que nos permite generar módulos de mando web interactivos, crear interfaces para algoritmos o bien manipular en tiempo real tablas de datos y gráficos a través de controles de HTML. 
+
+Para instalarlo puedes usar los siguientes códigos:
+
+```{r, eval=FALSE}
+install.packages("shiny")
+
+if (!require("devtools"))
+  install.packages("devtools")
+devtools::install_github("shiny", "rstudio")
+
+```
+
+Mediante esta paquetería podemos personalizar nuestra creación de forma sencilla con sintaxis HTML, CSS o Javascript. Pero aún así solo se requieren conocimientos de R para emplear Shiny. 
+
+
+## La estructura canónica de Shiny 
+
+Toda aplicación web de Shiny tendrá la misma estructura, dos bloques de códigos de R:
+
+- *ui*: genera una interfaz de usuario
+- *server*: contiene las instrucciones que la computadora necesita para crear la app. 
+
+La estructura de código de una app Shiny se vería del siguiente modo:
+
+```{r, eval=FALSE}
+library(shiny)
+
+ui <- fluidPage(
+xxxxInput(),
+xxxxOutput()
+)
+
+server <- function(input, output)
+{
+ Codigo de R
+}
+
+shinyApp(ui = ui, server = server)
+```
+
+En RStudio puedes generar una nueva app con este molde de código mediante los siguientes pasos:
+
+1. Crea un nuevo directorio y un archivo **app.R** que contenga una aplicación básica en un solo paso haciendo clic en *Archivo* | *Nuevo proyecto*, luego selecciona *Nuevo directorio* y *Shiny Web Application*.
+2. Si ya has creado el archivo **app.R**, puedes agregar rápidamente el texto estándar de la aplicación escribiendo "shinyapp" y presionando `Shift + Tab`.
+3. También puedes hacer dos scripts por separado, **ui.R** y **server.R** y ejecutar ambos en la app.R con `shinyApp(ui = ui.R, server = server.R)`.
+
+Para que la app esté completa necesitas solo 4 cosas en tu **app.R**:
+
+1. Cargar la paquetería de Shiny con `library(shiny)`
+2. Definir la interfaz de usuario, la web HTML con la que interactúan quienes ocuparán la app. Es decir, definir la `ui`.  
+3. Especificar el comportamiento de nuestra aplicación definiendo una función de `server`.
+4. Ejecutar `shinyApp(ui, server)` para construir e iniciar una Shiny app.
+
+### Actividad
+
+**Genera un archivo app.R listo para hacer una Shiny app.** Puedes generar solo un app.R y posteriormente escribir en la consola "shinyapp" y presionar `Shift + Tab`
+
+
+## La Interfaz de Usuario (**UI**)
+
+Shiny por default usa [*bootstrap*](https://getbootstrap.com) (lo cual no tiene nada que ver con el método estadistico bootstrap). Esto es un marco de trabajo de HTML, CSS y Javascript más popular para desarrollar sitios web receptivos. 
+
+**OJO**: si sabes usar HTML puedes usar todos los tags en Shiny. Puedes consultar estos tags con la siguiente función:
+
+```{r, eval=FALSE}
+shiny::tags
+names(shiny::tags)
+```
+
+

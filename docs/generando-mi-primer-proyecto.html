@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Generando mi primer proyecto | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</title>
+  <meta name="description" content="3 Generando mi primer proyecto | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Generando mi primer proyecto | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://comunidadbioinfo.github.io/cdsb2021_workflows/" />
+  
+  
+  <meta name="github-repo" content="comunidadbioinfo/cdsb2021_workflows" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Generando mi primer proyecto | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  
+  
+  
+
+<meta name="author" content="Joselyn Chávez, Erick Cuevas-Fernández, Alejandro Reyes, Alejandra Medina-Rivera, María Teresa Ortiz, Mirna Vázquez Rosas-Landa, Aurora Labastida, Ángel Escalante, Alejandro Ponce." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="flujos-de-trabajo-con-proyectos-de-rstudio.html"/>
+<link rel="next" href="paths-seguros.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructores"><i class="fa fa-check"></i><b>0.1</b> Instructores</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#ponentes-invitados"><i class="fa fa-check"></i><b>0.2</b> Ponentes invitados</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#temario"><i class="fa fa-check"></i><b>0.3</b> Temario</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#lunes-9-de-agosto"><i class="fa fa-check"></i><b>0.3.1</b> Lunes 9 de agosto</a></li>
+<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#martes-10-de-agosto"><i class="fa fa-check"></i><b>0.3.2</b> Martes 10 de agosto</a></li>
+<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#miércoles-11-de-agosto"><i class="fa fa-check"></i><b>0.3.3</b> Miércoles 11 de agosto</a></li>
+<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#jueves-12-de-agosto"><i class="fa fa-check"></i><b>0.3.4</b> Jueves 12 de agosto</a></li>
+<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#viernes-13-de-agosto"><i class="fa fa-check"></i><b>0.3.5</b> Viernes 13 de agosto</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#patrocinadores"><i class="fa fa-check"></i><b>0.4</b> Patrocinadores</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html"><i class="fa fa-check"></i><b>1</b> RStudio hacks</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#diapositivas"><i class="fa fa-check"></i><b>1.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html"><i class="fa fa-check"></i><b>2</b> Flujos de trabajo con proyectos de RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#diapositivas-1"><i class="fa fa-check"></i><b>2.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="2.2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#actividad-1"><i class="fa fa-check"></i><b>2.2</b> Actividad 1</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="generando-mi-primer-proyecto.html"><a href="generando-mi-primer-proyecto.html"><i class="fa fa-check"></i><b>3</b> Generando mi primer proyecto</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="generando-mi-primer-proyecto.html"><a href="generando-mi-primer-proyecto.html#diapositivas-2"><i class="fa fa-check"></i><b>3.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="3.2" data-path="generando-mi-primer-proyecto.html"><a href="generando-mi-primer-proyecto.html#actividad-1-1"><i class="fa fa-check"></i><b>3.2</b> Actividad 1</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="paths-seguros.html"><a href="paths-seguros.html"><i class="fa fa-check"></i><b>4</b> PATHs seguros</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="paths-seguros.html"><a href="paths-seguros.html#diapositivas-3"><i class="fa fa-check"></i><b>4.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="4.2" data-path="paths-seguros.html"><a href="paths-seguros.html#actividad-1-2"><i class="fa fa-check"></i><b>4.2</b> Actividad 1</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="nombres-de-archivos.html"><a href="nombres-de-archivos.html"><i class="fa fa-check"></i><b>5</b> Nombres de archivos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="nombres-de-archivos.html"><a href="nombres-de-archivos.html#diapositivas-4"><i class="fa fa-check"></i><b>5.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="5.2" data-path="nombres-de-archivos.html"><a href="nombres-de-archivos.html#actividad-1-3"><i class="fa fa-check"></i><b>5.2</b> Actividad 1</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html"><i class="fa fa-check"></i><b>6</b> Introducción a Git y GitHub desde terminal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#diapositivas-5"><i class="fa fa-check"></i><b>6.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="6.2" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#actividad"><i class="fa fa-check"></i><b>6.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html"><i class="fa fa-check"></i><b>7</b> Generando un proyecto colaborativo con Git/GitHub</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#diapositivas-6"><i class="fa fa-check"></i><b>7.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="7.2" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#actividad-2"><i class="fa fa-check"></i><b>7.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html"><i class="fa fa-check"></i><b>8</b> Git y GitHub con RStudio</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#diapositivas-7"><i class="fa fa-check"></i><b>8.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="8.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#actividad-3"><i class="fa fa-check"></i><b>8.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html"><i class="fa fa-check"></i><b>9</b> Merge y conflictos de versiones en Git y GitHub</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#diapositivas-8"><i class="fa fa-check"></i><b>9.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="9.2" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#actividad-4"><i class="fa fa-check"></i><b>9.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html"><i class="fa fa-check"></i><b>10</b> Modificando los archivos de inicio de R</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#diapositivas-9"><i class="fa fa-check"></i><b>10.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="10.2" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#actividad-5"><i class="fa fa-check"></i><b>10.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="keynote-buenas-practicas-de-escritura-de-funciones.html"><a href="keynote-buenas-practicas-de-escritura-de-funciones.html"><i class="fa fa-check"></i><b>11</b> Keynote: Buenas practicas de escritura de funciones</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="keynote-buenas-practicas-de-escritura-de-funciones.html"><a href="keynote-buenas-practicas-de-escritura-de-funciones.html#diapositivas-10"><i class="fa fa-check"></i><b>11.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="mantenimiento-del-espacio-de-trabajo.html"><a href="mantenimiento-del-espacio-de-trabajo.html"><i class="fa fa-check"></i><b>12</b> Mantenimiento del espacio de trabajo</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="mantenimiento-del-espacio-de-trabajo.html"><a href="mantenimiento-del-espacio-de-trabajo.html#diapositivas-11"><i class="fa fa-check"></i><b>12.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="12.2" data-path="mantenimiento-del-espacio-de-trabajo.html"><a href="mantenimiento-del-espacio-de-trabajo.html#actividad-6"><i class="fa fa-check"></i><b>12.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="instalación-de-paqueterías-desde-código-fuente.html"><a href="instalación-de-paqueterías-desde-código-fuente.html"><i class="fa fa-check"></i><b>13</b> Instalación de paqueterías desde código fuente</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="instalación-de-paqueterías-desde-código-fuente.html"><a href="instalación-de-paqueterías-desde-código-fuente.html#diapositivas-12"><i class="fa fa-check"></i><b>13.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="13.2" data-path="instalación-de-paqueterías-desde-código-fuente.html"><a href="instalación-de-paqueterías-desde-código-fuente.html#actividad-7"><i class="fa fa-check"></i><b>13.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html"><i class="fa fa-check"></i><b>14</b> Introducción a Shiny</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#diapositivas-13"><i class="fa fa-check"></i><b>14.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="14.2" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-8"><i class="fa fa-check"></i><b>14.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html"><i class="fa fa-check"></i><b>15</b> Mi primera aplicación ShinyR</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html#diapositivas-14"><i class="fa fa-check"></i><b>15.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="15.2" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html#actividad-9"><i class="fa fa-check"></i><b>15.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="proyecto-en-equipo.html"><a href="proyecto-en-equipo.html"><i class="fa fa-check"></i><b>16</b> Proyecto en equipo</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="proyecto-en-equipo.html"><a href="proyecto-en-equipo.html#actividad-10"><i class="fa fa-check"></i><b>16.1</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="keynote-aplicaciones-shinyr-en-la-vida-diaria.html"><a href="keynote-aplicaciones-shinyr-en-la-vida-diaria.html"><i class="fa fa-check"></i><b>17</b> Keynote: Aplicaciones ShinyR en la vida diaria</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="keynote-aplicaciones-shinyr-en-la-vida-diaria.html"><a href="keynote-aplicaciones-shinyr-en-la-vida-diaria.html#diapositivas-15"><i class="fa fa-check"></i><b>17.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="presentación-de-proyectos.html"><a href="presentación-de-proyectos.html"><i class="fa fa-check"></i><b>18</b> Presentación de proyectos</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="presentación-de-proyectos.html"><a href="presentación-de-proyectos.html#proyectos"><i class="fa fa-check"></i><b>18.1</b> Proyectos</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="generando-mi-primer-proyecto" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Generando mi primer proyecto</h1>
+<p>Joselyn Chávez</p>
+<p>9 de agosto de 2021</p>
+<div id="diapositivas-2" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Diapositivas</h2>
+</div>
+<div id="actividad-1-1" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Actividad 1</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="flujos-de-trabajo-con-proyectos-de-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="paths-seguros.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

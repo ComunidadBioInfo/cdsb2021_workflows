@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="0.3 Temario | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Joselyn Chávez, Erick Cuevas-Fernández, Alejandro Reyes, Alejandra Medina-Rivera, María Teresa Ortiz, Mirna Vázquez Rosas-Landa, Aurora Labastida, Ángel Escalante, Alejandro Ponce." />
+
+
+
+<meta name="description" content="0.3 Temario | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps">
+
+<title>0.3 Temario | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</title>
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+/* show arrow before summary tag as in bootstrap
+TODO: remove if boostrap in updated in html_document (rmarkdown#1485) */
+details > summary {
+  display: list-item;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#bienvenida">Bienvenida</a>
+<ul>
+<li><a href="0-1-instructores.html#instructores"><span class="toc-section-number">0.1</span> Instructores</a></li>
+<li><a href="0-2-ponentes-invitados.html#ponentes-invitados"><span class="toc-section-number">0.2</span> Ponentes invitados</a></li>
+<li><a href="0-3-temario.html#temario"><span class="toc-section-number">0.3</span> Temario</a>
+<ul>
+<li><a href="0-3-temario.html#lunes-9-de-agosto"><span class="toc-section-number">0.3.1</span> Lunes 9 de agosto</a></li>
+<li><a href="0-3-temario.html#martes-10-de-agosto"><span class="toc-section-number">0.3.2</span> Martes 10 de agosto</a></li>
+<li><a href="0-3-temario.html#miércoles-11-de-agosto"><span class="toc-section-number">0.3.3</span> Miércoles 11 de agosto</a></li>
+<li><a href="0-3-temario.html#jueves-12-de-agosto"><span class="toc-section-number">0.3.4</span> Jueves 12 de agosto</a></li>
+<li><a href="0-3-temario.html#viernes-13-de-agosto"><span class="toc-section-number">0.3.5</span> Viernes 13 de agosto</a></li>
+</ul></li>
+<li><a href="0-4-patrocinadores.html#patrocinadores"><span class="toc-section-number">0.4</span> Patrocinadores</a></li>
+</ul></li>
+<li><a href="1-rstudio-hacks.html#rstudio-hacks"><span class="toc-section-number">1</span> RStudio hacks</a>
+<ul>
+<li><a href="1-1-diapositivas.html#diapositivas"><span class="toc-section-number">1.1</span> Diapositivas</a></li>
+</ul></li>
+<li><a href="2-flujos-de-trabajo-con-proyectos-de-rstudio.html#flujos-de-trabajo-con-proyectos-de-rstudio"><span class="toc-section-number">2</span> Flujos de trabajo con proyectos de RStudio</a>
+<ul>
+<li><a href="2-1-diapositivas-1.html#diapositivas-1"><span class="toc-section-number">2.1</span> Diapositivas</a></li>
+<li><a href="2-2-actividad-1.html#actividad-1"><span class="toc-section-number">2.2</span> Actividad 1</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="temario" class="section level2" number="0.3">
+<h2><span class="header-section-number">0.3</span> Temario</h2>
+<p>Consulta el calendario de este curso en: <a href="http://bit.ly/calendarcdsb2021" class="uri">http://bit.ly/calendarcdsb2021</a></p>
+<div id="lunes-9-de-agosto" class="section level3" number="0.3.1">
+<h3><span class="header-section-number">0.3.1</span> Lunes 9 de agosto</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10:00-11:00</td>
+<td>Hacks de RStudio</td>
+<td>Erick Cuevas Fernández</td>
+</tr>
+<tr class="even">
+<td>11:30-13:00</td>
+<td>Flujo de trabajo con proyectos de RStudio</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="odd">
+<td>13:00-14:00</td>
+<td>Generando mi primer proyecto de RStudio</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>15:30-16:30</td>
+<td>Trabajando con paths seguros</td>
+<td>María Teresa Ortiz</td>
+</tr>
+<tr class="odd">
+<td>16:30-17:30</td>
+<td>Buenas prácticas para nombrar archivos</td>
+<td>María Teresa Ortiz</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="martes-10-de-agosto" class="section level3" number="0.3.2">
+<h3><span class="header-section-number">0.3.2</span> Martes 10 de agosto</h3>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="51%" />
+<col width="35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-10:00</td>
+<td>Introducción a Git y GitHub desde terminal</td>
+<td>Mirna Vázquez Rosas-Landa</td>
+</tr>
+<tr class="even">
+<td>10:00-11:00</td>
+<td>Generando un proyecto colaborativo con Git/GitHub</td>
+<td>Aurora Labastida</td>
+</tr>
+<tr class="odd">
+<td>11:30-12:00</td>
+<td>Keynote: La comunidad R-Ladies</td>
+<td>Ana Beatriz Villaseñor Altamirano</td>
+</tr>
+<tr class="even">
+<td>12:00-14:00</td>
+<td>Git y GitHub con RStudio</td>
+<td>Erick Cuevas Fernández</td>
+</tr>
+<tr class="odd">
+<td>15:30-17:30</td>
+<td>Merge y conflictos de versiones en Git y GitHub</td>
+<td>Alejandra Medina Rivera</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="miércoles-11-de-agosto" class="section level3" number="0.3.3">
+<h3><span class="header-section-number">0.3.3</span> Miércoles 11 de agosto</h3>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="58%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-10:30</td>
+<td>Modificando los archivos de inicio de R</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>11:30-12:30</td>
+<td>Keynote Código legible con R: buenas prácticas de escritura</td>
+<td>Ángel Escalante</td>
+</tr>
+<tr class="odd">
+<td>15:30-16:30</td>
+<td>Mantenimiento del espacio de trabajo</td>
+<td>Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>16:30-17:30</td>
+<td>Instalación de paqueterías desde código fuente</td>
+<td>Joselyn Chávez</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="jueves-12-de-agosto" class="section level3" number="0.3.4">
+<h3><span class="header-section-number">0.3.4</span> Jueves 12 de agosto</h3>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="41%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-11:00</td>
+<td>Introducción a Shiny</td>
+<td>Erick Cuevas Fernández</td>
+</tr>
+<tr class="even">
+<td>11:30-14:00</td>
+<td>Creando mi primera aplicación de Shiny</td>
+<td>Alejandro Reyes</td>
+</tr>
+<tr class="odd">
+<td>15:30-17:30</td>
+<td>Proyecto colaborativo</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="viernes-13-de-agosto" class="section level3" number="0.3.5">
+<h3><span class="header-section-number">0.3.5</span> Viernes 13 de agosto</h3>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="41%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Horario</th>
+<th>Tema</th>
+<th>Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9:00-11:00</td>
+<td>Proyecto colaborativo</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>11:30-12:30</td>
+<td>Keynote: Aplicaciones ShinyR en la vida diaria</td>
+<td>Alejandro Ponce</td>
+</tr>
+<tr class="odd">
+<td>12:30-14:00</td>
+<td>Proyecto colaborativo</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+<tr class="even">
+<td>15:30-17:00</td>
+<td>Presentación de proyectos</td>
+<td>Alejandro Reyes, Erick Cuevas Fernández, Joselyn Chávez</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="0-2-ponentes-invitados.html"><button class="btn btn-default">Previous</button></a>
+<a href="0-4-patrocinadores.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

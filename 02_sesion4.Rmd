@@ -1,0 +1,9 @@
+# Merge y conflictos de versiones en Git y GitHub
+
+Alejandra Medina-Rivera
+
+10 de agosto de 2021
+
+## Diapositivas
+
+## Actividad

@@ -1,0 +1,14 @@
+# Keynote Código legible en R: 6 consejos simples y prácticos para escribir mejor código
+
+Ángel Escalante
+
+11 de agosto de 2021
+
+## Diapositivas
+
+[
+```{r,echo=FALSE}
+knitr::include_url("https://codigo-legible-deck.netlify.app/", 
+                   height = "380px")
+```
+](https://codigo-legible-deck.netlify.app/)
