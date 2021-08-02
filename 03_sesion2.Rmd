@@ -6,3 +6,9 @@
 
 ## Diapositivas
 
+[
+```{r,echo=FALSE}
+knitr::include_url("https://codigo-legible-deck.netlify.app/", 
+                   height = "380px")
+```
+](https://codigo-legible-deck.netlify.app/)
