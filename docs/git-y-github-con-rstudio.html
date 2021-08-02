@@ -32,7 +32,7 @@
   
 <link rel="prev" href="generando-un-proyecto-colaborativo-con-gitgithub.html"/>
 <link rel="next" href="merge-y-conflictos-de-versiones-en-git-y-github.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +50,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
@@ -59,6 +58,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -153,10 +153,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#misión-de-rstudio"><i class="fa fa-check"></i><b>1.2</b> Misión de RStudio</a></li>
 <li class="chapter" data-level="1.3" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#equipo-de-rstudio"><i class="fa fa-check"></i><b>1.3</b> Equipo de RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#historia-de-rstudio"><i class="fa fa-check"></i><b>1.4</b> Historia de RStudio</a></li>
-<li class="chapter" data-level="1.5" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#primeros-consejos-para-iniciar"><i class="fa fa-check"></i><b>1.5</b> Primeros consejos para iniciar</a>
-<ul>
-<li class="chapter" data-level="1.5.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#la-interfaz-gráfica-de-rstudio"><i class="fa fa-check"></i><b>1.5.1</b> La interfaz gráfica de RStudio</a></li>
-</ul></li>
+<li class="chapter" data-level="1.5" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#primeros-consejos-para-iniciar"><i class="fa fa-check"></i><b>1.5</b> Primeros consejos para iniciar</a></li>
+<li class="chapter" data-level="1.6" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#la-interfaz-gráfica-de-rstudio"><i class="fa fa-check"></i><b>1.6</b> La interfaz gráfica de RStudio</a></li>
+<li class="chapter" data-level="1.7" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#atajos-con-el-teclado-en-rstudio"><i class="fa fa-check"></i><b>1.7</b> Atajos con el teclado en RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html"><i class="fa fa-check"></i><b>2</b> Flujos de trabajo con proyectos de RStudio</a>
 <ul>
@@ -233,7 +232,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html"><i class="fa fa-check"></i><b>14</b> Introducción a Shiny</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#diapositivas-13"><i class="fa fa-check"></i><b>14.1</b> Diapositivas</a></li>
-<li class="chapter" data-level="14.2" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-8"><i class="fa fa-check"></i><b>14.2</b> Actividad</a></li>
+<li class="chapter" data-level="14.2" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#qué-es-y-para-qué-me-sirve-shiny"><i class="fa fa-check"></i><b>14.2</b> ¿Qué es y para qué me sirve Shiny?</a></li>
+<li class="chapter" data-level="14.3" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-estructura-canónica-de-shiny"><i class="fa fa-check"></i><b>14.3</b> La estructura canónica de Shiny</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-8"><i class="fa fa-check"></i><b>14.3.1</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-interfaz-de-usuario-ui"><i class="fa fa-check"></i><b>14.4</b> La Interfaz de Usuario (<strong>UI</strong>)</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html"><i class="fa fa-check"></i><b>15</b> Mi primera aplicación ShinyR</a>
 <ul>
@@ -322,7 +326,7 @@ Como precaución de seguridad, GitHub elimina automáticamente los tokens de acc
 - Operaciones de la API de GitHub a través del paquete gh R y, por lo tanto, usethis</code></pre>
 <p><strong>¿Cómo crear un token desde R?</strong></p>
 <p>Puedes ir directamente a la página de GitHub a la parte para generar tu token de acceso personal mediante la siguiente función:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="git-y-github-con-rstudio.html#cb2-1"></a>usethis<span class="op">::</span><span class="kw">create_github_token</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="git-y-github-con-rstudio.html#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code></pre></div>
 <p>Y con las opciones que se mencionaban anteriormente puedes configurar y crear tu <strong>PAT</strong>.</p>
 </div>
 </div>

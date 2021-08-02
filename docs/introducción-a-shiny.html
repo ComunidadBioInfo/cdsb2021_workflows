@@ -285,11 +285,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Este paquete fue creado en 2012 por RStudio para desarrollar aplicaciones Web con el uso de R.
 Shiny es un paquete de R que nos permite generar módulos de mando web interactivos, crear interfaces para algoritmos o bien manipular en tiempo real tablas de datos y gráficos a través de controles de HTML.</p>
 <p>Para instalarlo puedes usar los siguientes códigos:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introducción-a-shiny.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;shiny&quot;</span>)</span>
-<span id="cb1-2"><a href="introducción-a-shiny.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="introducción-a-shiny.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;devtools&quot;</span>))</span>
-<span id="cb1-4"><a href="introducción-a-shiny.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
-<span id="cb1-5"><a href="introducción-a-shiny.html#cb1-5" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;shiny&quot;</span>, <span class="st">&quot;rstudio&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introducción-a-shiny.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;shiny&quot;</span>)</span>
+<span id="cb6-2"><a href="introducción-a-shiny.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="introducción-a-shiny.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;devtools&quot;</span>))</span>
+<span id="cb6-4"><a href="introducción-a-shiny.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb6-5"><a href="introducción-a-shiny.html#cb6-5" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;shiny&quot;</span>, <span class="st">&quot;rstudio&quot;</span>)</span></code></pre></div>
 <p>Mediante esta paquetería podemos personalizar nuestra creación de forma sencilla con sintaxis HTML, CSS o Javascript. Pero aún así solo se requieren conocimientos de R para emplear Shiny.</p>
 </div>
 <div id="la-estructura-canónica-de-shiny" class="section level2" number="14.3">
@@ -300,19 +300,19 @@ Shiny es un paquete de R que nos permite generar módulos de mando web interacti
 <li><em>server</em>: contiene las instrucciones que la computadora necesita para crear la app.</li>
 </ul>
 <p>La estructura de código de una app Shiny se vería del siguiente modo:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introducción-a-shiny.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
-<span id="cb2-2"><a href="introducción-a-shiny.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="introducción-a-shiny.html#cb2-3" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb2-4"><a href="introducción-a-shiny.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">xxxxInput</span>(),</span>
-<span id="cb2-5"><a href="introducción-a-shiny.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">xxxxOutput</span>()</span>
-<span id="cb2-6"><a href="introducción-a-shiny.html#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-7"><a href="introducción-a-shiny.html#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="introducción-a-shiny.html#cb2-8" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output)</span>
-<span id="cb2-9"><a href="introducción-a-shiny.html#cb2-9" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb2-10"><a href="introducción-a-shiny.html#cb2-10" aria-hidden="true" tabindex="-1"></a> Codigo de R</span>
-<span id="cb2-11"><a href="introducción-a-shiny.html#cb2-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-12"><a href="introducción-a-shiny.html#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="introducción-a-shiny.html#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introducción-a-shiny.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb7-2"><a href="introducción-a-shiny.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="introducción-a-shiny.html#cb7-3" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb7-4"><a href="introducción-a-shiny.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">xxxxInput</span>(),</span>
+<span id="cb7-5"><a href="introducción-a-shiny.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">xxxxOutput</span>()</span>
+<span id="cb7-6"><a href="introducción-a-shiny.html#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-7"><a href="introducción-a-shiny.html#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="introducción-a-shiny.html#cb7-8" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output)</span>
+<span id="cb7-9"><a href="introducción-a-shiny.html#cb7-9" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb7-10"><a href="introducción-a-shiny.html#cb7-10" aria-hidden="true" tabindex="-1"></a> Codigo de R</span>
+<span id="cb7-11"><a href="introducción-a-shiny.html#cb7-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-12"><a href="introducción-a-shiny.html#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="introducción-a-shiny.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div>
 <p>En RStudio puedes generar una nueva app con este molde de código mediante los siguientes pasos:</p>
 <ol style="list-style-type: decimal">
 <li>Crea un nuevo directorio y un archivo <strong>app.R</strong> que contenga una aplicación básica en un solo paso haciendo clic en <em>Archivo</em> | <em>Nuevo proyecto</em>, luego selecciona <em>Nuevo directorio</em> y <em>Shiny Web Application</em>.</li>
@@ -336,8 +336,8 @@ Shiny es un paquete de R que nos permite generar módulos de mando web interacti
 <h2><span class="header-section-number">14.4</span> La Interfaz de Usuario (<strong>UI</strong>)</h2>
 <p>Shiny por default usa <a href="https://getbootstrap.com"><em>bootstrap</em></a> (lo cual no tiene nada que ver con el método estadistico bootstrap). Esto es un marco de trabajo de HTML, CSS y Javascript más popular para desarrollar sitios web receptivos.</p>
 <p><strong>OJO</strong>: si sabes usar HTML puedes usar todos los tags en Shiny. Puedes consultar estos tags con la siguiente función:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducción-a-shiny.html#cb3-1" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span>tags</span>
-<span id="cb3-2"><a href="introducción-a-shiny.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(shiny<span class="sc">::</span>tags)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introducción-a-shiny.html#cb8-1" aria-hidden="true" tabindex="-1"></a>shiny<span class="sc">::</span>tags</span>
+<span id="cb8-2"><a href="introducción-a-shiny.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(shiny<span class="sc">::</span>tags)</span></code></pre></div>
 
 </div>
 </div>

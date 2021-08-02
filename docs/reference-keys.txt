@@ -11,7 +11,11 @@ licencia
 rstudio-hacks
 diapositivas
 misión-de-rstudio
+equipo-de-rstudio
 historia-de-rstudio
+primeros-consejos-para-iniciar
+la-interfaz-gráfica-de-rstudio
+atajos-con-el-teclado-en-rstudio
 flujos-de-trabajo-con-proyectos-de-rstudio
 diapositivas-1
 qué-es-un-proyecto-de-rstudio
@@ -39,6 +43,8 @@ diapositivas-6
 actividad-2
 git-y-github-con-rstudio
 diapositivas-7
+manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario
+credenciales-https-en-cache
 actividad-3
 merge-y-conflictos-de-versiones-en-git-y-github
 diapositivas-8
@@ -56,7 +62,10 @@ diapositivas-12
 actividad-7
 introducción-a-shiny
 diapositivas-13
+qué-es-y-para-qué-me-sirve-shiny
+la-estructura-canónica-de-shiny
 actividad-8
+la-interfaz-de-usuario-ui
 mi-primera-aplicación-shinyr
 diapositivas-14
 actividad-9
@@ -66,15 +75,3 @@ keynote-aplicaciones-shinyr-en-la-vida-diaria
 diapositivas-15
 presentación-de-proyectos
 proyectos
-equipo-de-rstudio
-primeros-consejos-para-iniciar
-la-interfaz-gráfica-de-rstudio
-primeros-pasos-con-git-en-rstudio
-manual-de-sobreviviencia-con-git-en-rstudio-en-caso-de-ser-necesario
-manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario
-credenciales-https-en-cache
-qué-es-y-para-qué-me-sirve-shiny
-la-estructura-canonica-de-shiny
-la-estructura-canónica-de-shiny
-atajos-con-el-teclado-en-rstudio
-la-interfaz-de-usuario-ui
