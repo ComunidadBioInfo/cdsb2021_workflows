@@ -1,4 +1,4 @@
-# Keynote: Buenas practicas de escritura de funciones
+# Keynote Código legible en R: 6 consejos simples y prácticos para escribir mejor código
 
 Ángel Escalante
 

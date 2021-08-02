@@ -52,7 +52,7 @@ actividad-4
 modificando-los-archivos-de-inicio-de-r
 diapositivas-9
 actividad-5
-keynote-buenas-practicas-de-escritura-de-funciones
+keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código
 diapositivas-10
 mantenimiento-del-espacio-de-trabajo
 diapositivas-11
