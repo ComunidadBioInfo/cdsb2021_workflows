@@ -12,6 +12,7 @@ output:
 
 # Bienvenida {-}
 
+[
 ```{r, echo=FALSE}
 knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/bienvenida.html",
   height = "380px")
