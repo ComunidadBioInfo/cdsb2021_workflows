@@ -12,6 +12,13 @@ output:
 
 # Bienvenida {-}
 
+```{r, echo=FALSE}
+knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/bienvenida.html",
+  height = "380px")
+```
+](https://comunidadbioinfo.github.io/cdsb2021_workflows/bienvenida.html)
+
+
 Bienvenidos al Workshop Flujos de trabajo con RStudio y creación de Shiny apps! 
 
 <p align="justify">

@@ -289,6 +289,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">2</span> Flujos de trabajo con proyectos de RStudio</h1>
 <p>Joselyn Chávez</p>
 <p>9 de agosto de 2021</p>
+<style>
+div.grey { 
+background-color: #bfbfbf;
+text-align:center;
+}
+</style>
 <div id="diapositivas-1" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Diapositivas</h2>
 <p><a href="https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_sesion2.html"><iframe src="https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_sesion2.html" width="672" height="380px"></iframe></a></p>
@@ -315,21 +321,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Selecciona la opción Open in New Session.</li>
 <li>Oprime Create Project.</li>
 </ul>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Actividad 1</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Genera un proyecto de RStudio llamado ‘nuevodirectorio’ en un directorio nuevo en tus Documentos (~/Documentos).</td>
-</tr>
-</tbody>
-</table>
+<div class="grey color">
+<p><strong>Actividad 1</strong></p>
+<p>Genera un proyecto de RStudio llamado ‘nuevodirectorio’ en un directorio nuevo en tus Documentos (~/Documentos).</p>
+</div>
 </div>
 <div id="opción-2-creando-un-proyecto-en-un-directorio-existente." class="section level3" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Opción 2: Creando un proyecto en un directorio existente.</h3>
@@ -341,21 +336,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Selecciona la opción Open in New Session.</li>
 <li>Oprime Create Project.</li>
 </ul>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Actividad 2</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Genera una carpeta o directorio llamado ‘directorioprevio’ en tus Documentos (~/Documentos), después genera un proyecto de RStudio usando este folder como base.</td>
-</tr>
-</tbody>
-</table>
+<div class="grey color">
+<p><strong>Actividad 2</strong></p>
+<p>Genera una carpeta o directorio llamado ‘directorioprevio’ en tus Documentos (~/Documentos), después genera un proyecto de RStudio usando este folder como base.</p>
+</div>
 </div>
 </div>
 <div id="por-qué-usar-proyectos-de-rstudio" class="section level2" number="2.4">
@@ -363,7 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Te permiten ser más organizado y pasar de tener una ensalada de archivos a tener carpetas para cada sección del análisis.</li>
 </ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="60%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>Compartamentalizas tu trabajo al generar un proyecto específico para cada análisis.</li>
 </ul>
@@ -378,22 +362,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Facilita el compartir y reproducir tu trabajo. No más rutas al estilo ~/MiComputadora/MiFolder/MiArchivo. Comparte la carpeta completa de tu proyecto con todos los archivos necesarios y usa rutas relativas dentro del Rscript, por ejemplo ./datos.</p></li>
 <li><p>Nos ayuda a establecer colaboraciones y trabajar con plataformas de control de versiones.</p></li>
 </ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="40%" style="display: block; margin: auto;" /></p>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Actividad 3</strong> <br> Comprueba algunas ventajas de usar proyectos de RStudio.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>- Genera un nuevo proyecto de RStudio llamado ‘miproyecto’, recuerda que existen varias formas para hacerlo. <br> - Cierra la sesión y vuelve a abrirla ejecutando desde la terminal open miproyecto.Rproj o dando doble click sobre el archivo miproyecto.Rproj. <br> - Evalúa tu directorio de trabajo ejecutando en la consola de RStudio el comando getwd(). <br> - Cierra la sesión y mueve toda la carpeta de tu proyecto a otra ubicación. Si lo creaste en Documentos mueve la carpeta al Escritorio o viceversa. <br> - Abre nuevamente el proyecto y verifica el directorio de trabajo, ¿Cambió el directorio de trabajo? <br> - Sin cerrar este proyecto, abre alguno de los proyectos que generaste previamente (por ejemplo directorioprevio.Rproj), recuerda que puedes seleccionar Open Project in New session</td>
-</tr>
-</tbody>
-</table>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="40%" style="display: block; margin: auto;" /></p>
+<div class="grey color">
+<p><strong>Actividad 3</strong></p>
+<p>Comprueba algunas ventajas de usar proyectos de RStudio.</p>
+<ul>
+<li>Genera un nuevo proyecto de RStudio llamado ‘miproyecto’, recuerda que existen varias formas para hacerlo.</li>
+<li>Cierra la sesión y vuelve a abrirla ejecutando desde la terminal open miproyecto.Rproj o dando doble click sobre el archivo miproyecto.Rproj.</li>
+<li>Evalúa tu directorio de trabajo ejecutando en la consola de RStudio el comando getwd().</li>
+<li>Cierra la sesión y mueve toda la carpeta de tu proyecto a otra ubicación. Si lo creaste en Documentos mueve la carpeta al Escritorio o viceversa.</li>
+<li>Abre nuevamente el proyecto y verifica el directorio de trabajo, ¿Cambió el directorio de trabajo?</li>
+<li>Sin cerrar este proyecto, abre alguno de los proyectos que generaste previamente (por ejemplo directorioprevio.Rproj), recuerda que puedes seleccionar Open Project in New session</li>
+</ul>
+</div>
 </div>
 <div id="algunos-hacks" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Algunos hacks!</h2>
@@ -404,7 +385,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Crea todos tus proyectos dentro de una carpeta principal y usa el buscador de archivos para acceder a ellos rápidamente.</li>
 </ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>

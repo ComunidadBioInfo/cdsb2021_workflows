@@ -289,6 +289,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">3</span> Generando mi primer proyecto de RStudio</h1>
 <p>Joselyn Chávez</p>
 <p>9 de agosto de 2021</p>
+<style>
+div.grey { 
+background-color: #bfbfbf;
+text-align:center;
+}
+</style>
 <div id="diapositivas-2" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Diapositivas</h2>
 <p><a href="https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_sesion3.html"><iframe src="https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_sesion3.html" width="672" height="380px"></iframe></a></p>
@@ -302,21 +308,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Salidas (Gráficas generadas y resultados).</li>
 </ul>
 <p><img src="img/proyecto1.png" width="35%" style="display: block; margin: auto;" /></p>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Actividad 1</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Descarga el proyecto desde <a href="https://bit.ly/driveCDSB2021" class="uri">https://bit.ly/driveCDSB2021</a> y ordena los archivos en subcarpetas, considera las recomendaciones mencionadas anteriormente.</td>
-</tr>
-</tbody>
-</table>
+<div class="grey color">
+<p><strong>Actividad 1</strong></p>
+<p>Descarga la carpeta <strong>proyecto_desordenado</strong> desde <a href="https://bit.ly/cdsb2021_workflows" class="uri">https://bit.ly/cdsb2021_workflows</a> y ordena los archivos en subcarpetas, considera las recomendaciones mencionadas anteriormente.</p>
+</div>
 </div>
 <div id="utiliza-las-rutas-adecuadas-a-los-archivos" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Utiliza las rutas adecuadas a los archivos</h2>
@@ -325,41 +320,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Por ejemplo:</p>
 <p><img src="img/rutas.png" width="30%" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="generando-mi-primer-proyecto-de-rstudio.html#cb3-1" aria-hidden="true" tabindex="-1"></a>tb <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;datos/mis_datos.txt&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Actividad 2</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>- Con tu proyecto ordenado, abre el archivo analisis.R y corrige las rutas a los archivos considerando los subdirectorios que creaste. <br> - Mejora aún más tu proyecto! Secciona tu código y crea nuevos scripts con cada una de las secciones que detectes en el análisis.</td>
-</tr>
-</tbody>
-</table>
+<div class="grey color">
+<p><strong>Actividad 2</strong></p>
+<ul>
+<li>Con tu proyecto ordenado, abre el archivo analisis.R y corrige las rutas a los archivos considerando los subdirectorios que creaste.</li>
+<li>Mejora aún más tu proyecto! Secciona tu código y crea nuevos scripts con cada una de las secciones que detectes en el análisis.</li>
+</ul>
+</div>
 </div>
 <div id="compartiendo-tus-proyectos" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Compartiendo tus proyectos</h2>
 <p>Una de las ventajas de usar proyectos de RStudio es facilitar la colaboración con otras personas, así como compartir tu código de manera reproducible.</p>
 <p>Lo más común es utilizar control de versiones, por ejemplo en GitHub o GitLab. Pero comencemos compartiendo nuestro proyecto mediante Drive.</p>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Actividad 3</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Genera un proyecto en tu computadora que contenga lo siguiente: <br> - Un Rscript o Rmd con un pequeño análisis usando datos públicos de R, por ejemplo puedes usar los datos <a href="https://allisonhorst.github.io/palmerpenguins/">palmperpinguins</a>, <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a>, o los conjuntos de datos en español del paquete <a href="https://github.com/cienciadedatos/datos">datos</a>. <br> - Genera al menos un archivo de salida, por ejemplo una gráfica, una tabla, un archivo de texto o un html relacionado con tu análisis. <br> - Crea los subdirectorios necesarios para ordernar tu proyecto y verifica que tu Rscript o Rmd contenga las rutas necesarias para leer o escribir estos archivos en las subcarpetas. <br> - Inercambien proyectos: Carga tu proyecto completo en el Drive <a href="https://bit.ly/driveCDSB2021" class="uri">https://bit.ly/driveCDSB2021</a> y pídele a tu compañera/o que lo descargue y compruebe que puede ejecutar el análisis en su computadora.</td>
-</tr>
-</tbody>
-</table>
+<div class="grey color">
+<p><strong>Actividad 3</strong></p>
+<p>Genera un proyecto en tu computadora que contenga lo siguiente:</p>
+<ul>
+<li>Un Rscript o Rmd con un pequeño análisis usando datos públicos de R, por ejemplo puedes usar los datos <a href="https://allisonhorst.github.io/palmerpenguins/">palmperpinguins</a>, <a href="https://cran.r-project.org/web/packages/gapminder/README.html">gapminder</a>, o los conjuntos de datos en español del paquete <a href="https://github.com/cienciadedatos/datos">datos</a>.<br />
+</li>
+<li>Genera al menos un archivo de salida, por ejemplo una gráfica, una tabla, un archivo de texto o un html relacionado con tu análisis.</li>
+<li>Crea los subdirectorios necesarios para ordernar tu proyecto y verifica que tu Rscript o Rmd contenga las rutas necesarias para leer o escribir estos archivos en las subcarpetas.</li>
+<li>Intercambien proyectos! Carga tu proyecto completo en el Drive <a href="https://bit.ly/cdsb2021_workflows" class="uri">https://bit.ly/cdsb2021_workflows</a> y pídele a tu compañera/o que lo descargue y compruebe que puede ejecutar el análisis en su computadora.</li>
+</ul>
+</div>
 
 </div>
 </div>

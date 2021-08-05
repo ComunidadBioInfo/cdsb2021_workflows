@@ -4,6 +4,13 @@ Joselyn Chávez
 
 9 de agosto de 2021
 
+<style>
+div.grey { 
+background-color: #bfbfbf;
+text-align:center;
+}
+</style>
+
 ## Diapositivas
 
 [
@@ -25,9 +32,11 @@ Genera carpetas con:
 knitr::include_graphics("img/proyecto1.png")
 ```
 
-| **Actividad 1**|
-|----------------|
-| Descarga el proyecto desde https://bit.ly/driveCDSB2021 y ordena los archivos en subcarpetas, considera las recomendaciones mencionadas anteriormente. |
+<div class = "grey color">
+**Actividad 1**
+
+Descarga la carpeta **proyecto_desordenado** desde https://bit.ly/cdsb2021_workflows y ordena los archivos en subcarpetas, considera las recomendaciones mencionadas anteriormente.
+</div>
 
 ## Utiliza las rutas adecuadas a los archivos
 
@@ -45,9 +54,12 @@ knitr::include_graphics("img/rutas.png")
 tb <- read.table("datos/mis_datos.txt", header = TRUE)
 ```
 
-| **Actividad 2**|
-|----------------|
-| - Con tu proyecto ordenado, abre el archivo analisis.R y corrige las rutas a los archivos considerando los subdirectorios que creaste. <br> - Mejora aún más tu proyecto! Secciona tu código y crea nuevos scripts con cada una de las secciones que detectes en el análisis.|
+<div class = "grey color">
+**Actividad 2**
+
+- Con tu proyecto ordenado, abre el archivo analisis.R y corrige las rutas a los archivos considerando los subdirectorios que creaste. 
+- Mejora aún más tu proyecto! Secciona tu código y crea nuevos scripts con cada una de las secciones que detectes en el análisis.
+</div>
 
 ## Compartiendo tus proyectos
 
@@ -55,6 +67,15 @@ Una de las ventajas de usar proyectos de RStudio es facilitar la colaboración c
 
 Lo más común es utilizar control de versiones, por ejemplo en GitHub o GitLab. Pero comencemos compartiendo nuestro proyecto mediante Drive. 
 
-| **Actividad 3**|
-|----------------|
-|Genera un proyecto en tu computadora que contenga lo siguiente: <br> - Un Rscript o Rmd con un pequeño análisis usando datos públicos de R, por ejemplo puedes usar los datos [palmperpinguins](https://allisonhorst.github.io/palmerpenguins/), [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html), o los conjuntos de datos en español del paquete [datos](https://github.com/cienciadedatos/datos). <br> - Genera al menos un archivo de salida, por ejemplo una gráfica, una tabla, un archivo de texto o un html relacionado con tu análisis. <br> - Crea los subdirectorios necesarios para ordernar tu proyecto y verifica que tu Rscript o Rmd contenga las rutas necesarias para leer o escribir estos archivos en las subcarpetas. <br> - Inercambien proyectos: Carga tu proyecto completo en el Drive https://bit.ly/driveCDSB2021 y pídele a tu compañera/o que lo descargue y compruebe que puede ejecutar el análisis en su computadora.|
+<div class = "grey color">
+**Actividad 3**
+
+Genera un proyecto en tu computadora que contenga lo siguiente: 
+
+- Un Rscript o Rmd con un pequeño análisis usando datos públicos de R, por ejemplo puedes usar los datos [palmperpinguins](https://allisonhorst.github.io/palmerpenguins/), [gapminder](https://cran.r-project.org/web/packages/gapminder/README.html), o los conjuntos de datos en español del paquete [datos](https://github.com/cienciadedatos/datos).  
+- Genera al menos un archivo de salida, por ejemplo una gráfica, una tabla, un archivo de texto o un html relacionado con tu análisis. 
+- Crea los subdirectorios necesarios para ordernar tu proyecto y verifica que tu Rscript o Rmd contenga las rutas necesarias para leer o escribir estos archivos en las subcarpetas. 
+- Intercambien proyectos! Carga tu proyecto completo en el Drive https://bit.ly/cdsb2021_workflows y pídele a tu compañera/o que lo descargue y compruebe que puede ejecutar el análisis en su computadora.
+
+</div>
+
