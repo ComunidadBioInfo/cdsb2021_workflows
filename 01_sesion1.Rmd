@@ -8,9 +8,9 @@ Erick Cuevas Fernández
 
 ## Inicio
 
-Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link [https://cran.itam.mx](https://cran.itam.mx). 
+Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link [https://cran.itam.mx](https://cran.itam.mx). Asegúrate de tener la versión más reciente. 
 
-También necesitas descargar la versión más reciente de RStudio Desktop. (*1.4.1717*).
+También necesitas descargar la versión más reciente de [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). (*1.4.1717*).
 
 ## Misión de RStudio
 
@@ -60,6 +60,30 @@ RStudio es un *entorno de desarrollo integrado* (IDE) para R. Su interfaz gráfi
 2. Datos en el ambiente, Historial, Conecciones remotas, Git.
 3. Gráficos, Archivos, Ayuda, Paqueterías. 
 
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/rstudio_paneles_1.png")
+```
+
+Las **opciones globales** (Global Options...) nos permitirán cambiar aspectos visuales de la organización de la interfaz gráfica. Para acceder a estas opciones debemos ir a `Tools` | `Global Options...` o usar directamente el atajo de teclado `command` + `,` (Mac) ó `ctrl` + `,` (Linux y Windows). 
+
+Una vez accesando a las **Opciones Globales** podemos modificar que no se gaste memoria temporal al guardar datos o código de sesiones anteriores en la parte de `General`. Al quitar las “palomitas” de los pequeños cuadros de las opciones generales señaladas en los recuadros azules.
+
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/rstudio_go_general.png")
+```
+
+Dentro de las **Opciones Globales** podemos modificar nuestros atajos de teclado, el tamaño de la indentación, margenes de código, etc, etc. Una función atractivamente visual al momento de escribir código, sobre todo en funciones y para hacer sub conjuntos de nuestros datos, es **Parentesis de Arcoíris**. Esta es una nueva función en esta nueva versión de RStudio. Para habilitarla debemos dentro de las **Opciones Globales** debemos acceder a `Code` | `Display` y marcar la "palomita" en `Rainbow parentheses`. 
+
+
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/rstudio_rainbow.png")
+```
+
+### Actividad
+
+Realiza los cambios necesarios en tus **Opciones Globales** para que no se guarde el proyecto más reciente ni los datos en el ambiente de RStudio, así como la .RData 
+
+Habilita los paréntesis de arcoíris. 
 
 ## Atajos con el teclado en RStudio
 
