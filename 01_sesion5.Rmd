@@ -6,4 +6,8 @@ María Teresa Ortiz
 
 ## Diapositivas
 
-## Actividad 1
+[
+```{r, echo=FALSE}
+knitr::include_url("https://docs.google.com/presentation/d/e/2PACX-1vQn99d48H8Q2rV66Owq_BNHwPC0KdzfUAvaq6-zf7-qrglA1XRumfU7YEhdFvlF_aFLkMPF9Z9zFccU/embed?", height="420px")
+```
+](https://docs.google.com/presentation/d/e/2PACX-1vQn99d48H8Q2rV66Owq_BNHwPC0KdzfUAvaq6-zf7-qrglA1XRumfU7YEhdFvlF_aFLkMPF9Z9zFccU/embed?)
