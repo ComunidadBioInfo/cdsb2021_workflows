@@ -200,7 +200,7 @@ ggplot(cats, aes(x = Sex)) +
 Usa uno de los proyectos que hayas generado en las sesiones anteriores, PERO, que no esté enlazado a GitHub. Ahora veremos como conectar un proyecti de R existente con GitHub. 
 Realiza los pasos que hicimos en **GitHub primero, RStudio después** pero asegurate de crear un repositorio con un nuevo nombre. 
 
-**Y LISTO!!** usa un simple `ctrl` + `c`, ó `mv` ó `click derecho` + `copiar` ó el método que prefieras oara mover o copiar archivos. Copia los archivos de tu antigüo proyecto al proyecto nuevo. 
+**Y LISTO!!** usa un simple `ctrl` + `c`, ó `mv` ó `click derecho` + `copiar` ó el método que prefieras para mover o copiar archivos. Copia los archivos de tu antigüo proyecto al proyecto nuevo. 
 Solo haz *commit* y *push* y listo, lo que tenía en tu antigüo proyecto ya está enlazado a GitHub. 
 
 

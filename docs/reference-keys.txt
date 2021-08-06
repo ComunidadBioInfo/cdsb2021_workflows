@@ -117,26 +117,12 @@ diapositivas-12
 presentación-de-proyectos
 proyectos
 <<<<<<< HEAD
-inicio
-actividad-10
-opciones-globales
-archivos-de-rstudio
-trabajando-con-el-environment
-últimos-tips
-actividad-11
-agradecimientos
 git-es-amor
 hasta-que-no
-usando-git-de-forma-segura
-commit-al-infinito
-probemos-nosotres
-todo-es-práctica
-conectando-rstudio-con-git-y-github.
 fig:unnamed-chunk-14
 fig:unnamed-chunk-17
-github-primero-rstudio-después
-actividad-12
 comentar-pull-y-push
 actividad-13
 =======
 >>>>>>> 0549e36091997e8cf1973e102d4310c9e17b0c56
+rstudio-primero-y-github-también
