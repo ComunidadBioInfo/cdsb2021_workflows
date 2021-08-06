@@ -104,3 +104,5 @@ fig:unnamed-chunk-14
 fig:unnamed-chunk-17
 github-primero-rstudio-después
 actividad-12
+comentar-pull-y-push
+actividad-13
