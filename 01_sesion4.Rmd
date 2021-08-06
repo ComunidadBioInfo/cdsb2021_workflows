@@ -5,5 +5,18 @@ María Teresa Ortiz
 9 de agosto de 2021
 
 ## Diapositivas
+[
+```{r, echo=FALSE}
+knitr::include_url("https://docs.google.com/presentation/d/e/2PACX-1vR_ouoxAMPkyf2bSUJ0YVHnQkvUPW0SIEG99wJBkwMq4g-H76XTn0HI7Cu898iCq_Httmk-E1DuEvze/embed?",
+  height="420px")
+```
+](https://docs.google.com/presentation/d/e/2PACX-1vR_ouoxAMPkyf2bSUJ0YVHnQkvUPW0SIEG99wJBkwMq4g-H76XTn0HI7Cu898iCq_Httmk-E1DuEvze/embed?)
 
 ## Actividad 1
+
+Corre las siguientes instrucciones para descargar el material de la actividad.
+
+```{r, eval = FALSE}
+library(usethis)
+use_course("comunidadbioinfo/corrige-rutas")
+```
