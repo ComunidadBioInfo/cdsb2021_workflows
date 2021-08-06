@@ -4,7 +4,37 @@ Erick Cuevas-Fernández
 
 10 de agosto de 2021
 
-## Diapositivas
+<style>
+
+div.color { 
+border-radius: 5px; 
+padding: 20px;
+margin: 30px 0px 30px;}
+
+div.red { background-color:#f67155; }
+
+div.orange{ background-color:#f0BB51;}
+
+div.pair { 	
+display: flex;
+flex-direction: row;
+justify-content: center;
+text-align:center;
+padding:0px}
+
+div.inside { width: 49%; padding: 0px}
+
+div.scroll { 
+max-height: 400px; 
+overflow-y: auto; 
+background: #111111;
+border-radius:5px;
+padding: 10px;
+margin: 30px 0px 30px;
+color: #999999;}
+
+div.alert{color:#bd475d; background-color:transparent}
+</style>
 
 ## Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)
 
@@ -23,10 +53,16 @@ Erick Cuevas-Fernández
     
 - Usualmente cuando inicies un proyecto colaborativo con GitHub inicializa el ropositorio con un README. Copia el HTTPS URL para clonar el repositorio en la *terminal* `git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git`. 
     
-### Credenciales HTTPS en **Cache**
+## Credenciales HTTPS en **Cache**
 
 Puedes crear un token de acceso personal, **PAT** (*PERSONAL ACCESS TOKEN*), esa será tu credencial para HTTPS. Es una alternativa al uso de contraseñas para la autenticación en GitHub cuando utilizas la API de GitHub o la línea de comandos.
 Como precaución de seguridad, GitHub elimina automáticamente los tokens de acceso personales que no se han usado durante un año. 
+
+<div class="alert">
+
+**OJO** PARA FINES DEL CURSO POR AHORA NO GENERAREMOS UN TOKEN, este proceso realizalo cuando tengas planificado donde guardar tu contraseña y trabajes con una computado personal. 
+
+</div> 
 
 **¿Cómo crear un token?**
 
@@ -63,7 +99,70 @@ Puedes ir directamente a la página de GitHub a la parte para generar tu token d
 ```{r, eval=FALSE}
 usethis::create_github_token()
 ```
-
 Y con las opciones que se mencionaban anteriormente puedes configurar y crear tu **PAT**. 
 
-## Actividad
+Si lo que quieres especificar tu **PAT** en RStudio, las siguientes funciones te serán útiles:
+
+```{r, eval=FALSE}
+
+library(gitcreds)
+
+gitcreds_set()
+
+```
+
+```{r, eval=FALSE}
+
+library(credentials)
+
+set_github_pat()
+
+```
+
+Para eliminar credenciales utiliza la función `credentials::git_credential_forget()`
+
+### Actividad
+Ejecuta los códigos **PERO** no generes para tu **PAT** por ahora. 
+
+
+## Conectando RStudio con Git y Github.
+
+<div class = "red color">
+
+Para lo que sigue a continuación, deberías tener esto:
+
+1. Tener una cuenta en GitHub
+2. **R** y **RStudio** actualizados
+3. Git instalado
+4. Saber que desde la terminal puedes hacer **push** y **pull**
+
+</div>
+
+
+## GitHub primero, RStudio después...
+
+1. Crea un repositorio en GitHub: `mi repositorio` > *Public* > *YES* initialize this repository with a *README* > `click`en el gran botón verde "Create repository"
+2. En RStudio crea un nuevo proyecto: *File* > *New Project* > *Version Control* > *Git*. Ahi pega el URL del repositorio `https://github.com/mi_usuario/mi_repositorio.git`. Da click en *Create Project*. 
+
+Esto nos generará los siguientes elementos:
+
+- Un directorio nuevo
+- Un repositorio Git enlazado a al repositorio de GitHub
+- Un proyecto en RStudio
+
+Con este procedimiento ya no es necesario preocuparse por configurar controles remotos Git
+y rastrear ramas en la línea de comandos.
+
+### Actividad
+
+<div class = "orange color">
+
+- Genera un repositorio con el nombre que desees. Y conéctalo a RStudio. Cerciorate de que el archivo *README* se encuentre en tu nueva carpeta. 
+- Usa la función `usethis::use_r("titulo_de_un_script")` y observa lo que sucede.
+
+**PAUSA**
+
+¿Cómo comento y doy push/pull desde RStudio?
+
+
+</div>

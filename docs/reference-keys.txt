@@ -99,3 +99,8 @@ usando-git-de-forma-segura
 commit-al-infinito
 probemos-nosotres
 todo-es-práctica
+conectando-rstudio-con-git-y-github.
+fig:unnamed-chunk-14
+fig:unnamed-chunk-17
+github-primero-rstudio-después
+actividad-12
