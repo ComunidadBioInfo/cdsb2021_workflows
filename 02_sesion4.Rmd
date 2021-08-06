@@ -4,29 +4,25 @@ Alejandra Medina-Rivera
 
 10 de agosto de 2021
 
+
 ## Diapositivas
 
-### Agradecimientos
+[
+```{r, echo=FALSE}
+knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/GitConflict.html",
+  height = "380px")
+```
+](https://comunidadbioinfo.github.io/cdsb2021_workflows/GitConflict.html)
+
+## Agradecimientos
 
 - Este documento se basa en "Happy Git with R" de Jenny Bryan, los STAT 545 TAs, Jim Hester
 
 
 https://happygitwithr.com
 
-### Git es Amor!
 
-```{r, out.width = '80%'}
-knitr::include_graphics('Figure3.png')
-```
-
-### Hasta que no
-
-```{r, fig.cap="https://xkcd.com", out.width = '40%'}
-knitr::include_graphics('Figure1.png')
-```
-
-
-### Usando git de forma segura
+## Usando git de forma segura
 
 - Usando commit podemos evitar problemas
 - Cada commit es un pin de seguridad en una escalada
@@ -37,17 +33,9 @@ knitr::include_graphics('Figure1.png')
 git commit -m "Mensaje que diga que hice"
 ```
 
-```{r, out.width = '40%'}
-knitr::include_graphics('Figure5.png')
-```
-
-### Commit al infinito
+## Commit al infinito
 
 - Hacer commit LOCAL es muy bueno pero puede dejar nuestra historia un poco intensa
-
-```{r, out.width = '60%'}
-knitr::include_graphics('Figure4.png')
-```
 
 - Para eso existe amend
 - no-edit va a dejar el mensaje original del commit
@@ -62,6 +50,244 @@ git commit --amend --no-edit
 ```{bash eval=FALSE, echo=TRUE}
 git commit --amend --m "ahora que ya terminé puedo dejar algo más completo" 
 git push
+```
+
+## Viajando en el tiempo
+
+- Estamos trabajando y nos equivocamos y ya nada sirve
+- Podemos volver al último commit donde todo funcionaba!
+
+```{bash eval=FALSE, echo=TRUE}
+git reset --hard
+```
+
+## Reescribiendo la historia
+
+- Amend es reescribir la historia de un commit.
+- Es importante no reescribir historias si ya se hizo PUSH
+- Cuando hacemos PUSH alguien de nuestro equipo podría ya haber hecho PULL.
+- Si por algo ya hicimos PUSH tenemos dos opciones:
+
+1. reset a un commit anterior y luego hacer pull
+```{bash eval=FALSE, echo=TRUE}
+git reset --hard HEAD
+git pull
+```
+
+2. Si estamos super seguros que nadie de nuestro equipo hizo pull de nuestro error, entonces podemos hacer un push force
+```{bash eval=FALSE, echo=TRUE}
+git push --force
+```
+
+## Reescribiendo la historia
+
+- Repetimos: De verdad no hay que hacer force
+
+## Rechazo de PUSH
+
+- Un problema común es que intentemos hacer PUSH a nuestro repositorio central y que se rechacen nuestros cambios
+
+```{bash eval=FALSE, echo=TRUE}
+$ git push
+To https://github.com/YOU/REPO.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/YOU/REPO.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+-Esto quiere decir que el repositorio central y lo que tenemos local han divergido.
+
+## Rechazo de PUSH
+-Solución: hacer PULL a local y lidiar con los conflictos
+
+-Cómo evitar que estemos pasando por este tipo de situaciones:
+
+1. No trabajar offline demasiado tiempo y hacer commit y PUSH seguido.
+
+2. Hacer PULL de forma continua para evitar divergir. Así si algo divergió el merge será menos doloroso.
+
+3. Trabajo en equipo, comunicación en equipo. Si sabemos qué hacen los demás es más fácil evitar conflictos.
+
+4. Uso de branches, organizar el progreso de nuestro trabajo en equipo en branches hará menos doloroso hacer integración con otras versiones.
+
+## Rechazo de PUSH > Hagamos PULL
+
+- Inevitable: nos rechazan un PUSH así que debemos hacer PULL
+
+- Nuestra historia local:
+
+A--B--C
+
+A--B-- Cambios sin commit
+
+- La historia en el repositorio central:
+
+A--B--D
+
+- Lo que queremos es hacer una fusion
+
+## PULL con cambios locales sin commit
+-Escenario 1: PULL feliz
+
+```{bash eval=FALSE, echo=TRUE}
+git pull
+```
+- Cuando no hay sobrelape entre lo que cambió en el repo central y lo que hice local, entonces PULL simplemente va a funcionar, dejando nuestra nueva historia incluyendo C
+
+A--B--C--(uncommitted changes)
+
+## PULL con conflictos
+- Si hay sobrelape entre lo que hicimos local y el repo central pull va a fallar
+
+```{bash eval=FALSE, echo=TRUE}
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 1 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:jennybc/ethel
+   db046b4..2d33a6f  master     -> origin/master
+Updating db046b4..2d33a6f
+error: Your local changes to the following files would be 
+overwritten by merge:
+        foo.R
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+- Quién me dice cuál es el problema?
+
+## Solución con git stash
+
+- stash nos permite guardar los cambios locales que no pasamos a commit en un universo medio paralelo
+
+```{bash eval=FALSE, echo=TRUE}
+$ git stash save
+Saved working directory and index state WIP on master: db046b4
+Merge branch 'master'of github.com:jennybc/ethel
+
+$ git pull
+Updating db046b4..2d33a6f
+Fast-forward
+ foo.R | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git stash pop
+Auto-merging foo.R
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes 
+  in working directory)
+
+        modified:   foo.R
+
+no changes added to commit 
+```
+
+## Cuando git stash no trae la felicidad
+```{bash eval=FALSE, echo=TRUE}
+git stash pop
+Auto-merging foo.R
+CONFLICT (content): Merge conflict in foo.R
+```
+
+## Merge conflics
+- A veces, no tan a veces también, las cosas no salen bien a la primera
+- Merging (Fusionar) es una de esas cosas
+- Primera regla: NO ENTRAR EN PANICO!!!
+- Revisen el status del repositorio. Qué archivo tiene conflicto?
+
+## Merge conflics
+
+- Abran ese archivo y busquen los problemas de merge. Es fácil, se ven así:
+
+```{r echo=TRUE, eval=FALSE}
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> issue-5:index.html
+```
+
+- Editen esa sección, dejen una versión final.
+
+
+## Regresando a git stash
+- Ya tenemos la versión final de nuestro archivo conflictivo
+- Ahora a limpiar un poco el desastre
+
+```{bash eval=FALSE, echo=TRUE}
+$ git reset
+$ git reset --mixed
+Unstaged changes after reset:
+M       foo.R
+```
+
+- git reset (default: mixed) nos va a regresar al "commit" anterior.
+- PELIGRO: la opción hard de git reset incluso borra todo lo que pasó después del commit. Esto es como rm -f, así que con cuidado!
+
+
+## Regresando a git stash
+- Por último, debemos dejar el stash que estábamos haciendo
+```{bash eval=FALSE, echo=TRUE}
+$ git stash drop
+Dropped refs/stash@{0} (7928db50288e9b4d934803b6b451a000fd7242ed)
+```
+- Ya quedó todo listo para continuar
+
+## Qué hacemos si si hicimos commit y PULL no funciona?
+- PULL, fetch/merge
+
+-El mejor escenario es que el merge es fácil por que no hay conflictos
+```{bash eval=FALSE, echo=TRUE}
+$ git pull
+<Se habre un editor de texto para que podamos añadir
+un mensaje al Merge>
+Merge made by the 'recursive' strategy.
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+```
+
+## Qué hacemos si si hicimos commit y PULL no funciona?
+- El escenario donde falla el merge
+```{bash eval=FALSE, echo=TRUE}
+$ git pull
+Auto-merging foo.R
+CONFLICT (content): Merge conflict in foo.R
+Automatic merge failed; fix conflicts and then commit the result.
+```
+- Arreglamos todo como la vez pasada, eligiendo en el archivo la versión que nos gusta y cuando estemos listos add y commit
+
+```{bash eval=FALSE, echo=TRUE}
+$ git add foo.R
+$ git commit 
+```
+
+## PULL con rebase
+- Pull combinado con su opción rebase hace una historia más limpia.
+- Nos evitamos añadir otro commit consecuencia del merge
+- Es tentador pero peligroso por que los cambios locales se aplicarán sobre los remotos
+
+
+## PULL con rebase
+```{bash eval=FALSE, echo=TRUE}
+$ git pull --rebase
+First, rewinding head to replay your work on top of it...
+Applying: Take max
+```
+- El problema: vamos a acarrear conflictos de merge en el futuro y nuestra historia se reescribe un poco
+
+```{bash eval=FALSE, echo=TRUE}
+$ git rebase --abort
 ```
 
 
@@ -84,8 +310,4 @@ git push
 ### Todo es práctica
 
 Y si nada funciona pues volvemos a instalar el repo
-
-```{r,, out.width = '50%'}
-knitr::include_graphics('img/Figure10.png')
-```
 
