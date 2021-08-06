@@ -92,3 +92,10 @@ archivos-de-rstudio
 trabajando-con-el-environment
 últimos-tips
 actividad-11
+agradecimientos
+git-es-amor
+hasta-que-no
+usando-git-de-forma-segura
+commit-al-infinito
+probemos-nosotres
+todo-es-práctica
