@@ -165,6 +165,8 @@ Puedes modificar el zoom de cada panel en RStudio según tus necesidades y prefe
 
 - **Addins**
 
+- **Help**
+
 ### Actividad 
 
 Ejecuta el siguiente código 
