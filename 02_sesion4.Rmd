@@ -6,4 +6,86 @@ Alejandra Medina-Rivera
 
 ## Diapositivas
 
+### Agradecimientos
+
+- Este documento se basa en "Happy Git with R" de Jenny Bryan, los STAT 545 TAs, Jim Hester
+
+
+https://happygitwithr.com
+
+### Git es Amor!
+
+```{r, out.width = '80%'}
+knitr::include_graphics('Figure3.png')
+```
+
+### Hasta que no
+
+```{r, fig.cap="https://xkcd.com", out.width = '40%'}
+knitr::include_graphics('Figure1.png')
+```
+
+
+### Usando git de forma segura
+
+- Usando commit podemos evitar problemas
+- Cada commit es un pin de seguridad en una escalada
+- Debemos hacer commit LOCAL continuamente 
+- LOCAL quiere decir sin PUSH
+
+```{bash eval=FALSE, echo=TRUE}
+git commit -m "Mensaje que diga que hice"
+```
+
+```{r, out.width = '40%'}
+knitr::include_graphics('Figure5.png')
+```
+
+### Commit al infinito
+
+- Hacer commit LOCAL es muy bueno pero puede dejar nuestra historia un poco intensa
+
+```{r, out.width = '60%'}
+knitr::include_graphics('Figure4.png')
+```
+
+- Para eso existe amend
+- no-edit va a dejar el mensaje original del commit
+
+```{bash eval=FALSE, echo=TRUE}
+git commit -m "Mensaje que diga que hice"
+git commit --amend --no-edit
+```
+
+- Cuando hayamos terminado de trabajar podemos cambiar el mensaje y dejar algo más completo
+
+```{bash eval=FALSE, echo=TRUE}
+git commit --amend --m "ahora que ya terminé puedo dejar algo más completo" 
+git push
+```
+
+
 ## Actividad
+### Probemos nosotres!
+- Vayan a GitHub y creen en repostorio "toxico"
+
+- Creen un README
+
+- Clonen este reposotorio a sus computadoras
+
+- Editen el README en su computadora
+
+- Ahora editen el READM en el GitHub
+
+- Traten de hacer pull, qué pasó?
+
+- Cómo lo arreglamos?
+
+### Todo es práctica
+
+Y si nada funciona pues volvemos a instalar el repo
+
+```{r,, out.width = '50%'}
+knitr::include_graphics('img/Figure10.png')
+```
+
