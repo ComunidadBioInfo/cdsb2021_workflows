@@ -4,8 +4,6 @@ Erick Cuevas Fernández
 
 9 de agosto de 2021
 
-## Diapositivas
-
 ## Inicio
 
 Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link [https://cran.itam.mx](https://cran.itam.mx). Asegúrate de tener la versión más reciente. 
@@ -64,6 +62,8 @@ RStudio es un *entorno de desarrollo integrado* (IDE) para R. Su interfaz gráfi
 knitr::include_graphics("img/rstudio_paneles_1.png")
 ```
 
+### Opciones Globales...
+
 Las **opciones globales** (Global Options...) nos permitirán cambiar aspectos visuales de la organización de la interfaz gráfica. Para acceder a estas opciones debemos ir a `Tools` | `Global Options...` o usar directamente el atajo de teclado `command` + `,` (Mac) ó `ctrl` + `,` (Linux y Windows). 
 
 Una vez accesando a las **Opciones Globales** podemos modificar que no se gaste memoria temporal al guardar datos o código de sesiones anteriores en la parte de `General`. Al quitar las “palomitas” de los pequeños cuadros de las opciones generales señaladas en los recuadros azules.
@@ -79,11 +79,21 @@ Dentro de las **Opciones Globales** podemos modificar nuestros atajos de teclado
 knitr::include_graphics("img/rstudio_rainbow.png")
 ```
 
+
+En la se sección de **Apariencia**, esta opción podemos definir el color, letra y tamaño de nuestro editor de código. De esta manera personalizarlo a nuestras necesidades o gustos. También podemos modificar el diseño de los paneles en **Pane Layout**, en la nueva versión de RStudio podemos visualizar dos editores de código al mismo tiempo. Al hcer click en `Add column`. En esta sección podemos modificar la distribución de los paneles y el contenido de ellos. 
+
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/rstudio_column.png")
+```
+
 ### Actividad
 
-Realiza los cambios necesarios en tus **Opciones Globales** para que no se guarde el proyecto más reciente ni los datos en el ambiente de RStudio, así como la .RData 
+- Realiza los cambios necesarios en tus **Opciones Globales** para que no se guarde el proyecto más reciente ni los datos en el ambiente de RStudio, así como la .RData 
 
-Habilita los paréntesis de arcoíris. 
+- Habilita los paréntesis de arcoíris. 
+
+- Cambia el tema de tu RStudio al de **Dracula** y usa la letra y el tamaño que más prefieras. 
+
 
 ## Atajos con el teclado en RStudio
 
@@ -94,6 +104,81 @@ Habilita los paréntesis de arcoíris.
 - Expandir cursor: mantén presionado `Alt` + usa el cursor
 - Ejecutar en la terminal líena de código y saltar a la siguiente línea de código: `command` + `Enter`
 - Ejecutar en la terminal línea de código y mantenerse en la línea de código: `Alt` + `Enter`
+- Compilar en reporte pdf: `Shift` + `command` + `k`
 
+
+## Archivos de RStudio
+
+En RStudio podemos generar todos los archivos enlístados en “New File”. El archivo más usado para desarrollar código en R es **“R Script”**. Aún así RStudio nos permite hacer reportes de nuestros código con **“R Notebook y R Markdown”**, aplicaciones web con **“Shiny Web App”**, generar APIs con “Plumber API”, editar código en HTML, C, C++, Python, CSS, JavaScript, Shell, entre otros. Más adelante verás cómo optimizar tu trabajo trabajando con RProject en RStudio.
+
+
+## Trabajando con el **Environment**
+
+### Actividad 
+
+- Crea dos **R scripts**. Agrega una nueva columna en la visualización de los *Scripts* dentro de **Opciones Globales**.
+
+- En un **script** ejecuta el siguiente código:
+
+```{r, eval=FALSE}
+install.packages("MASS")
+
+library(MASS)
+
+data(cats)
+View(cats)
+
+table(cats$Sex)
+
+```
+
+**PAUSA**
+
+¿Qué sucede al ejecutar `data(cats)` y `View(cats)`?
+
+¿Qué formas hay desde la interfaz gráfica para importar datos?
+
+
+- En el otro **script** ejecuta el siguiente código:
+
+```{r, eval=FALSE}
+install.packages("ggplot2")
+library(ggplot2)
+
+ggplot(cats, aes(x = Sex)) + 
+    geom_bar(fill = "orange", color = "black") + theme_classic() 
+
+```
+
+**PAUSA**
+
+¿Cómo podemos exportar el gráfico?
+
+
+## Últimos tips
+
+Puedes modificar el zoom de cada panel en RStudio según tus necesidades y preferencias.
+
+- **Lupa**
+
+- **Várita mágica**
+
+- **Addins**
+
+### Actividad 
+
+Ejecuta el siguiente código 
+
+```{r eval=FALSE}
+install.packages("ggThemeAssist")
+
+g <- ggplot(cats, aes(x = Sex)) + 
+    geom_bar(fill = "orange", color = "black") + theme_classic() +
+    xlab("Sexo") + ylab("Número de Gatos") + ggtitle("Gatos")
+
+g
+```
+
+A continuación selecciona `g`, ve a `Addins` y da click en `ggplot Theme Assistant`
 
 

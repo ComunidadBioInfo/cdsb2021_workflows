@@ -87,3 +87,8 @@ presentación-de-proyectos
 proyectos
 inicio
 actividad-10
+opciones-globales
+archivos-de-rstudio
+trabajando-con-el-environment
+últimos-tips
+actividad-11
