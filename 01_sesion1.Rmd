@@ -6,6 +6,11 @@ Erick Cuevas Fernández
 
 ## Diapositivas
 
+## Inicio
+
+Para poder usar RStudio tenemos que tener instalado R en nuestras máquinas. Si aún no lo has instalado lo puedes descargar desde el siguiente link [https://cran.itam.mx](https://cran.itam.mx). 
+
+También necesitas descargar la versión más reciente de RStudio Desktop. (*1.4.1717*).
 
 ## Misión de RStudio
 
@@ -49,7 +54,11 @@ demo(package = .packages(all.available = TRUE))
 
 ## La interfaz gráfica de RStudio
 
-RStudio es un *entorno de desarrollo integrado* (IDE) para R. Su interfaz gráfica incluye 4 paneles principales. 
+RStudio es un *entorno de desarrollo integrado* (IDE) para R. Su interfaz gráfica incluye 3 paneles principales:
+
+1. Consola de R
+2. Datos en el ambiente, Historial, Conecciones remotas, Git.
+3. Gráficos, Archivos, Ayuda, Paqueterías. 
 
 
 ## Atajos con el teclado en RStudio
