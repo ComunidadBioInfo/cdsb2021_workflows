@@ -116,3 +116,13 @@ keynote-aplicaciones-shinyr-en-la-vida-diaria
 diapositivas-12
 presentación-de-proyectos
 proyectos
+<<<<<<< HEAD
+git-es-amor
+hasta-que-no
+fig:unnamed-chunk-14
+fig:unnamed-chunk-17
+comentar-pull-y-push
+actividad-13
+=======
+>>>>>>> 0549e36091997e8cf1973e102d4310c9e17b0c56
+rstudio-primero-y-github-también
