@@ -4,6 +4,108 @@ Joselyn Chávez
 
 11 de agosto de 2021
 
+<style>
+div.grey { 
+background-color: #bfbfbf;
+
+}
+</style>
+
+
 ## Diapositivas
 
-## Actividad
+## ¿Cuáles son los archivos de inicio?
+
+R ofrece una gran diversidad de opciones para personalizar el espacio de trabajo, sin embargo, esta flexibilidad conlleva un alto grado de complejidad. 
+
+```{r,echo=FALSE,out.width='100%',fig.align='center',fig.cap="R Startup flowchart de Thomas Lin Pedersen"}
+knitr::include_graphics("img/startflow.png")
+```
+
+Al iniciar R, una serie de procesos complejos se ejecutan tras bambalinas. En general, podemos concentrarnos en dos archivos: 
+    - El archivo *.Renviron* contiene las variables del ambiente de trabajo que deberán ser establecidas al iniciar cada sesión.
+    - El archivo *.Rprofile* contiene código de R que será ejecutado al iniciar cada sesión.
+
+Estos archivos forman parte de una gran familia de archivos de personalización conocidos como **dotfiles** o archivos ocultos. Este tipo de archivos suelen contener las instrucciones necesarias para dirigir el comportamiento de diversos programas, en particular aquellos que suelen ejecutarse desde un ambiente de linea de comandos. 
+
+Muchas personas suelen conservar este tipo de archivos dentro de sus repositorios, por ejemplo en GitHub. Consultar los archivos ocultos de otros desarrolladores puede ser una referencia o fuente de inspiración para conocer todo lo que es posible hacer con estos archivos. 
+
+Una forma rápida para encontrar este tipo de archivos dentro de los repositorios de GitHub es usando la herramienta de búsqueda y escribir .Rprofile.
+
+Puedes encontrar más información sobre los archivos de punto en https://dotfiles.github.io/
+
+## Modificando el archivo .Renviron
+
+El archivo .Renviron es útil para configurar cómo se comporta el ambiente de R, por ejemplo, podemos establecer el número de lineas que deseamos almacenar y mostrar en nuestra historia de comandos (history).
+
+- Dale un vistazo a la ventana History en tu sesión de RStudio, ¿Cuántos comandos ves?. Si tu historia está en bllanco, escribe algunos comandos sencillos en la consola para que puedas conocer el tamaño máximo de tu historial.
+- Ahora abre el archivo .Renviron, la forma más sencilla de hacerlo es usando el siguiente comando:
+```{r,eval=FALSE}
+usethis::edit_r_environ()
+```
+- Vamos a modificar el tamaño de la historia de comandos a mostrar, escribe 'R_HISTSIZE=3' dentro del archivo .Renviron.
+- Guarda los cambios y reinicia la sesión de RStudio.
+- Comienza a escribir algunos comandos sencillos en la consola y observa cuántos comandos se muestran en la ventana History. ¿Notas la diferencia?
+
+Las modificaciones a las variables del archivo .Renviron también nos permiten controlar cómo se va a comportar nuestro entorno cuando evaluamos ciertas condiciones, y nos permitirá ser más estrictos al evaluar las variables de entrada a nuestro código. Veamos un ejemplo:
+
+<div class = "grey color">
+**Actividad 1**
+
+- Define un vector x <- c(1, -2).
+- Escribe una función que te permita evaluar si los elementos dentro de este vector son positivos o negativos, tomando en cuenta si son menores o mayores a cero. (Pista: usa los condicionales if() y else() ). Recuerda que la estructura básica para escribir una función es:
+
+```{r,eval=FALSE}
+mifuncion <- function(x) {
+    # aquí va el cuerpo de la función
+}
+```
+
+- Evalúa los elementos del vector x usando tu función. Observa detenidamente el resultado.
+- Ahora, escribe en tu archivo .Renviron la siguiente variable: _R_CHECK_LENGTH_1_CONDITION_=true guarda los cambios y no olvides reiniciar tu sesión.
+- Vuelve a ejecutar la evaluación del vector x usando tu función. ¿Qué diferencia notas?
+</div>
+
+Una modificación interesante que podemos hacer dentro de .Renviron es seleccionar la ubicación donde serán instaladas las paqueterías de R (R_LIBS_USER).
+
+- Abre tu archivo .Renviron
+
+En .Renviron también podemos almacenar información sensible, por ejemplo, las llaves de autenticación para conectar con aplicaciones como GitHub. Esto es particularmente útil para la instalación de paqueterías desde el código fuente que veremos más adelante.
+
+- En el GitHub de la CDSB existe un paquete llamado 'saludo', pero se encuentra como un repositorio privado. Solamente los colaboradores de este repositorio tienen acceso a él (Si estás inscrito en este taller, te hemos agregado como colaborador). De forma normal, podrías instalar un paquete desde GitHub usando el comando:
+
+```{r,eval=FALSE}
+remotes::install_github("comunidadbioinfo/saludo")
+```
+
+- Intenta ejecutar este comando, seguramente obtendrás un mensaje que dirá que este repositorio no existe, ¿Por qué pasa esto? Esto se debe a que tu ambiente de R no está conectado con tu usuario de GitHub, debemos indicarle nuestras credenciales usando un Token de autenticación.
+
+- Vamos a tu usuario de GitHub y entra en Settings > Developer settings > Personal access tokens
+- Da clic en Generate new token. 
+- El las opciones Select scopes selecciona repo y write:packages:
+
+```{r,echo=FALSE,out.width='40%'}
+knitr::include_graphics("img/scopes.png")
+```
+
+- Da clic en Generate token y copia el token a tu portapapeles.
+- Ahora abre tu archivo .Renviron y escribe GITHUB_PAT=TuToken reemplaza la palabra TuToken con la clave token que copiaste.
+- Guarda los cambios y reinicia la sesión de R.
+- Vuelve a probar con la instalación del paquete, esta vez el código debe funcionar.
+
+Si colocas información sensible dentro del archivo .Renviron, entonces no querrás dejar expuesto este archivo al público. Puedes agregar este archivo en la lista de archivos ignorar por git, para esto deberás listarlo dentro del archivo .gitignore o puedes utilizar el paquete *credentials* que te ayudará a almacenar tu token de autenticación sin dejarlo expuesto en el archivo .Renviron
+
+Es importante recordar que las variables que estamos configurando en el archivo .Renviron no son código de R. Estas variables usan un formato similar a los usados en la linea de comandos de shell.
+
+
+<div class = "grey color">
+**Actividad 2**
+
+- Genera un nuevo proyecto de RStudio depositado en un repositorio de GitHub. 
+- Modifica el archivo .Renviron (puedes usar alguna de las ideas que vimos previamente).
+- Guarda los cambios y súbelos a GitHub.
+- Busca en el repositorio de tus compañeros, encuentra su archivo .Renviron e implementa alguna de sus ideas dentro de tu .Renviron.
+</div>
+
+## Modificando el archivo .Rprofile
+
