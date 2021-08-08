@@ -1,5 +1,6 @@
 fig:unnamed-chunk-37
 fig:unnamed-chunk-40
+fig:unnamed-chunk-101
 instructores
 ponentes-invitados
 temario
@@ -64,6 +65,9 @@ actividad-4
 conectando-rstudio-con-git-y-github.
 github-primero-rstudio-después
 actividad-5
+comentar-pull-y-push
+actividad-6
+rstudio-primero-y-github-también
 merge-y-conflictos-de-versiones-en-git-y-github
 diapositivas-5
 agradecimientos
@@ -87,12 +91,26 @@ qué-hacemos-si-si-hicimos-commit-y-pull-no-funciona
 qué-hacemos-si-si-hicimos-commit-y-pull-no-funciona-1
 pull-con-rebase
 pull-con-rebase-1
-actividad-6
+actividad-7
 probemos-nosotres
 todo-es-práctica
 modificando-los-archivos-de-inicio-de-r
 diapositivas-6
-actividad-7
+qué-son-los-archivos-de-inicio
+modificando-el-archivo-.renviron
+modificando-el-historial-de-la-sesión
+modificando-el-comportamiento-de-las-funciones
+generando-un-.renviron-por-proyecto
+guardando-tokens-para-la-conexión-con-apis
+modificando-el-archivo-.rprofile
+modificando-la-estética-de-la-consola
+modificando-el-número-de-dígitos
+cargando-paquetes-frecuentes
+asignación-de-sobrenombres-a-las-funciones
+creando-mensajes-de-error-personalizados
+mensajes-de-bienvenida
+generando-un-.rprofile-para-cada-proyecto
+reproducibilidad
 keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código
 diapositivas-7
 mantenimiento-del-espacio-de-trabajo
@@ -116,13 +134,3 @@ keynote-aplicaciones-shinyr-en-la-vida-diaria
 diapositivas-12
 presentación-de-proyectos
 proyectos
-<<<<<<< HEAD
-git-es-amor
-hasta-que-no
-fig:unnamed-chunk-14
-fig:unnamed-chunk-17
-comentar-pull-y-push
-actividad-13
-=======
->>>>>>> 0549e36091997e8cf1973e102d4310c9e17b0c56
-rstudio-primero-y-github-también
