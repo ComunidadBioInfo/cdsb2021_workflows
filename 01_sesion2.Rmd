@@ -7,6 +7,11 @@ Joselyn Chávez
 <style>
 div.grey { 
 background-color: #bfbfbf;
+}
+</style>
+
+<style>
+div.center {
 text-align:center;
 }
 </style>
@@ -40,7 +45,7 @@ knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_s
   - Oprime Create Project.
 
 <div class = "grey color">
-**Actividad 1**
+<div class = "center">**Actividad 1**</div>
 
 Genera un proyecto de RStudio llamado 'nuevodirectorio' en un directorio nuevo en tus Documentos (~/Documentos). 
 </div>
@@ -55,7 +60,7 @@ Genera un proyecto de RStudio llamado 'nuevodirectorio' en un directorio nuevo e
   - Oprime Create Project.
 
 <div class = "grey color">
-**Actividad 2**
+<div class = "center">**Actividad 2**</div>
 
 Genera una carpeta o directorio llamado 'directorioprevio' en tus Documentos (~/Documentos), después genera un proyecto de RStudio usando este folder como base. 
 </div>
@@ -102,7 +107,7 @@ ggdraw() +
 
 
 <div class = "grey color">
-**Actividad 3**
+<div class = "center">**Actividad 3**</div>
 
 Comprueba algunas ventajas de usar proyectos de RStudio.
 
