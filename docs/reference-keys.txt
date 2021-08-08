@@ -1,6 +1,6 @@
 fig:unnamed-chunk-37
 fig:unnamed-chunk-40
-fig:unnamed-chunk-101
+fig:unnamed-chunk-102
 instructores
 ponentes-invitados
 temario

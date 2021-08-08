@@ -19,6 +19,14 @@ text-align:center;
 
 ## Diapositivas
 
+[
+```{r, echo=FALSE}
+knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/dia3_sesion1.html",
+  height = "380px")
+```
+](https://comunidadbioinfo.github.io/cdsb2021_workflows/dia3_sesion1.html)
+
+
 ## ¿Qué son los archivos de inicio?
 
 R ofrece una gran diversidad de opciones para personalizar el espacio de trabajo, sin embargo, esta flexibilidad conlleva un alto grado de complejidad. 
@@ -131,7 +139,7 @@ remotes::install_github("comunidadbioinfo/saludo")
 - Intenta ejecutar este comando, seguramente obtendrás un mensaje que dirá que este repositorio no existe, ¿Por qué pasa esto? Esto se debe a que tu ambiente de R no está conectado con tu usuario de GitHub, debemos indicarle nuestras credenciales usando un Token de autenticación.
 - Vamos a tu usuario de GitHub y entra en Settings > Developer settings > Personal access tokens.
 - Da clic en Generate new token.
-- El las opciones 'Select scopes' selecciona 'repo' y 'write:packages'.
+- En las opciones 'Select scopes' selecciona 'repo' y 'write:packages'.
 
 ```{r,echo=FALSE,out.width='60%',fig.align='center'}
 knitr::include_graphics("img/scopes.png")
