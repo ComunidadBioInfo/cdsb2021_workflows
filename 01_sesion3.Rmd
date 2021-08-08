@@ -7,7 +7,12 @@ Joselyn Chávez
 <style>
 div.grey { 
 background-color: #bfbfbf;
-text-align:center;
+}
+</style>
+
+<style>
+div.center {
+text-align: center;
 }
 </style>
 
@@ -33,7 +38,7 @@ knitr::include_graphics("img/proyecto1.png")
 ```
 
 <div class = "grey color">
-**Actividad 1**
+<div class = "center">**Actividad 1**</div>
 
 Descarga la carpeta **proyecto_desordenado** desde https://bit.ly/cdsb2021_workflows y ordena los archivos en subcarpetas, considera las recomendaciones mencionadas anteriormente.
 </div>
@@ -55,7 +60,7 @@ tb <- read.table("datos/mis_datos.txt", header = TRUE)
 ```
 
 <div class = "grey color">
-**Actividad 2**
+<div class = "center">**Actividad 2**</div>
 
 - Con tu proyecto ordenado, abre el archivo analisis.R y corrige las rutas a los archivos considerando los subdirectorios que creaste. 
 - Mejora aún más tu proyecto! Secciona tu código y crea nuevos scripts con cada una de las secciones que detectes en el análisis.
@@ -68,7 +73,7 @@ Una de las ventajas de usar proyectos de RStudio es facilitar la colaboración c
 Lo más común es utilizar control de versiones, por ejemplo en GitHub o GitLab. Pero comencemos compartiendo nuestro proyecto mediante Drive. 
 
 <div class = "grey color">
-**Actividad 3**
+<div class = "center">**Actividad 3**</div>
 
 Genera un proyecto en tu computadora que contenga lo siguiente: 
 
