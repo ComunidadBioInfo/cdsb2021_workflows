@@ -59,8 +59,10 @@ Consulta el calendario de este curso en: <http://bit.ly/calendarcdsb2021>
 | 10:00-11:00 | Hacks de RStudio                          | Erick Cuevas Fernández |
 | 11:30-13:00 | Flujo de trabajo con proyectos de RStudio | Joselyn Chávez         |
 | 13:00-14:00 | Generando mi primer proyecto de RStudio   | Joselyn Chávez         |
-| 15:30-16:30 | Trabajando con paths seguros              | María Teresa Ortiz     |
-| 16:30-17:30 | Buenas prácticas para nombrar archivos    | María Teresa Ortiz     |
+| 15:00-16:00 | Trabajando con paths seguros              | María Teresa Ortiz     |
+| 16:00-17:00 | Buenas prácticas para nombrar archivos    | María Teresa Ortiz     |
+| 16:00-17:00 | Buenas prácticas para nombrar archivos    | María Teresa Ortiz     |
+| 17:00-17:50 | Principios FAIR para software de investigación| Paula Andrea       |
 
 ### Martes 10 de agosto
 
