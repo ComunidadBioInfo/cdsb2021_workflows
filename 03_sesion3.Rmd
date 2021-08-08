@@ -7,3 +7,21 @@ Joselyn Chávez
 ## Diapositivas
 
 ## Actividad
+
+Una modificación interesante que podemos hacer dentro de .Renviron es seleccionar la ubicación donde serán instaladas las paqueterías de R usando la variable R_LIBS_USER.
+
+Antes de modificar esta variable, veamos cómo se encuentra tu configuración actual. Ejecuta el siguiente comando para ver los valores actuales de tus variables:
+
+```{r,eval=FALSE}
+Sys.getenv()
+```
+
+Esta función te mostrará las variables que tiene tu configuración actual, busca dentro de esta lista a la variable R_LIBS_USER.
+
+Vamos a explorar los paquetes que tienes instalados actualmente, usaremos esta ubicación en tu computadora.
+
+
+
+- Abre tu archivo .Renviron
+- Vamos a instalar un paquete en esta nueva carpeta.
+- Vuelve a ejecutar el comando. ¿Cuáles paquetes observas ahora?
