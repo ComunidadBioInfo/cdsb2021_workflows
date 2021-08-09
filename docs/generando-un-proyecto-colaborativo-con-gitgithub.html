@@ -404,19 +404,18 @@ color: #999999;}
 div.alert{color:#0D4848; background-color:transparent}
 </style>
 <div class="alert">
-<p><strong>Si aún no nos has dado tu nombre de usuario de GitHub añadelo en</strong>:</p>
+<p><strong>Para participar en los ejercicios en equipo de esta sesión danos por favor tu nombre de usuario de GitHub</strong>:</p>
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScWW9qW0926tf3xqEkq9EBpjqJ-8k3Rj44W5P3lARshnvjM3A/viewform">Registro de usuarios de GitHub</a></p>
-<p><strong>Esto será necesario para formar equipos durante esta sesión.</strong></p>
 </div>
 <div id="colaborando-mediante-git-y-git-hub" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Colaborando mediante Git y Git Hub</h2>
-<p>Git y GitHub son muy útiles para la colaboración, pues permiten compartir copias de los proyectos (repositorios) y mantenerlas sincronizadas entre si. Además, permiten visualizar la historia de los cambio hechos por cada colaborador y evitan que los programadores sobre-escriban sobre los cambios de otro miembro del equipo.</p>
+<p>Git y GitHub son muy útiles para la colaboración, pues permiten compartir copias de los proyectos (repositorios) y mantenerlas sincronizadas entre sí. Además, Git y GitHub registran los cambios hechos por cada colaborador y evitan que un programador sobrescriba sobre los cambios de otro.</p>
 <p>Ensayaremos algunos principios de la colaboración con Git y GitHub mediante una serie de ejercicios.</p>
 </div>
 <div id="inicio-del-proyecto" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Inicio del proyecto</h2>
 <div class="cyan color">
-<p>A tí y a un colaborador les interesa la anatomía de gatos. Deciden colaborar para averiguar si hay diferencias significativas en el peso del cuerpo y del corazón entre gatos hembras y machos.</p>
+<p>A ti y a un colaborador les interesa la anatomía de gatos. Deciden colaborar para averiguar si hay diferencias significativas en el peso del cuerpo y del corazón entre gatos hembras y machos.</p>
 <p>Uno de ustedes iniciará el análisis del cuerpo (<strong>equipo</strong> <strong><em>body</em></strong>) y el otro el análisis del corazón (<strong>equipo</strong> <strong><em>heart</em></strong>). Para saber en qué equipo estás:</p>
 <p><a href="https://docs.google.com/spreadsheets/d/17erK-35KV2NYD55XlgzW09_1wb7ZSyIRp5bUiOeUsXk/edit?usp=sharing">Da click aquí</a></p>
 </div>
@@ -445,11 +444,11 @@ En el contexto de esta clase <strong>terminal</strong> se refiere al entorno de 
 <hr />
 <ol start="4" style="list-style-type: upper-alpha">
 <li><p>Abre <strong>RStudio</strong> y cambia la ruta de trabajo a la de tu repositorio. Para ello usa a <strong>setwd</strong> (en la consola de RStudio) o el menú de RStudio (ve a Session &gt; Choose working directory &gt; Choose directory…).</p></li>
-<li><p>Añade un primer script de R para analizar los datos del cuerpo o del corazón de gatos. Para ello usa el menú de RStudio (ve a File &gt; New File &gt; R Script).</p></li>
+<li><p>Añade un primer <em>script</em> de R para analizar los datos del cuerpo o del corazón de gatos. Para ello usa el menú de RStudio (ve a File &gt; New File &gt; R Script).</p></li>
 </ol>
 <ul>
-<li><p><em>Equipo</em> <strong><em>body</em></strong>: el nombre del script será body.R</p></li>
-<li><p><em>Equipo</em> <strong><em>heart</em></strong>: el nombre del script será heart.R</p></li>
+<li><p><em>Equipo</em> <strong><em>body</em></strong>: el nombre del <em>script</em> será body.R</p></li>
+<li><p><em>Equipo</em> <strong><em>heart</em></strong>: el nombre del <em>script</em> será heart.R</p></li>
 </ul>
 <div class="orange color">
 <p>Usaremos el set de datos <strong><em>cats</em></strong>, incluído en el paquete <strong>MASS</strong>. En él se listan el <strong>sexo (Sex)</strong>, <strong>peso corporal (Bwt)</strong> y <strong>peso del corazón (Hwt)</strong> de varios gatos.</p>
@@ -468,7 +467,7 @@ En el contexto de esta clase <strong>terminal</strong> se refiere al entorno de 
 ##  $ Hwt: num  7 7.4 9.5 7.2 7.3 7.6 8.1 8.2 8.3 8.5 ...</code></pre>
 </div>
 <ol start="6" style="list-style-type: upper-alpha">
-<li>Contenido del script (ambos equipos)</li>
+<li>Contenido del <em>script</em> (ambos equipos)</li>
 </ol>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb21-1" aria-hidden="true" tabindex="-1"></a>        <span class="fu">library</span>(<span class="st">&quot;MASS&quot;</span>)</span>
 <span id="cb21-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -478,7 +477,7 @@ En el contexto de esta clase <strong>terminal</strong> se refiere al entorno de 
 <span id="cb21-6"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb21-6" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb21-7"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">summary</span>(cats)</span></code></pre></div>
 <ol start="7" style="list-style-type: upper-alpha">
-<li>Guarda el script con el nombre antes mencionado.</li>
+<li>Guarda el <em>script</em> con el nombre antes mencionado.</li>
 </ol>
 <hr />
 <p>Ahora cuentas con un repositorio en GitHub y con una copia local de dicho repositorio. El repositorio local está configurado para enviar cambios y recibir cambios desde el repositorio original u <strong><em>origin</em></strong>, es decir, el repositorio en GitHub.</p>
@@ -492,15 +491,15 @@ En el contexto de esta clase <strong>terminal</strong> se refiere al entorno de 
 </ul>
 <div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
 <ul>
-<li>Añade los cambios al siguiente commit.</li>
+<li>Añade los cambios al siguiente <em>commit</em>.</li>
 </ul>
 <div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="pp">*</span></span></code></pre></div>
 <ul>
-<li>Realiza el commit añadiendo un mensaje.</li>
+<li>Realiza el <em>commit</em> añadiendo un mensaje.</li>
 </ul>
 <div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;primer script&quot;</span></span></code></pre></div>
 <ul>
-<li>Enviamos los cambios al GitHub, es decir, al repositorio <strong>origin</strong></li>
+<li>Enviamos los cambios al GitHub, es decir, al repositorio <strong><em>origin</em></strong></li>
 </ul>
 <div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
 </div>
@@ -540,13 +539,13 @@ Figure 7.1: <strong>Nota</strong>: si eres del equipo <em>heart</em> el nombre d
 <li>Usando a RStudio añade nuevos cambios a tu repositorio original.</li>
 </ol>
 <ul>
-<li>Si eres del equipo <em>body</em> añade al script body.R:</li>
+<li>Si eres del equipo <em>body</em> añade al <em>script</em> body.R:</li>
 </ul>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas del cuerpo por sexo</span></span>
 <span id="cb26-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(cats<span class="sc">$</span>Bwt,cats<span class="sc">$</span>Sex,summary)</span></code></pre></div>
 <ul>
-<li>Si eres del equipo <em>heart</em> añade al script heart.R</li>
+<li>Si eres del equipo <em>heart</em> añade al <em>script</em> heart.R</li>
 </ul>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas del corazon por sexo</span></span>
 <span id="cb27-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -556,7 +555,7 @@ Figure 7.1: <strong>Nota</strong>: si eres del equipo <em>heart</em> el nombre d
 </ol>
 <div class="orange color">
 <p><strong>Nota sobre el análisis:</strong></p>
-<p>Ejecuta el script body.R o heart.R. El test estadístico t sugiere que el peso promedio del cuerpo y del corazón es significativamente distinto entre gatos hembras y machos.</p>
+<p>Ejecuta el <em>script</em> body.R o heart.R. El test estadístico t sugiere que el peso promedio del cuerpo y del corazón es significativamente distinto entre gatos hembras y machos.</p>
 </div>
 <div class="cyan color">
 <p>Realizaste el <strong><em>fork</em></strong> del repositorio de tu colaborador para apoyarlo en el análisis estadístico. Después de ello tu colaborador siguió añadiendo cambios en su repositorio por lo que decides actualizar tu <em>fork</em> con sus cambios.</p>
@@ -579,13 +578,13 @@ Figure 7.2: <strong><em>Nota</em></strong>: Si estás en el equipo <em>heart</em
 <li>En RStudio añade otro cambio a tu repositorio original.</li>
 </ol>
 <ul>
-<li>Si estás en el <strong>equipo</strong> <strong><em>body</em></strong> añade al script body.R:</li>
+<li>Si estás en el <strong>equipo</strong> <strong><em>body</em></strong> añade al <em>script</em> body.R:</li>
 </ul>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prueba estadistica</span></span>
 <span id="cb28-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(cats<span class="sc">$</span>Bwt<span class="sc">~</span>cats<span class="sc">$</span>Sex)</span></code></pre></div>
 <ul>
-<li>Si estás en el <strong>equipo</strong> <strong><em>heart</em></strong> añade al script heart.R:</li>
+<li>Si estás en el <strong>equipo</strong> <strong><em>heart</em></strong> añade al <em>script</em> heart.R:</li>
 </ul>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prueba estadistica</span></span>
 <span id="cb29-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -685,22 +684,22 @@ Figure 7.2: <strong><em>Nota</em></strong>: Si estás en el equipo <em>heart</em
 <div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout graph</span></code></pre></div>
 <ol start="5" style="list-style-type: upper-alpha">
 <li><p>Abre RStudio y establece al <em>fork</em> como directorio de trabajo.</p></li>
-<li><p>Abre el script de R y haz una adición al análisis</p></li>
+<li><p>Abre el <em>script</em> de R y haz una adición al análisis</p></li>
 </ol>
-<p>-Si eres del <strong>equipo</strong> <strong><em>body</em></strong> abre el script heart.R y añade</p>
+<p>-Si eres del <strong>equipo</strong> <strong><em>body</em></strong> abre el <em>script</em> heart.R y añade</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Gráficas del peso del corazón por sexo</span></span>
 <span id="cb44-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-3"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Hwt <span class="sc">~</span> Sex, <span class="at">data =</span> cats)</span></code></pre></div>
-<p>-Si eres del <strong>equipo</strong> <strong><em>heart</em></strong> abre el script body.R y añade</p>
+<p>-Si eres del <strong>equipo</strong> <strong><em>heart</em></strong> abre el <em>script</em> body.R y añade</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Gráficas del peso del cuerpo por sexo</span></span>
 <span id="cb45-2"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-3"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Bwt <span class="sc">~</span> Sex, <span class="at">data =</span> cats)</span></code></pre></div>
 <div class="orange color">
 <p><strong>Nota sobre el análisis:</strong></p>
-<p>Ejecuta el script body.R o heart.R. Las gráficas muestran una distribución del peso del cuerpo y del corazón distinta para gatos hembras y machos.</p>
+<p>Ejecuta el <em>script</em> body.R o heart.R. Las gráficas muestran una distribución del peso del cuerpo y del corazón distinta para gatos hembras y machos.</p>
 </div>
 <ol start="7" style="list-style-type: upper-alpha">
-<li><p>Guarda los cambios al script en RStudio</p></li>
+<li><p>Guarda los cambios al <em>script</em> en RStudio</p></li>
 <li><p>En la terminal añade los cambios en el <em>fork</em> mediante un <em>commit</em>.</p></li>
 <li><p>Envía los cambios a al repositorio <strong><em>origin</em></strong>, creando una nueva rama.</p></li>
 </ol>
@@ -728,7 +727,7 @@ Figure 7.2: <strong><em>Nota</em></strong>: Si estás en el equipo <em>heart</em
 <div id="aceptar-un-pull-request" class="section level3" number="7.5.3">
 <h3><span class="header-section-number">7.5.3</span> Aceptar un <em>Pull Request</em></h3>
 <div class="cyan color">
-<p>Tu colaborador ha enviado una contribución desde su <em>fork</em> hacia tu repositorio de GitHub. Ve a tu repositorio para aceptar su Pull Request.</p>
+<p>Tu colaborador ha enviado una contribución desde su <em>fork</em> hacia tu repositorio de GitHub. Ve a tu repositorio para aceptar su <em>Pull Request</em>.</p>
 <p>( <a href="https://docs.google.com/spreadsheets/d/1Kx0bI-u5aE2xXp5TaiyRQmRTjgxG5qykqh4ie9qOtyU/edit?usp=sharing">Link al tu repositorio</a> )</p>
 </div>
 <div class="scroll">
@@ -750,7 +749,7 @@ Figure 7.2: <strong><em>Nota</em></strong>: Si estás en el equipo <em>heart</em
 <div id="sincronización-final-del-fork" class="section level3" number="7.5.4">
 <h3><span class="header-section-number">7.5.4</span> Sincronización final del <em>fork</em></h3>
 <div class="cyan color">
-<p>Tu colaborador ha aceptado tu <em>Pull Request</em>. Tu cotribución ya está en la rama <em>main</em> del repositorio upstream. Ahora debes actualizar la rama <em>main</em> de tu <em>fork</em> con los mismos cambios.</p>
+<p>Tu colaborador ha aceptado tu <em>Pull Request</em>. Tu cotribución ya está en la rama <em>main</em> del repositorio <em>upstream</em>. Ahora debes actualizar la rama <em>main</em> de tu <em>fork</em> con los mismos cambios.</p>
 </div>
 <ol style="list-style-type: upper-alpha">
 <li><p>En GitHub ve a la la rama <em>main</em> del fork y utiliza a <strong>Fetch upstream</strong> ( <a href="https://docs.google.com/spreadsheets/d/1Kx0bI-u5aE2xXp5TaiyRQmRTjgxG5qykqh4ie9qOtyU/edit?usp=sharing">Link al fork</a> ).</p></li>
@@ -762,10 +761,10 @@ Figure 7.2: <strong><em>Nota</em></strong>: Si estás en el equipo <em>heart</em
 </ol>
 <div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div>
 <ol start="4" style="list-style-type: upper-alpha">
-<li>Una vez que tus cambios están añadidos al repositorio main local, origin y upstream puedes eliminar la rama <em>graph</em></li>
+<li>Una vez que tus cambios están añadidos a la rama <em>main</em> en los repositorios local, <em>origin</em> y <em>upstream</em> puedes eliminar la rama <em>graph</em></li>
 </ol>
 <ul>
-<li>Para eliminarla de la copia local del fork</li>
+<li>Para eliminarla de la copia local del <em>fork</em></li>
 </ul>
 <div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> graph</span></code></pre></div>
 <ul>
