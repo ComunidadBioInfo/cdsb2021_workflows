@@ -32,7 +32,7 @@
   
 <link rel="prev" href="mantenimiento-del-espacio-de-trabajo-en-r.html"/>
 <link rel="next" href="introducción-a-shiny.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -403,15 +403,15 @@ text-align:center;
 <ul>
 <li>Si el paquete se encuentra depositado en CRAN podemos usar la función</li>
 </ul>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb118-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_dev</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb121-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_dev</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
 <p>Por ejemplo, para instalar la versión en desarrollo de dplyr usaremos el comando</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb119-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_dev</span>(<span class="st">&quot;dplyr&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb122-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_dev</span>(<span class="st">&quot;dplyr&quot;</span>) </span></code></pre></div>
 <ul>
 <li>Si el paquete se encuentra en Bioconductor usaremos la siguiente función:</li>
 </ul>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb120-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_bioc</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb123-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_bioc</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
 <p>Por ejemplo, para instalar la versión en desarrollo de regutools, el paquete desarrollado por miembros de la CDSB, usaremos el comando</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb121-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_bioc</span>(<span class="st">&quot;regutools&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb124-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_bioc</span>(<span class="st">&quot;regutools&quot;</span>)</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 1</strong>
@@ -426,9 +426,9 @@ text-align:center;
 <h2><span class="header-section-number">13.5</span> Instalando paquetes desde GitHub</h2>
 <p>Independientemente de si el paquete se encuentra en CRAN, Bioconductor, o ninguno de ellos, podemos instalar un paquete depositado en una cuenta de GitHub.</p>
 <p>Para poder instalar un paquete desde GitHub necesitaremos conocer el usuario del creador y el nombre del repositorio donde se encuentra depositado el paquete. Con esta información usaremos la siguiente función:</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb122-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;usuario/repositorio&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb125-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;usuario/repositorio&quot;</span>)</span></code></pre></div>
 <p>Por ejemplo, para instalar el paquete starwarssay desarrollado por Erick Cuevas (Erickcufe) utilizaremos el siguiente comando:</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb123-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Erickcufe/starwarssay&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb126-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Erickcufe/starwarssay&quot;</span>)</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 2</strong>
@@ -444,27 +444,27 @@ text-align:center;
 <ul>
 <li>Si el paquete se encuentra depositado en CRAN usaremos la función</li>
 </ul>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb124-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;pkgname&quot;</span>,<span class="at">version =</span> <span class="st">&quot;version&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb127-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;pkgname&quot;</span>,<span class="at">version =</span> <span class="st">&quot;version&quot;</span>)</span></code></pre></div>
 <p>Por ejemplo, para instalar la versión 1.0.0 de dplyr usaremos el comando</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb125-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;dplyr&quot;</span>,<span class="at">version =</span> <span class="st">&quot;1.0.0&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb128-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;dplyr&quot;</span>,<span class="at">version =</span> <span class="st">&quot;1.0.0&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Si el paquete se encuentra en Bioconductoor usaremos el paquete BiocManager</li>
 </ul>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb126-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="at">pkgs =</span> <span class="st">&quot;pkgname&quot;</span>, <span class="at">version =</span> <span class="st">&quot;version&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb129-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="at">pkgs =</span> <span class="st">&quot;pkgname&quot;</span>, <span class="at">version =</span> <span class="st">&quot;version&quot;</span>)</span></code></pre></div>
 <p>Por ejemplo, para instalar la versión 1.1.1 de regutools usaremos el comando</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb127-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="at">pkgs =</span> <span class="st">&quot;regutools&quot;</span>, <span class="at">version =</span> <span class="st">&quot;1.1.1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb130-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="at">pkgs =</span> <span class="st">&quot;regutools&quot;</span>, <span class="at">version =</span> <span class="st">&quot;1.1.1&quot;</span>)</span></code></pre></div>
 </div>
 <div id="instalando-un-paquete-local" class="section level2" number="13.7">
 <h2><span class="header-section-number">13.7</span> Instalando un paquete local</h2>
 <p>Ya sea que hagas un fork y clone de un paquete o si tienes un paquete propio en desarrollo, esta función te ayudará a instalar el paquete de manera local.</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb128-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb131-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>()</span></code></pre></div>
 <p>Por ejemplo, vamos a generar un directorio temporal para instalar un paquete de prueba</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb129-1" aria-hidden="true" tabindex="-1"></a>dir <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
-<span id="cb129-2"><a href="instalación-de-paquetes-desde-código-fuente.html#cb129-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(dir)</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb132-1" aria-hidden="true" tabindex="-1"></a>dir <span class="ot">&lt;-</span> <span class="fu">tempfile</span>()</span>
+<span id="cb132-2"><a href="instalación-de-paquetes-desde-código-fuente.html#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(dir)</span></code></pre></div>
 <p>Usaremos esta función para descargar el código fuente del paquete <strong>testthat</strong> en forma de directorio comprimido.</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb130-1" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">&lt;-</span> <span class="fu">download.packages</span>(<span class="st">&quot;testthat&quot;</span>, dir, <span class="at">type =</span> <span class="st">&quot;source&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb133-1" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">&lt;-</span> <span class="fu">download.packages</span>(<span class="st">&quot;testthat&quot;</span>, dir, <span class="at">type =</span> <span class="st">&quot;source&quot;</span>)</span></code></pre></div>
 <p>Al guardar los datos de la descarga en una variable, almacena la ubicación temporal donde se encuentra el archivo comprimido. Usaremos esta ruta para instalar el paquete desde su ubicación local.</p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb131-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>(pkg[, <span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb134-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>(pkg[, <span class="dv">2</span>])</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 3</strong>
@@ -486,9 +486,9 @@ text-align:center;
 <ul>
 <li>Instala el paquete desde su ubicación local</li>
 </ul>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb133-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>(<span class="st">&quot;rutalocal&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb136-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>(<span class="st">&quot;rutalocal&quot;</span>)</span></code></pre></div>
 <p>Por ejemplo, si lo clonaste en Descargas el comando se verá similar a</p>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb134-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>(<span class="st">&quot;~/Downloads/saludo/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="instalación-de-paquetes-desde-código-fuente.html#cb137-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_local</span>(<span class="st">&quot;~/Downloads/saludo/&quot;</span>)</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 4</strong>

@@ -32,7 +32,7 @@
   
 <link rel="prev" href="generando-un-proyecto-colaborativo-con-gitgithub.html"/>
 <link rel="next" href="merge-y-conflictos-de-versiones-en-git-y-github.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -445,15 +445,15 @@ Como precaución de seguridad, GitHub elimina automáticamente los tokens de acc
 - Operaciones de la API de GitHub a través del paquete gh R y, por lo tanto, usethis</code></pre>
 <p><strong>¿Cómo crear un token desde R?</strong></p>
 <p>Puedes ir directamente a la página de GitHub a la parte para generar tu token de acceso personal mediante la siguiente función:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="git-y-github-con-rstudio.html#cb45-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="git-y-github-con-rstudio.html#cb48-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code></pre></div>
 <p>Y con las opciones que se mencionaban anteriormente puedes configurar y crear tu <strong>PAT</strong>.</p>
 <p>Si lo que quieres especificar tu <strong>PAT</strong> en RStudio, las siguientes funciones te serán útiles:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="git-y-github-con-rstudio.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gitcreds)</span>
-<span id="cb46-2"><a href="git-y-github-con-rstudio.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="git-y-github-con-rstudio.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gitcreds_set</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="git-y-github-con-rstudio.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(credentials)</span>
-<span id="cb47-2"><a href="git-y-github-con-rstudio.html#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-3"><a href="git-y-github-con-rstudio.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set_github_pat</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="git-y-github-con-rstudio.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gitcreds)</span>
+<span id="cb49-2"><a href="git-y-github-con-rstudio.html#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="git-y-github-con-rstudio.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gitcreds_set</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="git-y-github-con-rstudio.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(credentials)</span>
+<span id="cb50-2"><a href="git-y-github-con-rstudio.html#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="git-y-github-con-rstudio.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set_github_pat</span>()</span></code></pre></div>
 <p>Para eliminar credenciales utiliza la función <code>credentials::git_credential_forget()</code></p>
 <div id="actividad-4" class="section level3" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Actividad</h3>
@@ -509,12 +509,12 @@ y rastrear ramas en la línea de comandos.</p>
 <ul>
 <li>Usa el código <code>dir.create("mis_imagenes")</code> en la consola de tu sesión de RStudio (la que está vinculada a tu repositorio). Ejecuta el siguiente código quitando los <code>#</code>:</li>
 </ul>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="git-y-github-con-rstudio.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(MASS<span class="sc">::</span>cats)</span>
-<span id="cb48-2"><a href="git-y-github-con-rstudio.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># pdf(&quot;mis_imagenes/cats_plot.pdf&quot;) </span></span>
-<span id="cb48-3"><a href="git-y-github-con-rstudio.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cats, <span class="fu">aes</span>(<span class="at">x =</span> Sex)) <span class="sc">+</span> </span>
-<span id="cb48-4"><a href="git-y-github-con-rstudio.html#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;orange&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb48-5"><a href="git-y-github-con-rstudio.html#cb48-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">&quot;Sexo&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Número de Gatos&quot;</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Gatos&quot;</span>)</span>
-<span id="cb48-6"><a href="git-y-github-con-rstudio.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off()</span></span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="git-y-github-con-rstudio.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(MASS<span class="sc">::</span>cats)</span>
+<span id="cb51-2"><a href="git-y-github-con-rstudio.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># pdf(&quot;mis_imagenes/cats_plot.pdf&quot;) </span></span>
+<span id="cb51-3"><a href="git-y-github-con-rstudio.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cats, <span class="fu">aes</span>(<span class="at">x =</span> Sex)) <span class="sc">+</span> </span>
+<span id="cb51-4"><a href="git-y-github-con-rstudio.html#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;orange&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb51-5"><a href="git-y-github-con-rstudio.html#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">&quot;Sexo&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Número de Gatos&quot;</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Gatos&quot;</span>)</span>
+<span id="cb51-6"><a href="git-y-github-con-rstudio.html#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off()</span></span></code></pre></div>
 <ul>
 <li>Comenta y da push a los cambios que realizaste en el repositorio.</li>
 </ul>

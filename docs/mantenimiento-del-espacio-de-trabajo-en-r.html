@@ -32,7 +32,7 @@
   
 <link rel="prev" href="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html"/>
 <link rel="next" href="instalación-de-paquetes-desde-código-fuente.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -382,21 +382,21 @@ text-align:center;
 <h2><span class="header-section-number">12.2</span> Exploremos tu instalación de R</h2>
 <p>Los paquetes en R son la unidad natural para distribuir código. Actualmente, R base contiene alrededor de 14 paquetes de base y 15 paquetes recomendados en todas sus distribuciones.</p>
 <p>El repositorio CRAN contiene ~ 18K paquetes que pueden ser instalados usando</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“nombre_del_paquete”)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“nombre_del_paquete”)</span></code></pre></div>
 <p>Por otro lado, Bioconductor contiene más de 2K paquetes de software, alrededor de 1000 paquetes de anotación, 400 de datos experimentales y 30 de flujos de trabajo.</p>
 <p>Para instalar paquetes desde Bioconductor necesitamos el paquete BiocManager:</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb91-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;Biostrings&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb94-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;Biostrings&quot;</span>)</span></code></pre></div>
 <p>Notarás que al instalar un paquete siempre aparece un mensaje mencionando la ruta donde el paquete será instalado.</p>
 <p>Por defecto toda la instalación de R se genera dentro de un directorio que R asigna de forma automática, cuya ruta podemos encontrar con</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb92-1" aria-hidden="true" tabindex="-1"></a>.Library</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb95-1" aria-hidden="true" tabindex="-1"></a>.Library</span></code></pre></div>
 <p>Adicionalmente, existe una ruta donde R busca la disponibilidad de paqueterías instaladas. Esta ruta se actualiza con cada nueva versión de R. Podemos conocer o modificar esta ruta usando</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>()</span></code></pre></div>
 <p>Nota que esta ruta contiene la versión de R que tienes instalada, por ejemplo 4.1</p>
 </div>
 <div id="cómo-sabemos-qué-paquetes-tenemos-instalados" class="section level2" number="12.3">
 <h2><span class="header-section-number">12.3</span> ¿Cómo sabemos qué paquetes tenemos instalados?</h2>
 <p>Si estás en RStudio puedes ir a la ventana Packages o usar el comando</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>()</span></code></pre></div>
 <p>Nota que este resultado muestra las propiedades del paquete, como la ruta donde se encuentra instalado, la versión del paquete, sus dependencias, la versión de R en que fue construida, entre otras.</p>
 <div class="grey color">
 <div class="center">
@@ -418,23 +418,23 @@ text-align:center;
 <p>Si te encuentras en RStudio, puedes ir a la ventana Packages &gt; Update y seleccionar los paquetes que deseas actualizar.</p>
 <p><img src="img/update.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Si te encuentras trabajando en la consola y deseas obtener una lista de los paquetes que tienen una actualización disponible puedes usar el comando</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">old.packages</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">old.packages</span>()</span></code></pre></div>
 <p>Para actualizar un paquete en específico desde la consola puedes instalar nuevamente el paquete con</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
 <p>O usar el paquete devtools</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb97-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb100-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
 <p>Nota que las instrucciones anteriores se suelen usar para actualizar uno o algunos paquetes, pero si deseas actualizar todos los paquetes a la vez puedes usar el comando</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb98-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="cn">TRUE</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb101-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="cn">TRUE</span>) </span></code></pre></div>
 </div>
 <div id="actualización-de-paquetes-desde-bioconductor" class="section level3" number="12.4.2">
 <h3><span class="header-section-number">12.4.2</span> Actualización de paquetes desde Bioconductor</h3>
 <p>Puedes conocer cuáles paquetes tienen una actualización disponible en Bioconductor con el comando</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb99-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">valid</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb102-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">valid</span>()</span></code></pre></div>
 <p>Nota que este comando además te proporcionará el comando necesario para instalar los paquetes que requieren actualización.</p>
 <p>Para instalar las actualizaciones basta con re-instalar el paquete con</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb100-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb103-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
 <p>O puedes instalar todos los paquetes que requieran actualización con</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb101-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb104-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>()</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 2</strong>
@@ -452,14 +452,14 @@ text-align:center;
 <p>En algunos casos necesitaremos instalar una versión anterior de algún paquete, por ejemplo para reproducir un análisis que se realizó hace tiempo o solucionar un problema de código.</p>
 <p>Primero debes conocer el número de versiones anteriores del paquete. Para las paqueterías de CRAN, dirígete a la página del paquete, entra a la sección ‘Old sources’ y selecciona la versión que deseas instalar.</p>
 <p>Después usa devtools para instalar esa versión en específico</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb102-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;1.13.6&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb105-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;1.13.6&quot;</span>)</span></code></pre></div>
 <p><img src="img/old.png" width="60%" style="display: block; margin: auto;" /></p>
 <p>Revisa la versión que tienes instalada actualmente</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
 <p>Instala la versión anterior que desees</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb104-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;2.0.0&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb107-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;2.0.0&quot;</span>)</span></code></pre></div>
 <p>Verifica la versión ahora</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 3</strong>
@@ -484,15 +484,15 @@ text-align:center;
 <p>Sin embargo, si tienes un gran número de paqueterías que deseas conservar entre actualizaciones de R, existe una solución.</p>
 <p>Una modificación interesante que podemos hacer dentro de .Renviron es seleccionar la ubicación donde serán instaladas las paqueterías de R usando la variable R_LIBS_USER.</p>
 <p>Antes de modificar esta variable, veamos cómo se encuentra tu configuración actual. Ejecuta el siguiente comando para ver la ruta que por defecto R selecciona para instalar las paqueterías:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">&quot;R_LIBS_USER&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;~/Library/R/x86_64/4.1/library&quot;</code></pre>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">&quot;R_LIBS_USER&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;~/Library/R/4.0/library&quot;</code></pre>
 <p>Si te encuentras trabajando en un sistema operativo OS/Mac, tu ruta se verá similar a R_LIBS_USER=~/Library/R/%v/library. Si te encuentras trabajando en Windows es muy probable que tu ruta se vea así: R_LIBS_USER=~/R/win-library/x.y</p>
 <p>Nota que la ruta menciona la versión de R que tienes instalada, en mi caso es la versión 4.1. Mantener esto en mente es importante porque cuando hagamos una actualización en el futuro, por ejemplo a R 4.2, esta ruta va cambiar.</p>
 <p>Suponiendo que estás por instalar la futura versión de R, vamos a crear un directorio para instalar las paqueterías que corresponderán a esa versión.</p>
 <ul>
 <li>Crea un directorio con el número de versión que instalarás, usando el comando:</li>
 </ul>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb108-1" aria-hidden="true" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_create</span>(<span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb111-1" aria-hidden="true" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_create</span>(<span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
 <ul>
 <li>Abre tu archivo .Renviron.</li>
 <li>Agrega la variable R_LIBS_USER y la ruta al directorio que acabas de crear. Usa R_LIBS_USER=~/Library/R/4.2/library para Mac o R_LIBS_USER=~/R/win-library/4.2 para Windows.</li>
@@ -502,40 +502,40 @@ text-align:center;
 <ul>
 <li>Instala el paquete dplyr usando el comando</li>
 </ul>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Nota que en el mensaje de instalación se menciona la ruta donde está realizando la instalación.</li>
 <li>Verifica que dplyr se instaló en el nuevo directorio, usa el comando</li>
 </ul>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>(<span class="st">&quot;mi-nuevo-directorio&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb110-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb110-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb110-3"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb110-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">View</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>(<span class="st">&quot;mi-nuevo-directorio&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb113-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb113-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb113-3"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb113-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">View</span>()</span></code></pre></div>
 <p>Ahora puedes transferir todos los paquete que tienes instalados en tu versión actual y preparar el directorio que usará tu próxima versión de R.</p>
 <p>Si deseas mantener todos los paquetes que tienes instalados actualmente, es recomendable guardar la lista de paquetes en una variable antes de cambiar de directorio de instalación y usarla dentro de los argumentos de tu comando de instalación.</p>
 <ul>
 <li>Reestablece el directorio de instalación que modificaste en el .Renviron.</li>
 <li>Genera la lista de paquetes instalados y guárdala en una variable</li>
 </ul>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb111-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">installed.packages</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb111-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb111-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb114-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">installed.packages</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb114-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb114-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>()</span></code></pre></div>
 <ul>
 <li>Dale un vistazo al contenido de esta variable.</li>
 <li>Modifica el directorio de instalación en .Renviron.</li>
 <li>Instala los paquetes enlistados en pkgs.</li>
 </ul>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package) </span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package) </span></code></pre></div>
 <p>Como alternativa, puedes usar el argumento lib de la función install.packages para indicar el directorio donde se instalarán estas paqueterías. De esta forma no es necesario modificar el .Renviron.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package, <span class="at">lib =</span> <span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package, <span class="at">lib =</span> <span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
 <p>Toma en cuenta que si tienes un gran número de paquetes enlistados en pkgs, este comando tardará un tiempo en completarse. Si solamente deseas seleccionar algunos paquetes, puedes usar filtros o selección de lineas ya sea con corchetes df[ ] o con las funciones de dplyr.</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb114-1" aria-hidden="true" tabindex="-1"></a>pkgs<span class="sc">$</span>Package[<span class="dv">445</span>]</span></code></pre></div>
-<pre><code>## [1] &quot;xaringan&quot;</code></pre>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package[<span class="dv">445</span>], <span class="at">lib =</span> <span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-1" aria-hidden="true" tabindex="-1"></a>pkgs<span class="sc">$</span>Package[<span class="dv">445</span>]</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package[<span class="dv">445</span>], <span class="at">lib =</span> <span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
 <ul>
 <li>Finalmente, revisa si los paquetes que instalaste se encuentran en la nueva ubicación.</li>
 </ul>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>(<span class="st">&quot;~/Library/R/4.2/library&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb117-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb117-3"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">View</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>(<span class="st">&quot;~/Library/R/4.2/library&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb120-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb120-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb120-3"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb120-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">View</span>()</span></code></pre></div>
 <div class="grey color">
 <div class="center">
 <strong>Actividad 4</strong>
