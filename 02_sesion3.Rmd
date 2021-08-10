@@ -36,6 +36,12 @@ color: #999999;}
 div.alert{color:#bd475d; background-color:transparent}
 </style>
 
+
+- Este documento se basa en "Happy Git with R" de Jenny Bryan, los STAT 545 TAs, Jim Hester
+
+
+https://happygitwithr.com
+
 ## Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)
 
 - Por cualquier problema con la conexión entre RStudio y Git, siempre ten en cuenta la ubicación de dónde se instaló Git. 
@@ -182,6 +188,8 @@ Volvemos a dar `click` en *commit*, y finalizamos con *push* (flecha verde).
 
 ### Actividad
 
+<div class = "orange color">
+
 - Usa el código `dir.create("mis_imagenes")` en la consola de tu sesión de RStudio (la que está vinculada a tu repositorio). Ejecuta el siguiente código quitando los `#`:
 
 ```{r, eval=FALSE}
@@ -195,13 +203,96 @@ ggplot(cats, aes(x = Sex)) +
 
 - Comenta y da push a los cambios que realizaste en el repositorio. 
 
+</div>
+
 ## RStudio primero y GitHub también 
 
-Usa uno de los proyectos que hayas generado en las sesiones anteriores, PERO, que no esté enlazado a GitHub. Ahora veremos como conectar un proyecti de R existente con GitHub. 
+Usa uno de los proyectos que hayas generado en las sesiones anteriores, PERO, que no esté enlazado a GitHub. Ahora veremos como conectar un proyecto de R existente con GitHub. 
 Realiza los pasos que hicimos en **GitHub primero, RStudio después** pero asegurate de crear un repositorio con un nuevo nombre. 
 
 **Y LISTO!!** usa un simple `ctrl` + `c`, ó `mv` ó `click derecho` + `copiar` ó el método que prefieras para mover o copiar archivos. Copia los archivos de tu antigüo proyecto al proyecto nuevo. 
 Solo haz *commit* y *push* y listo, lo que tenía en tu antigüo proyecto ya está enlazado a GitHub. 
 
+### Actividad
+
+<div class = "orange color">
+
+Por equipos de 3 personas:
+
+Copia y pega los archivos que generaste en el Repositorio que se compartió en
+el **"Drive"** (elijan uno de los tres repositorios) en un respositorio conectado a GitHub. Todos clonen un repositorio de GitHub en común. Enlacelo a GitHub y sigan el procedimiento de **RStudio primero y GitHub también**.  
+
+Seleccionen con que datos quieren trabajar por equipo:
+
+ - gapminder
+ - mtcars
+ - cats
+ 
+ Creen una carpeta para guardar imagenes. Por persona generen un grafico representativo de su dataset, guardelo en la carpeta de imagenes. Compartan entre el equipo sus creaciones al hacer **commit/pull/push**.  
 
 
+</div>
+## Proyecto existente, GitHub al final
+
+
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/elmo_hell.png")
+```
+
+Supongamos que tenemos un proyecto de R existente en algún lugar de nuestra computadora. 
+
+<div class = "red color">
+
+**NOTA:**
+Para generar proyecto de RStudio desde la consola puedes utilizar el siguiente código:
+```{r, eval=FALSE}
+usethis::create_project()
+```
+
+O en RStudio con *File > New Project > Existing Directory* 
+
+Si su proyecto ya es un proyecto de RStudio, ejecútelo.
+
+</div>
+
+¿Ya es un repositorio de Git? La presencia del panel de Git debería alertarlo. Si es así, ha terminado.
+
+Sino este es el primer camino a seguir:
+
+- Con el páquete **usethis** usa la función `usethis::use_git`
+- En RStudio ve a *Tools > Project Options > Git/SVN*. Dentro de *Version control system*, selecciona *Git*. Y da click a *"Yes"* cuando aparezca *"Confirm New Git Repository?"*.
+
+Si usaste RStudio o *usethis*, el proyecto debería reiniciarse en RStudio. Hazlo tu mismo si hizo git init. RStudio ahora debería tener un panel Git.
+
+### Breviario cultural con los PATs
+
+Si usas el paquete usethis Y has configurado un token de acceso personal (PAT) de GitHub has esto en R:
+
+```{r, eval=FALSE}
+usethis::use_github()
+```
+
+Esto creará un nuevo repositorio en GitHub, lo agregará como un control remoto, configurará una rama de seguimiento y lo abrirá en su navegador. Lea la ayuda de `use_github()` para conocer sus argumentos y consejos sobre cómo configurar una PAT. Esto es extremadamente útil para una variedad de flujos de trabajo que llaman a la API de GitHub. Considere configurar esto si usa usethis, devtools o gh con regularidad.
+
+----
+
+Volviendo al tema de **Proyecto existente, GitHub al final**. 
+
+Otra opción que se puede hacer para conectar un proyecto existen a GitHub es ir a hacer un repositorio a GitHub **PERO** ten en cuenta los siguientes cambios:
+
+1. Elije un nombre de repositorio; probablemente debería coincidir con el nombre de su proyecto y directorio local.
+2. **NO** inicialice este repositorio con un archivo *README*.
+
+Todo lo demás es igual a los pasos que hacíamos en **GitHub primero, RStudio después...**
+
+Ahora ve a tu proyecto de RStudio, has clic en los **"dos cuadros de color púrpura y un cuadrado blanco"** en el panel de Git. Has clic en **"Agregar control remoto"**. Pegue la URL aquí y elija un nombre remoto, casi con certeza el **origin**. Ahora **"ADD"**.
+
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/purple_cuadros.png")
+```
+
+Pasado esto deberiamos volver en el cuadro de diálogo **"New Branch"**. Ingresa **"master"** como el nombre de la rama y asegúrate de que la opción **"Sync branch with remote"** esté marcada. Haz clic en **"Create"**. En el siguiente cuadro de diálogo elije **"overwrite"**. 
+
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/add_remote_rstudio.png")
+```

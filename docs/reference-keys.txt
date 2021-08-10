@@ -151,3 +151,7 @@ keynote-aplicaciones-shinyr-en-la-vida-diaria
 diapositivas-11
 presentación-de-proyectos
 proyectos
+proyecto-existente
+actividad-10
+breviario-cultural-con-los-pats
+proyecto-existente-github-al-final
