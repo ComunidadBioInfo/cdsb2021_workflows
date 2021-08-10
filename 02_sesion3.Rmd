@@ -133,6 +133,10 @@ Ejecuta los códigos **PERO** no generes para tu **PAT** por ahora.
 
 ## Conectando RStudio con Git y Github.
 
+```{r,echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics("img/github_rstudio.png")
+```
+
 <div class = "red color">
 
 Para lo que sigue a continuación, deberías tener esto:
