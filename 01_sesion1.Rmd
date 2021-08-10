@@ -18,6 +18,8 @@ También necesitas descargar la versión más reciente de [RStudio Desktop](http
 
 *"Las personas que se han unido a RStudio en este viaje son extraordinarias. Incluyen un número excepcional de los científicos de datos y desarrolladores de software de código abierto más productivos y respetados del mundo."*
 
+...
+
 ## Historia de RStudio
 
 ```{r,echo=FALSE, out.width='80%', fig.align='center'}
