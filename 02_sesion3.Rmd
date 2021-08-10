@@ -296,3 +296,20 @@ Pasado esto deberiamos volver en el cuadro de diálogo **"New Branch"**. Ingresa
 ```{r,echo=FALSE, out.width='80%', fig.align='center'}
 knitr::include_graphics("img/add_remote_rstudio.png")
 ```
+
+Ahora solo haz **commit/pull/push** y cérciorate que FUNCIONE!!
+
+### Actividad
+
+<div class = "orange color">
+
+Por equipos hagan lo siguiente:
+
+1. Usa un proyecto que no esté enlazado a GitHub.
+2. Genera un repositorio que tenga el mismo nombre de tu proyecto siguiendo las instrucciones recientes. 
+3. Enlaza tu repositorio con el proyecto existente.
+
+**¡QUE LA FUERZA TE ACOMPAÑE!**
+
+</div>
+
