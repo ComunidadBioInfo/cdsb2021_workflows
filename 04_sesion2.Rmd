@@ -6,6 +6,12 @@ Alejandro Reyes
 
 ## Diapositivas
 
+[
+```{r, echo=FALSE}
+knitr::include_url("https://docs.google.com/presentation/d/137IVaGW9I7Wc8-2M0Jx8BlUBYsIjEAH6xHCuBPp5vIU/embed?", height="420px")
+```
+](https://https://docs.google.com/presentation/d/137IVaGW9I7Wc8-2M0Jx8BlUBYsIjEAH6xHCuBPp5vIU/embed?)
+
 ## Paso 0: Genera un código lineal
 
 ```{r,eval=FALSE}
