@@ -174,3 +174,7 @@ paso-6-genera-una-segunda-gráfica
 paso-7
 paso-8-agrega-una-segunda-pestaña
 paso-9-agrega-una-tercer-pestaña
+paso-7-expresiones-reactivas
+paso-10-corrigiendo-el-error-cuando-no-hay-datos
+paso-11-agregando-opciones-para-un-panel-en-específico-checkbox
+paso-12-operaciones-que-esperan-una-orden-para-ser-ejecutadas

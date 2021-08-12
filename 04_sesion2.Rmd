@@ -697,7 +697,7 @@ shinyApp(ui = ui, server = server)
 
 ## Paso 10: Corrigiendo el error cuando no hay datos
 
-```{r}
+```{r,eval=FALSE}
 
 library(shiny)
 library(dslabs)
@@ -791,7 +791,7 @@ shinyApp(ui = ui, server = server)
 
 ## Paso 11: Agregando opciones para un panel en específico (checkbox)
 
-```{r}
+```{r,eval=FALSE}
 library(shiny)
 library(dslabs)
 library(magrittr)
@@ -886,7 +886,7 @@ shinyApp(ui = ui, server = server)
 
 ## Paso 12: Operaciones que esperan una orden para ser ejecutadas
 
-```{r}
+```{r,eval=FALSE}
 library(shiny)
 library(dslabs)
 library(magrittr)
@@ -980,3 +980,4 @@ server <- function(input, output) {
 # Run the application 
 shinyApp(ui = ui, server = server)
 ```
+
