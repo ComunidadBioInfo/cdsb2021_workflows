@@ -156,3 +156,11 @@ actividad-10
 breviario-cultural-con-los-pats
 proyecto-existente-github-al-final
 actividad-11
+los-alcances-de-shiny
+primeros-pasos-la-estructura-canónica-de-shiny
+los-layouts-más-comunes
+controles-de-input
+actividad-12
+controles-de-output
+el-servidor-server
+actividad-13
