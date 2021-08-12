@@ -164,3 +164,13 @@ actividad-12
 controles-de-output
 el-servidor-server
 actividad-13
+paso-0-genera-un-código-lineal
+paso-1-genera-la-shiny-app-y-agrega-una-primer-gráfica
+paso-2-agrega-una-opción-para-seleccionar-datos
+paso-3-agrega-una-barra-con-rangos-de-valores
+paso-4-agrega-botones
+paso-5-agrega-algo-de-texto
+paso-6-genera-una-segunda-gráfica
+paso-7
+paso-8-agrega-una-segunda-pestaña
+paso-9-agrega-una-tercer-pestaña
