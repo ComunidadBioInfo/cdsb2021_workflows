@@ -4,6 +4,18 @@ Joselyn Chávez
 
 9 de agosto de 2021
 
+<style>
+div.grey { 
+background-color: #bfbfbf;
+}
+</style>
+
+<style>
+div.center {
+text-align:center;
+}
+</style>
+
 ## Diapositivas
 
 [
@@ -32,10 +44,11 @@ knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_s
   - Selecciona la opción Open in New Session.
   - Oprime Create Project.
 
+<div class = "grey color">
+<div class = "center">**Actividad 1**</div>
 
-| **Actividad 1** |
-|-----------------|
-|Genera un proyecto de RStudio llamado 'nuevodirectorio' en un directorio nuevo en tus Documentos (~/Documentos). |
+Genera un proyecto de RStudio llamado 'nuevodirectorio' en un directorio nuevo en tus Documentos (~/Documentos). 
+</div>
 
 ### Opción 2: Creando un proyecto en un directorio existente.
   
@@ -46,10 +59,11 @@ knitr::include_url("https://comunidadbioinfo.github.io/cdsb2021_workflows/dia1_s
   - Selecciona la opción Open in New Session.
   - Oprime Create Project.
 
+<div class = "grey color">
+<div class = "center">**Actividad 2**</div>
 
-| **Actividad 2** |
-|-----------------|
-|Genera una carpeta o directorio llamado 'directorioprevio' en tus Documentos (~/Documentos), después genera un proyecto de RStudio usando este folder como base. |
+Genera una carpeta o directorio llamado 'directorioprevio' en tus Documentos (~/Documentos), después genera un proyecto de RStudio usando este folder como base. 
+</div>
 
 ## ¿Por qué usar proyectos de RStudio?
 
@@ -91,9 +105,20 @@ ggdraw() +
   draw_image("img/gitlablogo.jpg", width = 0.5, x = 0.5)
 ```
 
-| **Actividad 3** <br> Comprueba algunas ventajas de usar proyectos de RStudio.|
-|------------------------------------------------------------------------------|
-|  - Genera un nuevo proyecto de RStudio llamado 'miproyecto', recuerda que existen varias formas para hacerlo. <br> - Cierra la sesión y vuelve a abrirla ejecutando desde la terminal open miproyecto.Rproj o dando doble click sobre el archivo miproyecto.Rproj. <br> - Evalúa tu directorio de trabajo ejecutando en la consola de RStudio el comando getwd(). <br> - Cierra la sesión y mueve toda la carpeta de tu proyecto a otra ubicación. Si lo creaste en Documentos mueve la carpeta al Escritorio o viceversa. <br> - Abre nuevamente el proyecto y verifica el directorio de trabajo, ¿Cambió el directorio de trabajo? <br> - Sin cerrar este proyecto, abre alguno de los proyectos que generaste previamente (por ejemplo directorioprevio.Rproj), recuerda que puedes seleccionar Open Project in New session |
+
+<div class = "grey color">
+<div class = "center">**Actividad 3**</div>
+
+Comprueba algunas ventajas de usar proyectos de RStudio.
+
+- Genera un nuevo proyecto de RStudio llamado 'miproyecto', recuerda que existen varias formas para hacerlo. 
+- Cierra la sesión y vuelve a abrirla ejecutando desde la terminal open miproyecto.Rproj o dando doble click sobre el archivo miproyecto.Rproj.
+- Evalúa tu directorio de trabajo ejecutando en la consola de RStudio el comando getwd().
+- Cierra la sesión y mueve toda la carpeta de tu proyecto a otra ubicación. Si lo creaste en Documentos mueve la carpeta al Escritorio o viceversa.
+- Abre nuevamente el proyecto y verifica el directorio de trabajo, ¿Cambió el directorio de trabajo?
+- Sin cerrar este proyecto, abre alguno de los proyectos que generaste previamente (por ejemplo directorioprevio.Rproj), recuerda que puedes seleccionar Open Project in New session
+</div>
+
 
 ## Algunos hacks!
 

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12 Mantenimiento del espacio de trabajo en R | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</title>
+  <meta name="description" content="12 Mantenimiento del espacio de trabajo en R | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="12 Mantenimiento del espacio de trabajo en R | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://comunidadbioinfo.github.io/cdsb2021_workflows/" />
+  
+  
+  <meta name="github-repo" content="comunidadbioinfo/cdsb2021_workflows" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12 Mantenimiento del espacio de trabajo en R | Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps" />
+  
+  
+  
+
+<meta name="author" content="Joselyn Chávez, Erick Cuevas-Fernández, Alejandro Reyes, Alejandra Medina-Rivera, María Teresa Ortiz, Mirna Vázquez Rosas-Landa, Aurora Labastida, Ángel Escalante, Alejandro Ponce." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html"/>
+<link rel="next" href="instalación-de-paquetes-desde-código-fuente.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructores"><i class="fa fa-check"></i><b>0.1</b> Instructores</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#ponentes-invitados"><i class="fa fa-check"></i><b>0.2</b> Ponentes invitados</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#temario"><i class="fa fa-check"></i><b>0.3</b> Temario</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#lunes-9-de-agosto"><i class="fa fa-check"></i><b>0.3.1</b> Lunes 9 de agosto</a></li>
+<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#martes-10-de-agosto"><i class="fa fa-check"></i><b>0.3.2</b> Martes 10 de agosto</a></li>
+<li class="chapter" data-level="0.3.3" data-path="index.html"><a href="index.html#miércoles-11-de-agosto"><i class="fa fa-check"></i><b>0.3.3</b> Miércoles 11 de agosto</a></li>
+<li class="chapter" data-level="0.3.4" data-path="index.html"><a href="index.html#jueves-12-de-agosto"><i class="fa fa-check"></i><b>0.3.4</b> Jueves 12 de agosto</a></li>
+<li class="chapter" data-level="0.3.5" data-path="index.html"><a href="index.html#viernes-13-de-agosto"><i class="fa fa-check"></i><b>0.3.5</b> Viernes 13 de agosto</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#patrocinadores"><i class="fa fa-check"></i><b>0.4</b> Patrocinadores</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#licencia"><i class="fa fa-check"></i><b>0.5</b> Licencia</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html"><i class="fa fa-check"></i><b>1</b> RStudio hacks</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#inicio"><i class="fa fa-check"></i><b>1.1</b> Inicio</a></li>
+<li class="chapter" data-level="1.2" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#misión-de-rstudio"><i class="fa fa-check"></i><b>1.2</b> Misión de RStudio</a></li>
+<li class="chapter" data-level="1.3" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#equipo-de-rstudio"><i class="fa fa-check"></i><b>1.3</b> Equipo de RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#historia-de-rstudio"><i class="fa fa-check"></i><b>1.4</b> Historia de RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#primeros-consejos-para-iniciar"><i class="fa fa-check"></i><b>1.5</b> Primeros consejos para iniciar</a></li>
+<li class="chapter" data-level="1.6" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#la-interfaz-gráfica-de-rstudio"><i class="fa fa-check"></i><b>1.6</b> La interfaz gráfica de RStudio</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#opciones-globales"><i class="fa fa-check"></i><b>1.6.1</b> Opciones Globales…</a></li>
+<li class="chapter" data-level="1.6.2" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#actividad"><i class="fa fa-check"></i><b>1.6.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#atajos-con-el-teclado-en-rstudio"><i class="fa fa-check"></i><b>1.7</b> Atajos con el teclado en RStudio</a></li>
+<li class="chapter" data-level="1.8" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#archivos-de-rstudio"><i class="fa fa-check"></i><b>1.8</b> Archivos de RStudio</a></li>
+<li class="chapter" data-level="1.9" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#trabajando-con-el-environment"><i class="fa fa-check"></i><b>1.9</b> Trabajando con el <strong>Environment</strong></a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#actividad-1"><i class="fa fa-check"></i><b>1.9.1</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#últimos-tips"><i class="fa fa-check"></i><b>1.10</b> Últimos tips</a>
+<ul>
+<li class="chapter" data-level="1.10.1" data-path="rstudio-hacks.html"><a href="rstudio-hacks.html#actividad-2"><i class="fa fa-check"></i><b>1.10.1</b> Actividad</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html"><i class="fa fa-check"></i><b>2</b> Flujos de trabajo con proyectos de RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#diapositivas"><i class="fa fa-check"></i><b>2.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="2.2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#qué-es-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>2.2</b> ¿Qué es un proyecto de RStudio?</a></li>
+<li class="chapter" data-level="2.3" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#cómo-generamos-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>2.3</b> ¿Cómo generamos un proyecto de RStudio?</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#opción-1-creando-un-proyecto-en-un-directorio-nuevo."><i class="fa fa-check"></i><b>2.3.1</b> Opción 1: Creando un proyecto en un directorio nuevo.</a></li>
+<li class="chapter" data-level="2.3.2" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#opción-2-creando-un-proyecto-en-un-directorio-existente."><i class="fa fa-check"></i><b>2.3.2</b> Opción 2: Creando un proyecto en un directorio existente.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#por-qué-usar-proyectos-de-rstudio"><i class="fa fa-check"></i><b>2.4</b> ¿Por qué usar proyectos de RStudio?</a></li>
+<li class="chapter" data-level="2.5" data-path="flujos-de-trabajo-con-proyectos-de-rstudio.html"><a href="flujos-de-trabajo-con-proyectos-de-rstudio.html#algunos-hacks"><i class="fa fa-check"></i><b>2.5</b> Algunos hacks!</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="generando-mi-primer-proyecto-de-rstudio.html"><a href="generando-mi-primer-proyecto-de-rstudio.html"><i class="fa fa-check"></i><b>3</b> Generando mi primer proyecto de RStudio</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="generando-mi-primer-proyecto-de-rstudio.html"><a href="generando-mi-primer-proyecto-de-rstudio.html#diapositivas-1"><i class="fa fa-check"></i><b>3.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="3.2" data-path="generando-mi-primer-proyecto-de-rstudio.html"><a href="generando-mi-primer-proyecto-de-rstudio.html#buenas-prácticas-para-ordenar-tu-proyecto"><i class="fa fa-check"></i><b>3.2</b> Buenas prácticas para ordenar tu proyecto</a></li>
+<li class="chapter" data-level="3.3" data-path="generando-mi-primer-proyecto-de-rstudio.html"><a href="generando-mi-primer-proyecto-de-rstudio.html#utiliza-las-rutas-adecuadas-a-los-archivos"><i class="fa fa-check"></i><b>3.3</b> Utiliza las rutas adecuadas a los archivos</a></li>
+<li class="chapter" data-level="3.4" data-path="generando-mi-primer-proyecto-de-rstudio.html"><a href="generando-mi-primer-proyecto-de-rstudio.html#compartiendo-tus-proyectos"><i class="fa fa-check"></i><b>3.4</b> Compartiendo tus proyectos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="paths-seguros.html"><a href="paths-seguros.html"><i class="fa fa-check"></i><b>4</b> PATHs seguros</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="paths-seguros.html"><a href="paths-seguros.html#diapositivas-2"><i class="fa fa-check"></i><b>4.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="4.2" data-path="paths-seguros.html"><a href="paths-seguros.html#actividad-1-1"><i class="fa fa-check"></i><b>4.2</b> Actividad 1</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="nombres-de-archivos.html"><a href="nombres-de-archivos.html"><i class="fa fa-check"></i><b>5</b> Nombres de archivos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="nombres-de-archivos.html"><a href="nombres-de-archivos.html#diapositivas-3"><i class="fa fa-check"></i><b>5.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html"><i class="fa fa-check"></i><b>6</b> Introducción a Git y GitHub desde terminal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#qué-es-git"><i class="fa fa-check"></i><b>6.1</b> ¿Qué es git?</a></li>
+<li class="chapter" data-level="6.2" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#instalación-y-configuración."><i class="fa fa-check"></i><b>6.2</b> Instalación y configuración.</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#configurando-mi-cuenta"><i class="fa fa-check"></i><b>6.2.1</b> Configurando mi cuenta</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#mi-primer-repositorio"><i class="fa fa-check"></i><b>6.3</b> Mi primer repositorio</a></li>
+<li class="chapter" data-level="6.4" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#interactuar-con-github-desde-la-terminal"><i class="fa fa-check"></i><b>6.4</b> Interactuar con GitHub desde la terminal</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="introducción-a-git-y-github-desde-terminal.html"><a href="introducción-a-git-y-github-desde-terminal.html#secciones-de-un-proyecto-de-git"><i class="fa fa-check"></i><b>6.4.1</b> Secciones de un proyecto de git</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html"><i class="fa fa-check"></i><b>7</b> Generando un proyecto colaborativo con Git/GitHub</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#colaborando-mediante-git-y-git-hub"><i class="fa fa-check"></i><b>7.1</b> Colaborando mediante Git y Git Hub</a></li>
+<li class="chapter" data-level="7.2" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#inicio-del-proyecto"><i class="fa fa-check"></i><b>7.2</b> Inicio del proyecto</a></li>
+<li class="chapter" data-level="7.3" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#inicio-de-la-colaboración"><i class="fa fa-check"></i><b>7.3</b> Inicio de la colaboración</a></li>
+<li class="chapter" data-level="7.4" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#actualizar-un-fork-desde-el-repositorio-upstream"><i class="fa fa-check"></i><b>7.4</b> Actualizar un <em>fork</em> desde el repositorio <em>upstream</em></a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#sincronización-desde-la-terminal"><i class="fa fa-check"></i><b>7.4.1</b> Sincronización desde la terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#cambios-desde-un-fork-hacia-el-repositorio-upstream"><i class="fa fa-check"></i><b>7.5</b> Cambios desde un <em>fork</em> hacia el repositorio <em>upstream</em></a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#trabajando-con-ramas"><i class="fa fa-check"></i><b>7.5.1</b> Trabajando con ramas</a></li>
+<li class="chapter" data-level="7.5.2" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#abrir-un-pull-request"><i class="fa fa-check"></i><b>7.5.2</b> Abrir un <em>Pull Request</em></a></li>
+<li class="chapter" data-level="7.5.3" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#aceptar-un-pull-request"><i class="fa fa-check"></i><b>7.5.3</b> Aceptar un <em>Pull Request</em></a></li>
+<li class="chapter" data-level="7.5.4" data-path="generando-un-proyecto-colaborativo-con-gitgithub.html"><a href="generando-un-proyecto-colaborativo-con-gitgithub.html#sincronización-final-del-fork"><i class="fa fa-check"></i><b>7.5.4</b> Sincronización final del <em>fork</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html"><i class="fa fa-check"></i><b>8</b> Git y GitHub con RStudio</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#manual-de-sobreviviencia-con-git-y-github-en-rstudio-en-caso-de-ser-necesario"><i class="fa fa-check"></i><b>8.1</b> Manual de sobreviviencia con Git Y GitHub en RStudio (en caso de ser necesario)</a></li>
+<li class="chapter" data-level="8.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#credenciales-https-en-cache"><i class="fa fa-check"></i><b>8.2</b> Credenciales HTTPS en <strong>Cache</strong></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#actividad-3"><i class="fa fa-check"></i><b>8.2.1</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#conectando-rstudio-con-git-y-github."><i class="fa fa-check"></i><b>8.3</b> Conectando RStudio con Git y Github.</a></li>
+<li class="chapter" data-level="8.4" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#github-primero-rstudio-después"><i class="fa fa-check"></i><b>8.4</b> GitHub primero, RStudio después…</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#actividad-4"><i class="fa fa-check"></i><b>8.4.1</b> Actividad</a></li>
+<li class="chapter" data-level="8.4.2" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#comentar-pull-y-push"><i class="fa fa-check"></i><b>8.4.2</b> Comentar, pull y push</a></li>
+<li class="chapter" data-level="8.4.3" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#actividad-5"><i class="fa fa-check"></i><b>8.4.3</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="git-y-github-con-rstudio.html"><a href="git-y-github-con-rstudio.html#rstudio-primero-y-github-también"><i class="fa fa-check"></i><b>8.5</b> RStudio primero y GitHub también</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html"><i class="fa fa-check"></i><b>9</b> Merge y conflictos de versiones en Git y GitHub</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#diapositivas-4"><i class="fa fa-check"></i><b>9.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="9.2" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#agradecimientos"><i class="fa fa-check"></i><b>9.2</b> Agradecimientos</a></li>
+<li class="chapter" data-level="9.3" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#usando-git-de-forma-segura"><i class="fa fa-check"></i><b>9.3</b> Usando git de forma segura</a></li>
+<li class="chapter" data-level="9.4" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#commit-al-infinito"><i class="fa fa-check"></i><b>9.4</b> Commit al infinito</a></li>
+<li class="chapter" data-level="9.5" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#viajando-en-el-tiempo"><i class="fa fa-check"></i><b>9.5</b> Viajando en el tiempo</a></li>
+<li class="chapter" data-level="9.6" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#reescribiendo-la-historia"><i class="fa fa-check"></i><b>9.6</b> Reescribiendo la historia</a></li>
+<li class="chapter" data-level="9.7" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#reescribiendo-la-historia-1"><i class="fa fa-check"></i><b>9.7</b> Reescribiendo la historia</a></li>
+<li class="chapter" data-level="9.8" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#rechazo-de-push"><i class="fa fa-check"></i><b>9.8</b> Rechazo de PUSH</a></li>
+<li class="chapter" data-level="9.9" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#rechazo-de-push-1"><i class="fa fa-check"></i><b>9.9</b> Rechazo de PUSH</a></li>
+<li class="chapter" data-level="9.10" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#rechazo-de-push-hagamos-pull"><i class="fa fa-check"></i><b>9.10</b> Rechazo de PUSH &gt; Hagamos PULL</a></li>
+<li class="chapter" data-level="9.11" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#pull-con-cambios-locales-sin-commit"><i class="fa fa-check"></i><b>9.11</b> PULL con cambios locales sin commit</a></li>
+<li class="chapter" data-level="9.12" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#pull-con-conflictos"><i class="fa fa-check"></i><b>9.12</b> PULL con conflictos</a></li>
+<li class="chapter" data-level="9.13" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#solución-con-git-stash"><i class="fa fa-check"></i><b>9.13</b> Solución con git stash</a></li>
+<li class="chapter" data-level="9.14" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#cuando-git-stash-no-trae-la-felicidad"><i class="fa fa-check"></i><b>9.14</b> Cuando git stash no trae la felicidad</a></li>
+<li class="chapter" data-level="9.15" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#merge-conflics"><i class="fa fa-check"></i><b>9.15</b> Merge conflics</a></li>
+<li class="chapter" data-level="9.16" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#merge-conflics-1"><i class="fa fa-check"></i><b>9.16</b> Merge conflics</a></li>
+<li class="chapter" data-level="9.17" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#regresando-a-git-stash"><i class="fa fa-check"></i><b>9.17</b> Regresando a git stash</a></li>
+<li class="chapter" data-level="9.18" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#regresando-a-git-stash-1"><i class="fa fa-check"></i><b>9.18</b> Regresando a git stash</a></li>
+<li class="chapter" data-level="9.19" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#qué-hacemos-si-si-hicimos-commit-y-pull-no-funciona"><i class="fa fa-check"></i><b>9.19</b> Qué hacemos si si hicimos commit y PULL no funciona?</a></li>
+<li class="chapter" data-level="9.20" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#qué-hacemos-si-si-hicimos-commit-y-pull-no-funciona-1"><i class="fa fa-check"></i><b>9.20</b> Qué hacemos si si hicimos commit y PULL no funciona?</a></li>
+<li class="chapter" data-level="9.21" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#pull-con-rebase"><i class="fa fa-check"></i><b>9.21</b> PULL con rebase</a></li>
+<li class="chapter" data-level="9.22" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#pull-con-rebase-1"><i class="fa fa-check"></i><b>9.22</b> PULL con rebase</a></li>
+<li class="chapter" data-level="9.23" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#actividad-6"><i class="fa fa-check"></i><b>9.23</b> Actividad</a>
+<ul>
+<li class="chapter" data-level="9.23.1" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#probemos-nosotres"><i class="fa fa-check"></i><b>9.23.1</b> Probemos nosotres!</a></li>
+<li class="chapter" data-level="9.23.2" data-path="merge-y-conflictos-de-versiones-en-git-y-github.html"><a href="merge-y-conflictos-de-versiones-en-git-y-github.html#todo-es-práctica"><i class="fa fa-check"></i><b>9.23.2</b> Todo es práctica</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html"><i class="fa fa-check"></i><b>10</b> Modificando los archivos de inicio de R</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#diapositivas-5"><i class="fa fa-check"></i><b>10.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="10.2" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#qué-son-los-archivos-de-inicio"><i class="fa fa-check"></i><b>10.2</b> ¿Qué son los archivos de inicio?</a></li>
+<li class="chapter" data-level="10.3" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#modificando-el-archivo-.renviron"><i class="fa fa-check"></i><b>10.3</b> Modificando el archivo .Renviron</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#modificando-el-historial-de-la-sesión"><i class="fa fa-check"></i><b>10.3.1</b> Modificando el historial de la sesión</a></li>
+<li class="chapter" data-level="10.3.2" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#modificando-el-comportamiento-de-las-funciones"><i class="fa fa-check"></i><b>10.3.2</b> Modificando el comportamiento de las funciones</a></li>
+<li class="chapter" data-level="10.3.3" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#generando-un-.renviron-por-proyecto"><i class="fa fa-check"></i><b>10.3.3</b> Generando un .Renviron por proyecto</a></li>
+<li class="chapter" data-level="10.3.4" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#guardando-tokens-para-la-conexión-con-apis"><i class="fa fa-check"></i><b>10.3.4</b> Guardando tokens para la conexión con APIs</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#modificando-el-archivo-.rprofile"><i class="fa fa-check"></i><b>10.4</b> Modificando el archivo .Rprofile</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#modificando-la-estética-de-la-consola"><i class="fa fa-check"></i><b>10.4.1</b> Modificando la estética de la consola</a></li>
+<li class="chapter" data-level="10.4.2" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#modificando-el-número-de-dígitos"><i class="fa fa-check"></i><b>10.4.2</b> Modificando el número de dígitos</a></li>
+<li class="chapter" data-level="10.4.3" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#cargando-paquetes-frecuentes"><i class="fa fa-check"></i><b>10.4.3</b> Cargando paquetes frecuentes</a></li>
+<li class="chapter" data-level="10.4.4" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#asignación-de-sobrenombres-a-las-funciones"><i class="fa fa-check"></i><b>10.4.4</b> Asignación de sobrenombres a las funciones</a></li>
+<li class="chapter" data-level="10.4.5" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#creando-mensajes-de-error-personalizados"><i class="fa fa-check"></i><b>10.4.5</b> Creando mensajes de error personalizados</a></li>
+<li class="chapter" data-level="10.4.6" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#mensajes-de-bienvenida"><i class="fa fa-check"></i><b>10.4.6</b> Mensajes de bienvenida</a></li>
+<li class="chapter" data-level="10.4.7" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#generando-un-.rprofile-para-cada-proyecto"><i class="fa fa-check"></i><b>10.4.7</b> Generando un .Rprofile para cada proyecto</a></li>
+<li class="chapter" data-level="10.4.8" data-path="modificando-los-archivos-de-inicio-de-r.html"><a href="modificando-los-archivos-de-inicio-de-r.html#reproducibilidad"><i class="fa fa-check"></i><b>10.4.8</b> Reproducibilidad</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html"><a href="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html"><i class="fa fa-check"></i><b>11</b> Keynote Código legible en R: 6 consejos simples y prácticos para escribir mejor código</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html"><a href="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html#diapositivas-6"><i class="fa fa-check"></i><b>11.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html"><i class="fa fa-check"></i><b>12</b> Mantenimiento del espacio de trabajo en R</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#diapositivas-7"><i class="fa fa-check"></i><b>12.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="12.2" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#exploremos-tu-instalación-de-r"><i class="fa fa-check"></i><b>12.2</b> Exploremos tu instalación de R</a></li>
+<li class="chapter" data-level="12.3" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cómo-sabemos-qué-paquetes-tenemos-instalados"><i class="fa fa-check"></i><b>12.3</b> ¿Cómo sabemos qué paquetes tenemos instalados?</a></li>
+<li class="chapter" data-level="12.4" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cómo-mantenemos-actualizados-nuestros-paquetes"><i class="fa fa-check"></i><b>12.4</b> ¿Cómo mantenemos actualizados nuestros paquetes?</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#actualización-de-paquetes-desde-cran"><i class="fa fa-check"></i><b>12.4.1</b> Actualización de paquetes desde CRAN</a></li>
+<li class="chapter" data-level="12.4.2" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#actualización-de-paquetes-desde-bioconductor"><i class="fa fa-check"></i><b>12.4.2</b> Actualización de paquetes desde Bioconductor</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#instalando-una-versión-anterior-de-un-paquete"><i class="fa fa-check"></i><b>12.5</b> Instalando una versión anterior de un paquete</a></li>
+<li class="chapter" data-level="12.6" data-path="mantenimiento-del-espacio-de-trabajo-en-r.html"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#mantenimiento-de-paqueterías-entre-versiones-de-r"><i class="fa fa-check"></i><b>12.6</b> Mantenimiento de paqueterías entre versiones de R</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html"><i class="fa fa-check"></i><b>13</b> Instalación de paquetes desde código fuente</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#diapositivas-8"><i class="fa fa-check"></i><b>13.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="13.2" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#a-qué-nos-referimos-con-paqueterías-de-código-fuente"><i class="fa fa-check"></i><b>13.2</b> ¿A qué nos referimos con paqueterías de código fuente?</a></li>
+<li class="chapter" data-level="13.3" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#en-dónde-podemos-encontrar-el-código-fuente-de-un-paquete"><i class="fa fa-check"></i><b>13.3</b> ¿En dónde podemos encontrar el código fuente de un paquete?</a></li>
+<li class="chapter" data-level="13.4" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#instalando-la-última-versión-en-desarrollo"><i class="fa fa-check"></i><b>13.4</b> Instalando la última versión en desarrollo</a></li>
+<li class="chapter" data-level="13.5" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#instalando-paquetes-desde-github"><i class="fa fa-check"></i><b>13.5</b> Instalando paquetes desde GitHub</a></li>
+<li class="chapter" data-level="13.6" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#instalando-versiones-anteriores"><i class="fa fa-check"></i><b>13.6</b> Instalando versiones anteriores</a></li>
+<li class="chapter" data-level="13.7" data-path="instalación-de-paquetes-desde-código-fuente.html"><a href="instalación-de-paquetes-desde-código-fuente.html#instalando-un-paquete-local"><i class="fa fa-check"></i><b>13.7</b> Instalando un paquete local</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html"><i class="fa fa-check"></i><b>14</b> Introducción a Shiny</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#diapositivas-9"><i class="fa fa-check"></i><b>14.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="14.2" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#qué-es-y-para-qué-me-sirve-shiny"><i class="fa fa-check"></i><b>14.2</b> ¿Qué es y para qué me sirve Shiny?</a></li>
+<li class="chapter" data-level="14.3" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-estructura-canónica-de-shiny"><i class="fa fa-check"></i><b>14.3</b> La estructura canónica de Shiny</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#actividad-7"><i class="fa fa-check"></i><b>14.3.1</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="introducción-a-shiny.html"><a href="introducción-a-shiny.html#la-interfaz-de-usuario-ui"><i class="fa fa-check"></i><b>14.4</b> La Interfaz de Usuario (<strong>UI</strong>)</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html"><i class="fa fa-check"></i><b>15</b> Mi primera aplicación ShinyR</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html#diapositivas-10"><i class="fa fa-check"></i><b>15.1</b> Diapositivas</a></li>
+<li class="chapter" data-level="15.2" data-path="mi-primera-aplicación-shinyr.html"><a href="mi-primera-aplicación-shinyr.html#actividad-8"><i class="fa fa-check"></i><b>15.2</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="proyecto-en-equipo.html"><a href="proyecto-en-equipo.html"><i class="fa fa-check"></i><b>16</b> Proyecto en equipo</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="proyecto-en-equipo.html"><a href="proyecto-en-equipo.html#actividad-9"><i class="fa fa-check"></i><b>16.1</b> Actividad</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="keynote-aplicaciones-shinyr-en-la-vida-diaria.html"><a href="keynote-aplicaciones-shinyr-en-la-vida-diaria.html"><i class="fa fa-check"></i><b>17</b> Keynote: Aplicaciones ShinyR en la vida diaria</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="keynote-aplicaciones-shinyr-en-la-vida-diaria.html"><a href="keynote-aplicaciones-shinyr-en-la-vida-diaria.html#diapositivas-11"><i class="fa fa-check"></i><b>17.1</b> Diapositivas</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="presentación-de-proyectos.html"><a href="presentación-de-proyectos.html"><i class="fa fa-check"></i><b>18</b> Presentación de proyectos</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="presentación-de-proyectos.html"><a href="presentación-de-proyectos.html#proyectos"><i class="fa fa-check"></i><b>18.1</b> Proyectos</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Workshop CDSB 2021: Flujos de trabajo con RStudio y creación de Shiny apps</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mantenimiento-del-espacio-de-trabajo-en-r" class="section level1" number="12">
+<h1><span class="header-section-number">12</span> Mantenimiento del espacio de trabajo en R</h1>
+<p>Joselyn Chávez</p>
+<p>11 de agosto de 2021</p>
+<style>
+div.grey { 
+background-color: #bfbfbf;
+}
+</style>
+<style>
+div.center { 
+text-align:center;
+}
+</style>
+<div id="diapositivas-7" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> Diapositivas</h2>
+<p><a href="https://comunidadbioinfo.github.io/cdsb2021_workflows/dia3_sesion3.html"><iframe src="https://comunidadbioinfo.github.io/cdsb2021_workflows/dia3_sesion3.html" width="672" height="380px"></iframe></a></p>
+</div>
+<div id="exploremos-tu-instalación-de-r" class="section level2" number="12.2">
+<h2><span class="header-section-number">12.2</span> Exploremos tu instalación de R</h2>
+<p>Los paquetes en R son la unidad natural para distribuir código. Actualmente, R base contiene alrededor de 14 paquetes de base y 15 paquetes recomendados en todas sus distribuciones.</p>
+<p>El repositorio CRAN contiene ~ 18K paquetes que pueden ser instalados usando</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“nombre_del_paquete”)</span></code></pre></div>
+<p>Por otro lado, Bioconductor contiene más de 2K paquetes de software, alrededor de 1000 paquetes de anotación, 400 de datos experimentales y 30 de flujos de trabajo.</p>
+<p>Para instalar paquetes desde Bioconductor necesitamos el paquete BiocManager:</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb98-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;Biostrings&quot;</span>)</span></code></pre></div>
+<p>Notarás que al instalar un paquete siempre aparece un mensaje mencionando la ruta donde el paquete será instalado.</p>
+<p>Por defecto toda la instalación de R se genera dentro de un directorio que R asigna de forma automática, cuya ruta podemos encontrar con</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb99-1" aria-hidden="true" tabindex="-1"></a>.Library</span></code></pre></div>
+<p>Adicionalmente, existe una ruta donde R busca la disponibilidad de paqueterías instaladas. Esta ruta se actualiza con cada nueva versión de R. Podemos conocer o modificar esta ruta usando</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>()</span></code></pre></div>
+<p>Nota que esta ruta contiene la versión de R que tienes instalada, por ejemplo 4.1</p>
+</div>
+<div id="cómo-sabemos-qué-paquetes-tenemos-instalados" class="section level2" number="12.3">
+<h2><span class="header-section-number">12.3</span> ¿Cómo sabemos qué paquetes tenemos instalados?</h2>
+<p>Si estás en RStudio puedes ir a la ventana Packages o usar el comando</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>()</span></code></pre></div>
+<p>Nota que este resultado muestra las propiedades del paquete, como la ruta donde se encuentra instalado, la versión del paquete, sus dependencias, la versión de R en que fue construida, entre otras.</p>
+<div class="grey color">
+<div class="center">
+<strong>Actividad 1</strong>
+</div>
+<p>Aprovechemos las funciones de dplyr para analizar tus paquetes instalados.</p>
+<ul>
+<li>¿Cuántos paquetes de tu instalación necesitan compilación?</li>
+<li>¿Todos tus paquetes se construyeron en la misma versión de R?</li>
+<li>¿Cuántos de los paquetes son de R base y cuántos son recomendados?</li>
+</ul>
+</div>
+</div>
+<div id="cómo-mantenemos-actualizados-nuestros-paquetes" class="section level2" number="12.4">
+<h2><span class="header-section-number">12.4</span> ¿Cómo mantenemos actualizados nuestros paquetes?</h2>
+<p>Continuamente los paquetes tienen actualizaciones mejorando el código, agregando funciones o solucionando problemas de código.</p>
+<div id="actualización-de-paquetes-desde-cran" class="section level3" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> Actualización de paquetes desde CRAN</h3>
+<p>Si te encuentras en RStudio, puedes ir a la ventana Packages &gt; Update y seleccionar los paquetes que deseas actualizar.</p>
+<p><img src="img/update.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Si te encuentras trabajando en la consola y deseas obtener una lista de los paquetes que tienen una actualización disponible puedes usar el comando</p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">old.packages</span>()</span></code></pre></div>
+<p>Para actualizar un paquete en específico desde la consola puedes instalar nuevamente el paquete con</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<p>O usar el paquete devtools</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb104-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<p>Nota que las instrucciones anteriores se suelen usar para actualizar uno o algunos paquetes, pero si deseas actualizar todos los paquetes a la vez puedes usar el comando</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb105-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">update_packages</span>(<span class="cn">TRUE</span>) </span></code></pre></div>
+</div>
+<div id="actualización-de-paquetes-desde-bioconductor" class="section level3" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> Actualización de paquetes desde Bioconductor</h3>
+<p>Puedes conocer cuáles paquetes tienen una actualización disponible en Bioconductor con el comando</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb106-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">valid</span>()</span></code></pre></div>
+<p>Nota que este comando además te proporcionará el comando necesario para instalar los paquetes que requieren actualización.</p>
+<p>Para instalar las actualizaciones basta con re-instalar el paquete con</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb107-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<p>O puedes instalar todos los paquetes que requieran actualización con</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb108-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>()</span></code></pre></div>
+<div class="grey color">
+<div class="center">
+<strong>Actividad 2</strong>
+</div>
+<ul>
+<li>Revisa si tus paquetes se encuentran actualizados, usa algunas de las opciones que revisamos anteriormente.</li>
+<li>Si tienes paquetes que requieran actualizaciones, usa alguna de las opciones y actualiza un paquete.</li>
+<li>Verifica que después de la actualización se haya eliminado de la lista de paquetes que requieren actualización.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="instalando-una-versión-anterior-de-un-paquete" class="section level2" number="12.5">
+<h2><span class="header-section-number">12.5</span> Instalando una versión anterior de un paquete</h2>
+<p>En algunos casos necesitaremos instalar una versión anterior de algún paquete, por ejemplo para reproducir un análisis que se realizó hace tiempo o solucionar un problema de código.</p>
+<p>Primero debes conocer el número de versiones anteriores del paquete. Para las paqueterías de CRAN, dirígete a la página del paquete, entra a la sección ‘Old sources’ y selecciona la versión que deseas instalar.</p>
+<p>Después usa devtools para instalar esa versión en específico</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb109-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;1.13.6&quot;</span>)</span></code></pre></div>
+<p><img src="img/old.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>Revisa la versión que tienes instalada actualmente</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
+<p>Instala la versión anterior que desees</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb111-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;2.0.0&quot;</span>)</span></code></pre></div>
+<p>Verifica la versión ahora</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
+<div class="grey color">
+<div class="center">
+<strong>Actividad 3</strong>
+</div>
+<p>Practiquemos la instalación de versiones anteriores de paquetes y su actualización.</p>
+<ul>
+<li>Revisa qué versión de ggplot2 tienes instalada.</li>
+<li>Busca la página de ggplot2 en CRAN y elige alguna versión anterior.</li>
+<li>Instala alguna de las versiones anteriores.</li>
+<li>Verifica que se haya instalado la versión que deseabas.</li>
+<li>Vuelve a actualizar el paquete.</li>
+<li>Verifica que se haya actualizado a la última versión disponible.</li>
+</ul>
+</div>
+</div>
+<div id="mantenimiento-de-paqueterías-entre-versiones-de-r" class="section level2" number="12.6">
+<h2><span class="header-section-number">12.6</span> Mantenimiento de paqueterías entre versiones de R</h2>
+<p>Cuando instalamos una actualización menor de R (por ejemplo si tenemos instalada la versión 3.5.0 y actualizamos a la versión 3.5.1) la instalación de nuestras paqueterías se conserva en el mismo directorio y no es necesario volver a instalarlas.</p>
+<p>Por el contrario, cuando realizamos actualizaciones grandes de R (por ejemplo de 3.5.3 a 3.6.0 o de 3.6.1 a 4.0.0) la ruta de instalación de nuestras paqueterías cambiará y por ello es posible que necesitemos instalarlas nuevamente.</p>
+<p><img src="img/minors.png" width="40%" style="display: block; margin: auto;" /></p>
+<p>Si sueles instalar un gran número de paqueterías pero no las usas frecuentemente, este cambio de ruta de instalación puede servir para reconsiderar cuáles paqueterías relamente necesitas volver a instalar.</p>
+<p>Sin embargo, si tienes un gran número de paqueterías que deseas conservar entre actualizaciones de R, existe una solución.</p>
+<p>Una modificación interesante que podemos hacer dentro de .Renviron es seleccionar la ubicación donde serán instaladas las paqueterías de R usando la variable R_LIBS_USER.</p>
+<p>Antes de modificar esta variable, veamos cómo se encuentra tu configuración actual. Ejecuta el siguiente comando para ver la ruta que por defecto R selecciona para instalar las paqueterías:</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">&quot;R_LIBS_USER&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;~/Library/R/x86_64/4.1/library&quot;</code></pre>
+<p>Si te encuentras trabajando en un sistema operativo OS/Mac, tu ruta se verá similar a R_LIBS_USER=~/Library/R/%v/library. Si te encuentras trabajando en Windows es muy probable que tu ruta se vea así: R_LIBS_USER=~/R/win-library/x.y</p>
+<p>Nota que la ruta menciona la versión de R que tienes instalada, en mi caso es la versión 4.1. Mantener esto en mente es importante porque cuando hagamos una actualización en el futuro, por ejemplo a R 4.2, esta ruta va cambiar.</p>
+<p>Suponiendo que estás por instalar la futura versión de R, vamos a crear un directorio para instalar las paqueterías que corresponderán a esa versión.</p>
+<ul>
+<li>Crea un directorio con el número de versión que instalarás, usando el comando:</li>
+</ul>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb115-1" aria-hidden="true" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_create</span>(<span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
+<ul>
+<li>Abre tu archivo .Renviron.</li>
+<li>Agrega la variable R_LIBS_USER y la ruta al directorio que acabas de crear. Usa R_LIBS_USER=~/Library/R/4.2/library para Mac o R_LIBS_USER=~/R/win-library/4.2 para Windows.</li>
+<li>Guarda los cambios y reinicia la sesión.</li>
+</ul>
+<p>Ahora podemos instalar paquetes en este directorio.</p>
+<ul>
+<li>Instala el paquete dplyr usando el comando</li>
+</ul>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</span></code></pre></div>
+<ul>
+<li>Nota que en el mensaje de instalación se menciona la ruta donde está realizando la instalación.</li>
+<li>Verifica que dplyr se instaló en el nuevo directorio, usa el comando</li>
+</ul>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>(<span class="st">&quot;mi-nuevo-directorio&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb117-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb117-3"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb117-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">View</span>()</span></code></pre></div>
+<p>Ahora puedes transferir todos los paquete que tienes instalados en tu versión actual y preparar el directorio que usará tu próxima versión de R.</p>
+<p>Si deseas mantener todos los paquetes que tienes instalados actualmente, es recomendable guardar la lista de paquetes en una variable antes de cambiar de directorio de instalación y usarla dentro de los argumentos de tu comando de instalación.</p>
+<ul>
+<li>Reestablece el directorio de instalación que modificaste en el .Renviron.</li>
+<li>Genera la lista de paquetes instalados y guárdala en una variable</li>
+</ul>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb118-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">installed.packages</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb118-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb118-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>()</span></code></pre></div>
+<ul>
+<li>Dale un vistazo al contenido de esta variable.</li>
+<li>Modifica el directorio de instalación en .Renviron.</li>
+<li>Instala los paquetes enlistados en pkgs.</li>
+</ul>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package) </span></code></pre></div>
+<p>Como alternativa, puedes usar el argumento lib de la función install.packages para indicar el directorio donde se instalarán estas paqueterías. De esta forma no es necesario modificar el .Renviron.</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package, <span class="at">lib =</span> <span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
+<p>Toma en cuenta que si tienes un gran número de paquetes enlistados en pkgs, este comando tardará un tiempo en completarse. Si solamente deseas seleccionar algunos paquetes, puedes usar filtros o selección de lineas ya sea con corchetes df[ ] o con las funciones de dplyr.</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb121-1" aria-hidden="true" tabindex="-1"></a>pkgs<span class="sc">$</span>Package[<span class="dv">445</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;xaringan&quot;</code></pre>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs<span class="sc">$</span>Package[<span class="dv">445</span>], <span class="at">lib =</span> <span class="st">&quot;~/Library/R/4.2/library&quot;</span>) </span></code></pre></div>
+<ul>
+<li>Finalmente, revisa si los paquetes que instalaste se encuentran en la nueva ubicación.</li>
+</ul>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">installed.packages</span>(<span class="st">&quot;~/Library/R/4.2/library&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb124-2"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb124-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb124-3"><a href="mantenimiento-del-espacio-de-trabajo-en-r.html#cb124-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">View</span>()</span></code></pre></div>
+<div class="grey color">
+<div class="center">
+<strong>Actividad 4</strong>
+</div>
+<ul>
+<li>Si aún no lo has hecho, genera un directorio para instalar paqueterías en una versión superior a la que tienes instalada.</li>
+<li>Enlista las paqueterías que tienes instaladas actualmente y guárdalas en una variable en formato tibble().</li>
+<li>Dale un vistazo a tu lista de paqueterías y selecciona alguna o algunas de ellas.</li>
+<li>Instala estas paqueterías en el directorio correspondiente a la versión superior de R.</li>
+<li>Asegúrate que se encuentran listadas en el nuevo directorio.</li>
+</ul>
+</div>
+<p>Si deseas consultar más detalles sobre mantenimiento de nuestro ambiente de R puedes ir al siguiente link en inglés: <a href="https://rstats.wtf/maintaining-r.html" class="uri">https://rstats.wtf/maintaining-r.html</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="keynote-código-legible-en-r-6-consejos-simples-y-prácticos-para-escribir-mejor-código.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="instalación-de-paquetes-desde-código-fuente.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
